@@ -6,7 +6,7 @@ import { SobreProjeto } from '@/components/sections/SobreProjeto';
 import { MapaInterativo } from '@/components/sections/MapaInterativo';
 import { MarqueeSection } from '@/components/sections/MarqueeSection';
 import { EstatsSection } from '@/components/sections/EstatsSection';
-import { PhraseRevealSection } from '@/components/sections/PhraseRevealSection';
+import { HorizontalScrollSection } from '@/components/sections/HorizontalScrollSection';
 import { CarouselSection } from '@/components/sections/CarouselSection';
 import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
@@ -58,7 +58,7 @@ export default function Home() {
 
         <ColorStripe />
 
-        <PhraseRevealSection />
+        <HorizontalScrollSection />
 
         <EstatsSection />
 

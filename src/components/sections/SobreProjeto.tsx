@@ -1,5 +1,7 @@
 'use client';
 
+import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
+
 interface SobreProjetoProps {
   backgroundColor?: string;
 }
@@ -9,9 +11,9 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
     <section className={`py-32 px-6 ${backgroundColor}`}>
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
+          <LiquifyTitle className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
             O Projeto
-          </h2>
+          </LiquifyTitle>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto mb-8" />
         </div>
 

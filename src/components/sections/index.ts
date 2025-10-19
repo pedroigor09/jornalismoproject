@@ -8,4 +8,4 @@ export { ReportagemGrid } from './ReportagemGrid';
 export { EstatsSection } from './EstatsSection';
 export { MarqueeSection } from './MarqueeSection';
 export { CarouselSection } from './CarouselSection';
-export { PhraseRevealSection } from './PhraseRevealSection';
+export { HorizontalScrollSection } from './HorizontalScrollSection';

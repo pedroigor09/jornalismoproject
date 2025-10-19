@@ -13,15 +13,6 @@ export const Footer = ({
 }: FooterProps) => {
   return (
     <div className={styles.author}>
-      Desenvolvido com 💜 por{' '}
-      <a 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className={styles.authorLink} 
-        href={authorUrl}
-      >
-        {authorName}
-      </a>
     </div>
   );
 };

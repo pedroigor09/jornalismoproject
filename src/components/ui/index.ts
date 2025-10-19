@@ -9,3 +9,4 @@ export { CountUpNumber } from './CountUpNumber';
 export { ParallaxText } from './ParallaxText';
 export { RevealOnScroll } from './RevealOnScroll';
 export { StickyText } from './StickyText';
+export { LiquifyTitle } from './LiquifyTitle';

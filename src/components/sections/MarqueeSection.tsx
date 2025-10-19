@@ -10,24 +10,24 @@ export function MarqueeSection() {
   if (!isVisible) return null;
 
   return (
-    <section className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--bahia-yellow)] py-4 border-t-4 border-black overflow-hidden shadow-2xl">
+    <section className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-[#00BFA5] via-[#00E5CC] to-[#00BFA5] py-2 border-t-2 border-black overflow-hidden shadow-xl">
       <button
         onClick={() => setIsVisible(false)}
-        className="absolute top-2 right-2 z-10 w-8 h-8 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all hover:scale-110"
-        aria-label="Fechar barra de inscrições"
+        className="absolute top-1 right-2 z-10 w-6 h-6 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all hover:scale-110"
+        aria-label="Fechar barra de notícias"
       >
-        <X className="w-5 h-5 text-black" />
+        <X className="w-4 h-4 text-black" />
       </button>
       
       <Marquee speed={20} className="text-black">
-        <span className="text-2xl md:text-4xl font-black inline-flex items-center gap-8">
-          <span>INSCREVA-SE</span>
+        <span className="text-lg md:text-2xl font-black inline-flex items-center gap-6">
+          <span>NOTICIÁRIO DA UJ</span>
           <span className="text-[var(--bahia-red)]">●</span>
-          <span>INSCRIÇÕES AQUI</span>
+          <span>JORNALISMO UNIJORGE</span>
           <span className="text-[var(--bahia-red)]">●</span>
-          <span>INSCREVA-SE</span>
+          <span>NOTICIÁRIO DA UJ</span>
           <span className="text-[var(--bahia-red)]">●</span>
-          <span>INSCRIÇÕES AQUI</span>
+          <span>JORNALISMO UNIJORGE</span>
           <span className="text-[var(--bahia-red)]">●</span>
         </span>
       </Marquee>
