@@ -1,0 +1,51 @@
+.author {
+  color: #404040;
+  margin: 50px 0 10px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.authorLink {
+  color: #404040;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.authorLink::before,
+.authorLink::after {
+  bottom: 0;
+  content: "";
+  height: 8px;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.authorLink::before {
+  background-color: #dbdbdb;
+  width: 100%;
+}
+
+.authorLink::after {
+  background-color: #c584f8;
+  transition: width 0.3s ease-in-out;
+  width: 0;
+  will-change: width;
+}
+
+.authorLink:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .author {
+    font-size: 0.875rem;
+    bottom: 10px;
+  }
+}
