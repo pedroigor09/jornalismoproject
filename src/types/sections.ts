@@ -1,6 +1,3 @@
-/**
- * Tipos compartilhados para componentes de seção
- */
 
 export interface SectionProps {
   backgroundColor?: string;

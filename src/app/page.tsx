@@ -2,31 +2,67 @@
 
 import { HeroSection } from '@/components/sections/HeroSection';
 import { OpacityRevealSection } from '@/components/sections/OpacityRevealSection';
+import { SobreProjeto } from '@/components/sections/SobreProjeto';
+import { MapaInterativo } from '@/components/sections/MapaInterativo';
+import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
+import { ColorStripe } from '@/components/ui/ColorStripe';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
-import { ASSETS } from '@/lib/constants';
+import { ASSETS, SITE_CONTENT } from '@/lib/constants';
+
+const reportagensData = [
+  {
+    id: '1',
+    titulo: 'Oxente! As gírias que definem a Bahia',
+    descricao: 'Uma exploração profunda sobre as expressões mais marcantes do vocabulário baiano e suas origens',
+    tipo: 'video' as const,
+    imagemCapa: ASSETS.JORNAL.JORNAL1,
+    data: '15 de Outubro, 2025',
+  },
+  {
+    id: '2',
+    titulo: 'Sotaque Baiano: Uma identidade sonora',
+    descricao: 'Áudios e entrevistas revelam a musicalidade única do falar baiano em diferentes regiões',
+    tipo: 'audio' as const,
+    imagemCapa: ASSETS.JORNAL.JORNAL2,
+    data: '12 de Outubro, 2025',
+  },
+  {
+    id: '3',
+    titulo: 'Festas Populares e a Cultura Baiana',
+    descricao: 'Imagens que capturam a essência das celebrações e tradições que mantêm viva nossa identidade',
+    tipo: 'fotos' as const,
+    imagemCapa: ASSETS.JORNAL.JORNAL3,
+    data: '08 de Outubro, 2025',
+  },
+];
 
 export default function Home() {
   return (
     <GSAPWrapper>
+      <ColorStripe />
       <main>
         <HeroSection
-          title={['jornalismo', 'unijorge']}
+          title={SITE_CONTENT.HERO.TITLE}
           descriptions={[
-            'Histórias que transformam. Verdades que inspiram.',
-            'Conheça o trabalho dos futuros comunicadores da Bahia'
+            SITE_CONTENT.HERO.SUBTITLE,
+            SITE_CONTENT.HERO.DESCRIPTION,
           ]}
-          imageUrl="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80"
-          imageAlt="Jornalismo UniJorge"
+          imageUrl={ASSETS.BAHIA_HERO}
+          imageAlt="Salvador, Bahia - Pelourinho"
         />
 
-        <OpacityRevealSection
-          text="Mais do que informar, queremos conectar pessoas através de histórias reais e impactantes"
-        />
+        <OpacityRevealSection text={SITE_CONTENT.ABOUT.TEXT} />
+
+        <SobreProjeto />
+
+        <MapaInterativo />
+
+        <ReportagemGrid reportagens={reportagensData} />
 
         <LiquifySection
-          videoUrl="https://assets.codepen.io/204808/alice-in-wonderland-vid.mov"
-          overlayText="Contando histórias que importam"
+          videoUrl={ASSETS.PLACEHOLDER_VIDEO}
+          overlayText="Sô da Bahia, ê!"
         />
       </main>
     </GSAPWrapper>

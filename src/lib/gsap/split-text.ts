@@ -22,7 +22,6 @@ export class SplitText {
       span.textContent = char;
       span.style.display = 'inline-block';
       
-      // Preserva espaços
       if (char === ' ') {
         span.innerHTML = '&nbsp;';
       }

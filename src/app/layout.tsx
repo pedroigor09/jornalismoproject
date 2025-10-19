@@ -13,8 +13,8 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Jornalismo UniJorge | Histórias que transformam",
-  description: "Portal de notícias e reportagens produzidas pelos estudantes de Jornalismo da UniJorge",
+  title: "Baianidade | A identidade cultural da Bahia",
+  description: "Projeto de jornalismo da UniJorge explorando gírias, sotaque e cultura baiana através de reportagens multimídia",
 };
 
 export default function RootLayout({

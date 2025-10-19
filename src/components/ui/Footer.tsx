@@ -7,10 +7,6 @@ interface FooterProps {
   authorUrl?: string;
 }
 
-/**
- * Footer com créditos do autor
- * Exibe link com animação de hover
- */
 export const Footer = ({ 
   authorName = 'Jornalismo UniJorge',
   authorUrl = '#'

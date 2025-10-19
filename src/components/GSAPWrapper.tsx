@@ -10,13 +10,10 @@ interface GSAPWrapperProps {
   children: ReactNode;
 }
 
-/**
- * Wrapper que inicializa o GSAP e Lenis Smooth Scroll
- * Deve envolver toda a aplicação
- */
+
 export const GSAPWrapper = ({ children }: GSAPWrapperProps) => {
-  useScrollSmoother(); // Inicializa GSAP plugins
-  useLenisScroll();     // Inicializa smooth scroll
+  useScrollSmoother();
+  useLenisScroll();    
 
   return (
     <>

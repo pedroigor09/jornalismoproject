@@ -8,10 +8,7 @@ interface VideoPlayerProps extends VideoHTMLAttributes<HTMLVideoElement> {
   fallbackText?: string;
 }
 
-/**
- * Componente de vídeo otimizado
- * Inclui configurações padrão para melhor performance
- */
+
 export const VideoPlayer = ({
   src,
   className = '',

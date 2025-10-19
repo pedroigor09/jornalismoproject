@@ -5,6 +5,16 @@
   --foreground: #171717;
   --font-open-sans: var(--font-open-sans);
   --font-noto-sans: var(--font-noto-sans);
+  
+  /* Cores da Bahia */
+  --bahia-yellow: #FFD700;
+  --bahia-red: #E63946;
+  --bahia-orange: #FF6B35;
+  --bahia-blue: #1E88E5;
+  --bahia-beige: #F5E6D3;
+  --bahia-green: #00BFA5;
+  --bahia-pink: #E91E63;
+  --bahia-purple: #9C27B0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,4 +71,23 @@ body {
   .heading {
     font-size: clamp(3rem, 8vw, 5rem);
   }
+}
+
+/* Utilities extras */
+.bg-beige-50 {
+  background-color: var(--bahia-beige);
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
