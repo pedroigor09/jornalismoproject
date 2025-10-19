@@ -4,6 +4,10 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { OpacityRevealSection } from '@/components/sections/OpacityRevealSection';
 import { SobreProjeto } from '@/components/sections/SobreProjeto';
 import { MapaInterativo } from '@/components/sections/MapaInterativo';
+import { MarqueeSection } from '@/components/sections/MarqueeSection';
+import { EstatsSection } from '@/components/sections/EstatsSection';
+import { PhraseRevealSection } from '@/components/sections/PhraseRevealSection';
+import { CarouselSection } from '@/components/sections/CarouselSection';
 import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
@@ -43,20 +47,26 @@ export default function Home() {
       <ColorStripe />
       <main>
         <HeroSection
-          title={SITE_CONTENT.HERO.TITLE}
-          descriptions={[
-            SITE_CONTENT.HERO.SUBTITLE,
-            SITE_CONTENT.HERO.DESCRIPTION,
-          ]}
+          title={[...SITE_CONTENT.HERO.TITLE]}
+          descriptions={[SITE_CONTENT.HERO.SUBTITLE, SITE_CONTENT.HERO.DESCRIPTION]}
           imageUrl={ASSETS.BAHIA_HERO}
-          imageAlt="Salvador, Bahia - Pelourinho"
         />
 
         <OpacityRevealSection text={SITE_CONTENT.ABOUT.TEXT} />
 
         <SobreProjeto />
 
+        <ColorStripe />
+
+        <PhraseRevealSection />
+
+        <EstatsSection />
+
         <MapaInterativo />
+
+        <CarouselSection />
+
+        <ColorStripe />
 
         <ReportagemGrid reportagens={reportagensData} />
 
@@ -65,6 +75,8 @@ export default function Home() {
           overlayText="Sô da Bahia, ê!"
         />
       </main>
+      
+      <MarqueeSection />
     </GSAPWrapper>
   );
 }
