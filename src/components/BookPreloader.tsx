@@ -43,7 +43,10 @@ export function BookPreloader() {
             <div className="book__pg book__pg--5"></div>
           </div>
           <div className="loading-text">
-            <h2>Carregando Baianidade...</h2>
+            <h2>
+              <span className="desktop-text">Carregando Plataforma de Noticiário da Unijorge...</span>
+              <span className="mobile-text">Carregando Baianidade...</span>
+            </h2>
             <div className="loading-dots">
               <span></span>
               <span></span>
@@ -127,22 +130,22 @@ export function BookPreloader() {
           position: absolute;
           inset: 0;
           background-image: 
-            radial-gradient(circle at 15% 25%, rgba(255, 215, 0, 0.08) 1px, transparent 1px),
-            radial-gradient(circle at 85% 75%, rgba(230, 57, 70, 0.06) 1px, transparent 1px),
-            radial-gradient(circle at 45% 15%, rgba(255, 107, 53, 0.05) 1px, transparent 1px),
-            radial-gradient(circle at 75% 45%, rgba(233, 30, 99, 0.04) 1px, transparent 1px);
-          background-size: 150px 150px, 200px 200px, 180px 180px, 220px 220px;
-          animation: floatParticles 20s linear infinite;
+            radial-gradient(circle at 15% 25%, rgba(255, 215, 0, 0.12) 1px, transparent 1px),
+            radial-gradient(circle at 85% 75%, rgba(230, 57, 70, 0.08) 1px, transparent 1px),
+            radial-gradient(circle at 45% 15%, rgba(255, 107, 53, 0.06) 1px, transparent 1px),
+            radial-gradient(circle at 75% 45%, rgba(156, 39, 176, 0.04) 1px, transparent 1px);
+          background-size: 120px 120px, 180px 180px, 150px 150px, 200px 200px;
+          animation: floatParticles 25s linear infinite;
         }
 
         .noise-layer {
           position: absolute;
           inset: 0;
           background-image: 
-            radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
-          background-size: 30px 30px;
-          opacity: 0.3;
-          animation: moveNoise 12s linear infinite;
+            radial-gradient(circle, rgba(200,200,200,0.08) 1px, transparent 1px);
+          background-size: 40px 40px;
+          opacity: 0.2;
+          animation: moveNoise 15s linear infinite;
         }
 
         .vignette-layer {
@@ -150,9 +153,9 @@ export function BookPreloader() {
           inset: 0;
           background: radial-gradient(
             circle at center, 
-            transparent 30%, 
-            rgba(0,0,0,0.3) 70%,
-            rgba(0,0,0,0.8) 100%
+            transparent 40%, 
+            rgba(245, 230, 211, 0.1) 70%,
+            rgba(245, 230, 211, 0.2) 100%
           );
         }
 
@@ -174,16 +177,32 @@ export function BookPreloader() {
         }
 
         .loading-text h2 {
-          color: var(--bahia-yellow);
-          font-size: 1.5rem;
+          color: #333;
+          font-size: 1.2rem;
           margin-bottom: 1rem;
           font-weight: 700;
           text-shadow: 
-            0 0 10px rgba(255, 215, 0, 0.3),
-            0 0 20px rgba(255, 215, 0, 0.2),
-            2px 2px 4px rgba(0,0,0,0.5);
+            0 1px 3px rgba(0,0,0,0.1),
+            0 0 15px rgba(255, 215, 0, 0.2);
           letter-spacing: 0.5px;
+          background: linear-gradient(135deg, 
+            var(--bahia-red) 0%, 
+            var(--bahia-orange) 30%, 
+            var(--bahia-yellow) 70%, 
+            var(--bahia-purple) 100%
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        .mobile-text {
+          display: block;
+        }
+
+        .desktop-text {
+          display: none;
         }
 
         .loading-dots {
@@ -193,11 +212,13 @@ export function BookPreloader() {
         }
 
         .loading-dots span {
-          width: 8px;
-          height: 8px;
-          background: var(--bahia-orange);
+          width: 10px;
+          height: 10px;
+          background: linear-gradient(135deg, var(--bahia-orange) 0%, var(--bahia-red) 100%);
           border-radius: 50%;
-          box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+          box-shadow: 
+            0 2px 8px rgba(255, 107, 53, 0.3),
+            0 0 15px rgba(230, 57, 70, 0.2);
           animation: bounceDots 1.4s ease-in-out infinite both;
         }
 
@@ -328,15 +349,15 @@ export function BookPreloader() {
         @keyframes textGlow {
           0% { 
             text-shadow: 
-              0 0 5px rgba(255, 215, 0, 0.2),
-              0 0 10px rgba(255, 215, 0, 0.1),
-              2px 2px 4px rgba(0,0,0,0.5);
+              0 1px 3px rgba(0,0,0,0.1),
+              0 0 10px rgba(255, 215, 0, 0.15);
+            filter: brightness(1);
           }
           100% { 
             text-shadow: 
-              0 0 15px rgba(255, 215, 0, 0.4),
-              0 0 25px rgba(255, 215, 0, 0.3),
-              2px 2px 4px rgba(0,0,0,0.5);
+              0 1px 3px rgba(0,0,0,0.15),
+              0 0 20px rgba(255, 215, 0, 0.25);
+            filter: brightness(1.1);
           }
         }
 
@@ -564,14 +585,30 @@ export function BookPreloader() {
         }
 
         /* Responsividade aprimorada */
-        @media (max-width: 768px) {
-          .book {
-            width: 8em;
-            height: 6em;
+        @media (min-width: 769px) {
+          .mobile-text {
+            display: none;
+          }
+          
+          .desktop-text {
+            display: block;
           }
           
           .loading-text h2 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .book {
+            width: 7em;
+            height: 5.25em;
+          }
+          
+          .loading-text h2 {
+            font-size: 1.1rem;
+            padding: 0 1rem;
+            text-align: center;
           }
           
           .gradient-layer-1,
@@ -579,20 +616,31 @@ export function BookPreloader() {
           .gradient-layer-3 {
             opacity: 0.7;
           }
+          
+          .content-container {
+            gap: 1.5rem;
+            padding: 1rem;
+          }
         }
 
         @media (max-width: 480px) {
           .book {
-            width: 6em;
-            height: 4.5em;
+            width: 5em;
+            height: 3.75em;
           }
           
           .loading-text h2 {
             font-size: 1rem;
+            padding: 0 0.5rem;
           }
           
           .content-container {
-            gap: 1.5rem;
+            gap: 1rem;
+          }
+          
+          .loading-dots span {
+            width: 8px;
+            height: 8px;
           }
         }
       `}</style>

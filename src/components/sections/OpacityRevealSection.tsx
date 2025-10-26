@@ -39,7 +39,7 @@ export const OpacityRevealSection = ({
 
       <p
         ref={textRef}
-        className={`opacity-reveal text-7xl text-center w-3/5 font-medium relative z-10 ${textColor} drop-shadow-2xl`}
+        className={`opacity-reveal text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center w-11/12 sm:w-4/5 md:w-3/5 font-medium relative z-10 ${textColor} drop-shadow-2xl px-4`}
       >
         {text}
       </p>
