@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Noto_Sans } from "next/font/google";
+import { BookPreloader } from "@/components/BookPreloader";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -27,6 +28,10 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${notoSans.variable} font-[var(--font-open-sans)] antialiased`}
       >
+        {/* Preloader completamente isolado - não afeta o DOM principal */}
+        <BookPreloader />
+        
+        {/* Conteúdo principal sempre renderizado */}
         {children}
       </body>
     </html>
