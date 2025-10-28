@@ -2,6 +2,7 @@
 
 import { useReverseScroll } from '@/hooks/useReverseScroll';
 import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
+import { ASSETS } from '@/lib/constants';
 
 interface HeroSectionProps {
   title: string[];
@@ -42,7 +43,7 @@ export const HeroSection = ({
           <div ref={imageRef} className="reverse-scroll">
             <img
               className="w-full max-w-[400px] md:max-w-[600px] lg:max-w-[760px]"
-              src="/unijorgelogo.png"
+              src={ASSETS.LOGO}
               alt="Logo UniJorge"
             />
           </div>
