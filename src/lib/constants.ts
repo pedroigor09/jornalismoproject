@@ -1,5 +1,7 @@
 // Helper para adicionar basePath às imagens
-const basePath = process.env.NODE_ENV === 'production' ? '/jornalismoproject' : '';
+// Detecta se estamos em build/export ou se já estamos em produção
+const isDevelopment = process.env.NODE_ENV === 'development';
+const basePath = isDevelopment ? '' : '/jornalismoproject';
 
 const getAssetPath = (path: string) => {
   // Se for URL externa, retorna como está
