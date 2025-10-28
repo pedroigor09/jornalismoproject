@@ -52,7 +52,9 @@ export default function Home() {
           imageUrl={ASSETS.BAHIA_HERO}
         />
 
-        <OpacityRevealSection text={SITE_CONTENT.ABOUT.TEXT} />
+        <OpacityRevealSection 
+          text="Uma identidade que pulsa em cada oxente, em cada sô, em cada jeito baiano de ser"
+        />
 
         <SobreProjeto />
 

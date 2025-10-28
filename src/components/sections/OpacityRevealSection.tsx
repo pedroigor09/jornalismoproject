@@ -2,9 +2,10 @@
 
 import Image from 'next/image';
 import { useOpacityReveal } from '@/hooks/useOpacityReveal';
+import { ReactNode } from 'react';
 
 interface OpacityRevealSectionProps {
-  text: string;
+  text: string | ReactNode;
   backgroundImage?: string;
   textColor?: string;
 }
