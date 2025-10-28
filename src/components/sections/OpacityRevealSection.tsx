@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useOpacityReveal } from '@/hooks/useOpacityReveal';
 import { ReactNode } from 'react';
+import { ASSETS } from '@/lib/constants';
 
 interface OpacityRevealSectionProps {
   text: string | ReactNode;
@@ -13,7 +14,7 @@ interface OpacityRevealSectionProps {
 
 export const OpacityRevealSection = ({
   text,
-  backgroundImage = '/salvador.jpg',
+  backgroundImage = ASSETS.SALVADOR,
   textColor = 'text-white'
 }: OpacityRevealSectionProps) => {
   const textRef = useOpacityReveal();
