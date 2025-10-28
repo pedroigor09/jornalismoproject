@@ -128,7 +128,7 @@ export function HorizontalScrollSection() {
                   <div className="absolute inset-0 overflow-hidden">
                     <Image
                       src={panel.image}
-                      alt={panel.title}
+                      alt={panel.title || 'Panel image'}
                       fill
                       className="object-cover parallax-image opacity-40"
                     />
@@ -150,7 +150,7 @@ export function HorizontalScrollSection() {
                 <div className="relative overflow-hidden">
                   <Image
                     src={panel.image}
-                    alt={panel.title}
+                    alt={panel.title || 'Panel image'}
                     fill
                     className="object-cover parallax-image"
                   />
@@ -164,7 +164,7 @@ export function HorizontalScrollSection() {
                 <div className="absolute inset-0 overflow-hidden">
                   <Image
                     src={panel.image}
-                    alt={panel.title}
+                    alt={panel.title || 'Panel image'}
                     fill
                     className="object-cover parallax-image"
                   />
@@ -188,7 +188,7 @@ export function HorizontalScrollSection() {
                 <div className="absolute inset-0 overflow-hidden">
                   <Image
                     src={panel.image}
-                    alt={panel.text}
+                    alt={panel.text || 'Mega panel'}
                     fill
                     className="object-cover parallax-image"
                   />
