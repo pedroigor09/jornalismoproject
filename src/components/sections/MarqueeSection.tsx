@@ -10,7 +10,7 @@ export function MarqueeSection() {
   if (!isVisible) return null;
 
   return (
-    <section className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-[#00BFA5] via-[#00E5CC] to-[#00BFA5] py-2 border-t-2 border-black overflow-hidden shadow-xl">
+    <section className="fixed bottom-0 left-0 right-0 z-50 bg-white py-2 border-t-2 border-black overflow-hidden shadow-xl">
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-1 right-2 z-10 w-6 h-6 rounded-full bg-black/20 hover:bg-black/40 flex items-center justify-center transition-all hover:scale-110"
@@ -20,16 +20,18 @@ export function MarqueeSection() {
       </button>
       
       <Marquee speed={20} className="text-black">
-        <span className="text-lg md:text-2xl font-black inline-flex items-center gap-6">
-          <span>NOTICIÁRIO DA UJ</span>
-          <span className="text-[var(--bahia-red)]">●</span>
-          <span>JORNALISMO UNIJORGE</span>
-          <span className="text-[var(--bahia-red)]">●</span>
-          <span>NOTICIÁRIO DA UJ</span>
-          <span className="text-[var(--bahia-red)]">●</span>
-          <span>JORNALISMO UNIJORGE</span>
-          <span className="text-[var(--bahia-red)]">●</span>
-        </span>
+        <div className="text-lg md:text-2xl font-black inline-flex items-center font-['Poppins']">
+          <span className="px-3">OXE</span>
+          <span className="text-[var(--bahia-red)] px-3">●</span>
+          <span className="px-3">OXENTE</span>
+          <span className="text-[var(--bahia-red)] px-3">●</span>
+          <span className="px-3">LÁ ELE</span>
+          <span className="text-[var(--bahia-red)] px-3">●</span>
+          <span className="px-3">PEGUE A VISÃO</span>
+          <span className="text-[var(--bahia-red)] px-3">●</span>
+          <span className="px-3">SE PLANTE</span>
+          <span className="text-[var(--bahia-red)] px-3">●</span>
+        </div>
       </Marquee>
     </section>
   );

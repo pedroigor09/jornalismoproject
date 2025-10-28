@@ -19,15 +19,18 @@ export function Marquee({
     <div className={cn("overflow-hidden whitespace-nowrap", className)}>
       <div 
         className={cn(
-          "inline-block animate-marquee",
+          "inline-flex animate-marquee",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
         style={{
           animationDuration: `${speed}s`
         }}
       >
-        {children}
-        <span className="inline-block ml-4">{children}</span>
+        {/* Múltiplas repetições para garantir continuidade */}
+        <span className="inline-flex shrink-0">{children}</span>
+        <span className="inline-flex shrink-0">{children}</span>
+        <span className="inline-flex shrink-0">{children}</span>
+        <span className="inline-flex shrink-0">{children}</span>
       </div>
     </div>
   );

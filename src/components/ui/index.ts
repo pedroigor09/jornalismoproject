@@ -10,3 +10,6 @@ export { ParallaxText } from './ParallaxText';
 export { RevealOnScroll } from './RevealOnScroll';
 export { StickyText } from './StickyText';
 export { LiquifyTitle } from './LiquifyTitle';
+export { GoldenText } from './GoldenText';
+export { CoqueiroAnimated } from './CoqueiroAnimated';
+export { CoqueiroBackground } from './CoqueiroBackground';
