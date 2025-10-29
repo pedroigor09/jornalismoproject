@@ -14,7 +14,7 @@
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   box-shadow: 0 4px 20px rgba(243, 115, 53, 0.4);
 }
 
@@ -44,14 +44,14 @@
 }
 
 .navbar-item {
-  padding: 1rem 2rem 1.15rem;
+  padding: 0.6rem 1.2rem 0.7rem;
   text-transform: uppercase;
   cursor: pointer;
   color: #ffffff;
-  min-width: 80px;
+  min-width: 70px;
   margin: 0;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   white-space: nowrap;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 500;

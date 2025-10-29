@@ -49,15 +49,11 @@ export default function Home() {
       <Navbar />
       <ColorStripe />
       <NavigationButtons />
-      <main style={{ paddingTop: '100px' }}>
+      <main style={{ paddingTop: '70px' }}>
         <HeroSection
           title={[...SITE_CONTENT.HERO.TITLE]}
           descriptions={[SITE_CONTENT.HERO.SUBTITLE, SITE_CONTENT.HERO.DESCRIPTION]}
           imageUrl={ASSETS.BAHIA_HERO}
-        />
-
-        <OpacityRevealSection 
-          text="Uma identidade que pulsa em cada oxente, em cada sô, em cada jeito baiano de ser"
         />
 
         <SobreProjeto />
@@ -75,11 +71,6 @@ export default function Home() {
         <ColorStripe />
 
         <ReportagemGrid reportagens={reportagensData} />
-
-        <LiquifySection
-          videoUrl={ASSETS.PLACEHOLDER_VIDEO}
-          overlayText="Sô da Bahia, ê!"
-        />
       </main>
       
       <MarqueeSection />
