@@ -12,6 +12,7 @@ import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
 import { NavigationButtons } from '@/components/ui/NavigationButtons';
+import { Navbar } from '@/components/ui/Navbar';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
 import { ASSETS, SITE_CONTENT } from '@/lib/constants';
 
@@ -45,9 +46,10 @@ const reportagensData = [
 export default function Home() {
   return (
     <GSAPWrapper>
+      <Navbar />
       <ColorStripe />
       <NavigationButtons />
-      <main>
+      <main style={{ paddingTop: '100px' }}>
         <HeroSection
           title={[...SITE_CONTENT.HERO.TITLE]}
           descriptions={[SITE_CONTENT.HERO.SUBTITLE, SITE_CONTENT.HERO.DESCRIPTION]}
