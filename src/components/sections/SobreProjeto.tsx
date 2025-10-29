@@ -1,7 +1,6 @@
 'use client';
 
 import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
-import { GoldenText } from '@/components/ui/GoldenText';
 import { CoqueiroAnimated, CoqueiroBackground } from '@/components/ui';
 import { useFadeIn } from '@/hooks/useFadeIn';
 
@@ -33,39 +32,39 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
           <div ref={fadeInRef} className="max-w-4xl mx-auto">
             <div className="text-base md:text-lg text-gray-700 leading-relaxed text-left space-y-4">
               <p>
-                Ouvi outra vez um <GoldenText glitchIntensity="medium">"colé de mermo"</GoldenText> vindo do pai de uma amiga e fiquei viajando… ''colé de mermo o quê?'' Será que ele pegou ar com alguma coisa? Rapaz, acho que esse daí é das antigas, viu?! Faz tempo que não ouço ninguém mais pivetinho falando assim… e outra, <GoldenText glitchIntensity="high">baiano inventa é arte véi</GoldenText>. Cê já parou pra pensar que o jeito que a gente fala diz muito sobre quem a gente é? Pois é... outro dia mesmo eu tava no buzú, indo no Comércio, quando uma senhora virou pra mim e soltou um <GoldenText glitchIntensity="medium">"Oxente, menino, esse sol tá pegando fogo, viu?"</GoldenText>.
+                Ouvi outra vez um <strong className="text-black">"colé de mermo"</strong> vindo do pai de uma amiga e fiquei viajando… ''colé de mermo o quê?'' Será que ele pegou ar com alguma coisa? Rapaz, acho que esse daí é das antigas, viu?! Faz tempo que não ouço ninguém mais pivetinho falando assim… e outra, <strong className="text-black">baiano inventa é arte véi</strong>. Cê já parou pra pensar que o jeito que a gente fala diz muito sobre quem a gente é? Pois é... outro dia mesmo eu tava no buzú, indo no Comércio, quando uma senhora virou pra mim e soltou um <strong className="text-black">"Oxente, menino, esse sol tá pegando fogo, viu?"</strong>.
               </p>
               
               <p>
-                Aí eu ri e pensei: <GoldenText glitchIntensity="low">rapaz, até pra reclamar a gente tem estilo!</GoldenText>
+                Aí eu ri e pensei: <strong className="text-black">rapaz, até pra reclamar a gente tem estilo!</strong>
               </p>
               
               <p>
-                E foi daí que veio o projeto <GoldenText glitchIntensity="high" className="text-lg">"Sotaque em Pauta: identidade e resistência no falar baiano"</GoldenText>. A ideia é mostrar que o nosso sotaque, esse <GoldenText glitchIntensity="medium">jeitinho manso e malemolente</GoldenText>, é mais do que fala: é identidade, é cultura, é resistência.
+                E foi daí que veio o projeto <strong className="text-black text-lg">"Sotaque em Pauta: identidade e resistência no falar baiano"</strong>. A ideia é mostrar que o nosso sotaque, esse <strong className="text-black">jeitinho manso e malemolente</strong>, é mais do que fala: é identidade, é cultura, é resistência.
               </p>
               
               <p>
-                Porque, pegue a visão, nas novelas e nos filmes, o povo às vezes tenta esconder o sotaque, né? Fica querendo falar <GoldenText glitchIntensity="medium">"neutro"</GoldenText>, como se o nosso jeito fosse errado. <GoldenText glitchIntensity="high">Que nada!</GoldenText>
+                Porque, pegue a visão, nas novelas e nos filmes, o povo às vezes tenta esconder o sotaque, né? Fica querendo falar <strong className="text-black">"neutro"</strong>, como se o nosso jeito fosse errado. <strong className="text-black">Que nada!</strong>
               </p>
               
               <p>
-                Na música, então... ah, meu parceiro, aí é o contrário! É <GoldenText glitchIntensity="medium">Ivete gritando alegria</GoldenText>, é <GoldenText glitchIntensity="medium">Luedji Luna poetizando a negritude</GoldenText>, é <GoldenText glitchIntensity="high">Caetano e Gil</GoldenText> mostrando que o sotaque baiano é melodia pura.
+                Na música, então... ah, meu parceiro, aí é o contrário! É <strong className="text-black">Ivete gritando alegria</strong>, é <strong className="text-black">Luedji Luna poetizando a negritude</strong>, é <strong className="text-black">Caetano e Gil</strong> mostrando que o sotaque baiano é melodia pura.
               </p>
               
               <p>
-                E a moda? <GoldenText glitchIntensity="high">Oxe!</GoldenText> A moda fala também, viu? É cada camisa com <GoldenText glitchIntensity="medium">"Oxente!", "Lá ele!", "Sua cara nem arde!"</GoldenText> que a gente vê por aí... o povo usa como quem diz: <GoldenText glitchIntensity="low">"sou baiano, e daí?"</GoldenText>.
+                E a moda? <strong className="text-black">Oxe!</strong> A moda fala também, viu? É cada camisa com <strong className="text-black">"Oxente!", "Lá ele!", "Sua cara nem arde!"</strong> que a gente vê por aí... o povo usa como quem diz: <strong className="text-black">"sou baiano, e daí?"</strong>.
               </p>
               
               <p>
-                Até no jornalismo, a fala vira uma ponte, o repórter puxa um <GoldenText glitchIntensity="medium">"meu povo"</GoldenText> no ar e já conquista todo mundo, porque parece que tá ali, conversando na calçada.
+                Até no jornalismo, a fala vira uma ponte, o repórter puxa um <strong className="text-black">"meu povo"</strong> no ar e já conquista todo mundo, porque parece que tá ali, conversando na calçada.
               </p>
               
               <p>
-                Esse projeto é isso: é <GoldenText glitchIntensity="high">ouvir, sentir e celebrar</GoldenText> o que a gente tem de mais bonito: <GoldenText glitchIntensity="medium">a fala, o jeito, o balanço</GoldenText>.
+                Esse projeto é isso: é <strong className="text-black">ouvir, sentir e celebrar</strong> o que a gente tem de mais bonito: <strong className="text-black">a fala, o jeito, o balanço</strong>.
               </p>
               
               <p className="text-center">
-                <GoldenText glitchIntensity="high" className="text-xl font-bold">Porque aqui na Bahia, meu irmão, a gente não fala bonito. A gente fala do nosso jeito, e fala mermo!</GoldenText>
+                <strong className="text-black text-xl">Porque aqui na Bahia, meu irmão, a gente não fala bonito. A gente fala do nosso jeito, e fala mermo!</strong>
               </p>
             </div>
           </div>

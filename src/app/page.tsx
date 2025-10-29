@@ -11,6 +11,7 @@ import { CarouselSection } from '@/components/sections/CarouselSection';
 import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
+import { NavigationButtons } from '@/components/ui/NavigationButtons';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
 import { ASSETS, SITE_CONTENT } from '@/lib/constants';
 
@@ -45,6 +46,7 @@ export default function Home() {
   return (
     <GSAPWrapper>
       <ColorStripe />
+      <NavigationButtons />
       <main>
         <HeroSection
           title={[...SITE_CONTENT.HERO.TITLE]}

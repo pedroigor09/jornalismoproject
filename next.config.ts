@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/jornalismoproject',
+  basePath: isProd ? '/jornalismoproject' : '',
+  devIndicators: {
+    appIsrStatus: false,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
