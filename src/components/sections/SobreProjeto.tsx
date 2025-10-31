@@ -12,7 +12,7 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
   const fadeInRef = useFadeIn(0.3);
   
   return (
-    <section className={`relative py-32 px-6 ${backgroundColor} overflow-hidden`}>
+    <section id="o-baiano-tem-o-molho" className={`relative py-32 px-6 ${backgroundColor} overflow-hidden`}>
       {/* Coqueiros de background */}
       <CoqueiroBackground count={12} />
       

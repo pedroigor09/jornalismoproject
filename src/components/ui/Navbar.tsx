@@ -14,17 +14,17 @@ export const Navbar = () => {
   const [emojis, setEmojis] = useState<Emoji[]>([]);
 
   const menuItems = [
-    'Home',
-    'O baiano tem o molho!',
-    'Pegue a visão',
-    'Baiano não nasce, estreia!',
-    'Naquela pegada!',
-    'Na cocó'
+    { label: 'Home', link: '#' },
+    { label: 'O baiano tem o molho!', link: '#o-baiano-tem-o-molho' },
+    { label: 'Pegue a visão', link: '#pegue-a-visao' },
+    { label: 'Baiano não nasce, estreia!', link: '#' },
+    { label: 'Naquela pegada!', link: '#' },
+    { label: 'Na cocó', link: '#' }
   ];
 
   const baianoEmojis = ['🌴', '☀️', '🥥', '🌊', '🎉', '🎊', '💃', '🕺', '🔥', '⭐', '✨', '🎭', '🎪', '🎨', '🍹', '🏖️'];
 
-  const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLLIElement>, link: string) => {
     const rect = event.currentTarget.getBoundingClientRect();
     const numberOfEmojis = 8;
     const newEmojis: Emoji[] = [];
@@ -45,6 +45,15 @@ export const Navbar = () => {
     setTimeout(() => {
       setEmojis(prev => prev.filter(e => !newEmojis.includes(e)));
     }, 1000);
+
+    // Scroll suave para a seção
+    if (link && link.startsWith('#')) {
+      const targetId = link.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   };
 
   return (
@@ -52,8 +61,8 @@ export const Navbar = () => {
       <nav className="navbar-container">
         <ul className="navbar-menu">
           {menuItems.map((item, index) => (
-            <li key={index} className="navbar-item" onClick={handleClick}>
-              {item}
+            <li key={index} className="navbar-item" onClick={(e) => handleClick(e, item.link)}>
+              {item.label}
             </li>
           ))}
         </ul>
