@@ -11,3 +11,5 @@ export { CarouselSection } from './CarouselSection';
 export { HorizontalScrollSection } from './HorizontalScrollSection';
 export { VideoRevealSection } from './VideoRevealSection';
 export { ArtisticSection } from './ArtisticSection';
+export { FashionSection } from './FashionSection';
+export { MediaSection } from './MediaSection';

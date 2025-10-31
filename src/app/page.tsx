@@ -12,12 +12,16 @@ import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
 import { VideoRevealSection } from '@/components/sections/VideoRevealSection';
 import { ArtisticSection } from '@/components/sections/ArtisticSection';
+import { FashionSection } from '@/components/sections/FashionSection';
+import { MediaSection } from '@/components/sections/MediaSection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
 import { NavigationButtons } from '@/components/ui/NavigationButtons';
 import { Navbar } from '@/components/ui/Navbar';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
 import { ASSETS, SITE_CONTENT } from '@/lib/constants';
 import { artistsData } from '@/lib/artistsData';
+import { fashionExpert, fashionReferences, tamoJuntoParceiro } from '@/lib/fashionData';
+import { mediaIntroduction, journalists, actors, influencers } from '@/lib/mediaData';
 
 const reportagensData = [
   {
@@ -87,6 +91,28 @@ E quer saber? Quem entende, entende — e quem não entende… chegue mais pra a
           subtitle="Quando o sotaque vira poesia e o ritmo vira identidade"
           introduction="Entre versos, acordes e palcos, a Bahia respira cultura em cada palavra pronunciada. Aqui, o sotaque não é apenas forma — é conteúdo, é herança, é estética. É o poeta que transforma o falar em manifesto, a cantora que leva a oralidade dos blocos afros aos grandes palcos, o dramaturgo que equilibra prosódia e performance sem cair no estereótipo. Conheça as vozes que tornam a baianidade uma linguagem artística viva, complexa e inconfundível."
           artists={artistsData}
+        />
+
+        <ColorStripe />
+
+        <FashionSection
+          title="Baiano não nasce, estreia!"
+          subtitle="Expressões do cotidiano que viram slogans e estampas"
+          introduction="Há algo fascinante em ver o jeito baiano de ser, se transformar em moda. As expressões populares que ecoam nas ruas agora estampam camisas, bolsas e acessórios — 'Lá ele!', 'Não aperte minha mente', 'Oxente!' — ganhando status de arte e identidade. O sotaque vira estilo, e a baianidade se consolida como grife. Mais que estética, é orgulho: uma forma de afirmar pertencimento e celebrar cultura. Cada frase, cor vibrante e estampa marcante carrega um pedaço da história e da irreverência da Bahia: leve, criativa e cheia de atitude."
+          expert={fashionExpert}
+          references={fashionReferences}
+          brand={tamoJuntoParceiro}
+        />
+
+        <ColorStripe />
+
+        <MediaSection
+          title="Naquela pegada!"
+          subtitle="A identidade e a fala baiana do telejornal ao streaming"
+          introductions={mediaIntroduction.map(intro => intro.text)}
+          journalists={journalists}
+          actors={actors}
+          influencers={influencers}
         />
 
         <ColorStripe />

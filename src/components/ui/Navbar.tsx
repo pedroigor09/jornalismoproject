@@ -18,8 +18,8 @@ export const Navbar = () => {
     { label: 'O baiano tem o molho!', link: '#o-baiano-tem-o-molho' },
     { label: 'Pegue a visão', link: '#pegue-a-visao' },
     { label: 'Oxe, Que arte é essa?', link: '#oxe-que-arte-e-essa' },
-    { label: 'Baiano não nasce, estreia!', link: '#' },
-    { label: 'Naquela pegada!', link: '#' },
+    { label: 'Baiano não nasce, estreia!', link: '#baiano-nao-nasce-estreia' },
+    { label: 'Naquela pegada!', link: '#naquela-pegada' },
     { label: 'Na cocó', link: '#' }
   ];
 
