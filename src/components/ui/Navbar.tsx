@@ -17,6 +17,7 @@ export const Navbar = () => {
     { label: 'Home', link: '#' },
     { label: 'O baiano tem o molho!', link: '#o-baiano-tem-o-molho' },
     { label: 'Pegue a visão', link: '#pegue-a-visao' },
+    { label: 'Oxe, Que arte é essa?', link: '#oxe-que-arte-e-essa' },
     { label: 'Baiano não nasce, estreia!', link: '#' },
     { label: 'Naquela pegada!', link: '#' },
     { label: 'Na cocó', link: '#' }

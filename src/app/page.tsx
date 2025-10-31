@@ -11,11 +11,13 @@ import { CarouselSection } from '@/components/sections/CarouselSection';
 import { ReportagemGrid } from '@/components/sections/ReportagemGrid';
 import { LiquifySection } from '@/components/sections/LiquifySection';
 import { VideoRevealSection } from '@/components/sections/VideoRevealSection';
+import { ArtisticSection } from '@/components/sections/ArtisticSection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
 import { NavigationButtons } from '@/components/ui/NavigationButtons';
 import { Navbar } from '@/components/ui/Navbar';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
 import { ASSETS, SITE_CONTENT } from '@/lib/constants';
+import { artistsData } from '@/lib/artistsData';
 
 const reportagensData = [
   {
@@ -76,6 +78,15 @@ Esse projeto é isso: é ouvir, sentir e celebrar o que a gente tem de mais boni
 Porque aqui na Bahia, meu irmão, a gente não fala bonito.
 A gente fala do nosso jeito. E fala mermo.
 E quer saber? Quem entende, entende — e quem não entende… chegue mais pra aprender!`}
+        />
+
+        <ColorStripe />
+
+        <ArtisticSection
+          title="Oxe, Que arte é essa?"
+          subtitle="Quando o sotaque vira poesia e o ritmo vira identidade"
+          introduction="Entre versos, acordes e palcos, a Bahia respira cultura em cada palavra pronunciada. Aqui, o sotaque não é apenas forma — é conteúdo, é herança, é estética. É o poeta que transforma o falar em manifesto, a cantora que leva a oralidade dos blocos afros aos grandes palcos, o dramaturgo que equilibra prosódia e performance sem cair no estereótipo. Conheça as vozes que tornam a baianidade uma linguagem artística viva, complexa e inconfundível."
+          artists={artistsData}
         />
 
         <ColorStripe />

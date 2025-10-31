@@ -10,3 +10,4 @@ export { MarqueeSection } from './MarqueeSection';
 export { CarouselSection } from './CarouselSection';
 export { HorizontalScrollSection } from './HorizontalScrollSection';
 export { VideoRevealSection } from './VideoRevealSection';
+export { ArtisticSection } from './ArtisticSection';
