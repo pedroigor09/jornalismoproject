@@ -26,6 +26,7 @@ export const artistsData: Artist[] = [
     role: 'Cantora',
     quote: 'O sotaque e as expressões são a alma da Bahia',
     image: '/marciashort.jpg',
+    polaroids: ['/marcia1.jpg', '/marcia2.avif', '/marcia3.jpg', '/marcia4.jpeg', '/marcia5.jpg'],
     content: {
       introduction: 'Conversar com Márcia Short é mergulhar na essência da cultura baiana. Cantora consagrada e uma das vozes mais marcantes do axé e da música afro-baiana.',
       paragraphs: [
@@ -45,6 +46,7 @@ export const artistsData: Artist[] = [
     role: 'Comunicador, Dramaturgo e Escritor',
     quote: 'A oralidade vem como verniz, mas o que dá vida à narrativa são as ações culturais',
     image: '/aldrianunciacao.jpg',
+    polaroids: ['/aldri1.jpg', '/aldri2.jpg', '/aldri3.jpg', '/aldri4.jpg', '/aldri5.jpg'],
     content: {
       introduction: 'O comunicador, dramaturgo e escritor Aldri Anunciação, autor de obras como Namíbia, Não! e Pretamorfose, explica como o dialeto aparece em sua literatura contemporânea.',
       paragraphs: [

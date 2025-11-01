@@ -3,6 +3,7 @@ export interface MediaProfessional {
   role: string;
   quote: string;
   image: string;
+  polaroids?: string[];
   bio?: string;
   videoUrl?: string;
   audioClips?: string[];

@@ -3,6 +3,7 @@ export interface Artist {
   role: string;
   quote: string;
   image: string;
+  polaroids?: string[];
   content: {
     introduction: string;
     paragraphs: string[];

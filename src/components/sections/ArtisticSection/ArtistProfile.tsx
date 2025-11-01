@@ -3,6 +3,7 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import type { Artist } from '@/types/artist';
 import Image from 'next/image';
+import FloatingPolaroidsProfile from '@/components/ui/FloatingPolaroidsProfile';
 
 interface ArtistProfileProps {
   artist: Artist;
@@ -22,7 +23,12 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12 ${isEven ? '' : 'lg:grid-flow-dense'}`}>
         {/* Imagem do Artista */}
         <div className={`relative ${isEven ? '' : 'lg:col-start-2'}`}>
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl">
+          {/* Polaroides flutuantes se existirem */}
+          {artist.polaroids && artist.polaroids.length > 0 && (
+            <FloatingPolaroidsProfile images={artist.polaroids} containerHeight="100%" />
+          )}
+          
+          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl z-0">
             <Image
               src={artist.image}
               alt={artist.name}

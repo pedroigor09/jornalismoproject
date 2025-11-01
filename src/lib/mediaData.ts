@@ -30,7 +30,8 @@ export const journalists: MediaProfessional[] = [
     name: 'Silvana Freire',
     role: 'Jornalista e Comunicadora',
     quote: 'Ser baiana é falar do nosso jeito, é resistir, é ter coragem de ocupar o espaço sem deixar o axé da gente pra trás',
-    image: ASSETS.JORNAL.JORNAL2,
+    image: '/silvana1.webp',
+    polaroids: ['/silvana2.jpeg', '/silvana3.jpg', '/silvana4.jpg'],
     bio: 'Jornalista e comunicadora baiana com mais de 20 anos de trajetória na imprensa. Passou por veículos importantes como a TV Bahia, onde apresentou telejornais como o Bahia Meio Dia e o Jornal da Manhã. Atuou como repórter na CNN Brasil, em São Paulo, e retornou à Bahia, onde comanda programas de rádio e projetos próprios de comunicação.',
     content: {
       introduction: 'A conversa com Silvana foi daquelas que fazem a gente sair admirando ainda mais o que é ser baiano. Jornalista com mais de duas décadas de carreira, ela é daquelas mulheres retadas que falam com o coração e deixam claro que o sotaque da Bahia não é detalhe: é identidade.',
@@ -46,7 +47,8 @@ export const journalists: MediaProfessional[] = [
     name: 'Vanderson Nascimento',
     role: 'Apresentador do Bahia Meio Dia e Resenha das 7',
     quote: 'Deus me livre não ser baiano!',
-    image: ASSETS.JORNAL.JORNAL3,
+    image: '/van2.jpeg',
+    polaroids: ['/van3.jpg', '/van4.jpg', '/van5.jpeg'],
     bio: 'Figura carismática e um dos nomes mais queridos do jornalismo baiano contemporâneo. Nascido e criado em Cajazeiras — ou, como ele mesmo costuma dizer, Cajacity —, conquistou o público com seu jeito espontâneo. Mestre em Comunicação e Jornalismo, acumula mais de 20 anos de experiência na televisão.',
     videoUrl: 'lgvZ2aNf9zk',
     content: {
@@ -62,7 +64,8 @@ export const journalists: MediaProfessional[] = [
     name: 'Luana Souza',
     role: 'Jornalista e Apresentadora',
     quote: 'O sotaque é a nossa marca de autenticidade',
-    image: ASSETS.JORNAL.JORNAL1,
+    image: '/luana1.jpg',
+    polaroids: ['/luana2.png', '/luana3.webp', '/luana4.jpg', '/luana5.jpeg'],
     bio: 'Natural de Cachoeira, no Recôncavo Baiano. Formada em Jornalismo pela UFRB, mestre em Cultura e Sociedade pela UFBA. Atua na Rede Bahia, onde já apresentou programas como Mosaico Baiano e Conversa Preta. Defensora da valorização das vozes negras e da linguagem regional.',
     content: {
       introduction: 'Com um timbre doce e firme, Luana Souza tem se destacado no cenário baiano por unir credibilidade e identidade em sua forma de comunicar. Para ela, o sotaque baiano é mais do que uma característica vocal — é uma expressão de pertencimento e afeto.',
@@ -78,7 +81,8 @@ export const journalists: MediaProfessional[] = [
     name: 'Mateus Borges',
     role: 'Jornalista e Repórter da Record TV Itapoan',
     quote: 'Quando a gente é verdadeiro, a mensagem chega',
-    image: ASSETS.JORNAL.JORNAL2,
+    image: '/mat1.webp',
+    polaroids: ['/mat2.webp', '/mat3.jpeg'],
     content: {
       introduction: 'Natural da Bahia, construiu sua trajetória com base na autenticidade e no compromisso de representar sua cultura por meio da linguagem. Com passagens marcantes pelo jornalismo popular, Mateus se tornou uma das vozes mais reconhecidas do telejornalismo baiano atual.',
       paragraphs: [
@@ -96,7 +100,8 @@ export const actors: MediaProfessional[] = [
     name: 'Evaldo Macarrão',
     role: 'Ator',
     quote: 'Quando a gente não sabe para onde vai, é só olhar para trás e ver de onde a gente veio',
-    image: ASSETS.JORNAL.JORNAL3,
+    image: '/evaldo1.webp',
+    polaroids: ['/evaldo2.avif', '/evaldo3.avif', '/evaldo4.avif', '/evaldo5.avif'],
     bio: 'Natural de Salvador, nasceu no bairro de Cosme de Farias. Formado em Pedagogia pela UCSal, construiu uma carreira marcada pela consciência social e pelo compromisso com a valorização da cultura baiana. Em 2024, ganhou destaque nacional ao interpretar Jupará na novela Renascer.',
     content: {
       introduction: 'Evaldo Maurício Silva — conhecido como Evaldo Macarrão — encontrou na arte uma forma de expressão e resistência. Foi no Centro de Referência Integral de Adolescentes (CRIA), no Pelourinho, que ele iniciou sua trajetória artística e política.',
@@ -112,7 +117,8 @@ export const actors: MediaProfessional[] = [
     name: 'Jéssica Marques',
     role: 'Atriz',
     quote: 'Quando falamos na nossa língua materna, as intenções ganham mais vida',
-    image: ASSETS.JORNAL.JORNAL1,
+    image: '/jes1.jpg',
+    polaroids: ['/jes2.jpg', '/jes3.avif', '/jes4.avif', '/jes5.webp'],
     bio: 'Conhecida por seu trabalho em novelas como Vale Tudo e séries como Justiça 2. Para ela, lidar com a linguagem é parte central do seu processo de interpretação — e o sotaque baiano, mesmo quando neutralizado, segue presente na essência de sua atuação.',
     content: {
       introduction: 'No universo do audiovisual brasileiro, o sotaque e as expressões regionais são muito mais do que simples detalhes de fala: são elementos que carregam identidade, história e autenticidade cultural.',
@@ -128,7 +134,8 @@ export const actors: MediaProfessional[] = [
     name: 'Ciro Sales',
     role: 'Ator e Gestor Cultural',
     quote: 'A Bahia me ensina a ter ginga, a ter jogo de cintura, a ser adaptável',
-    image: ASSETS.JORNAL.JORNAL2,
+    image: '/ciro1.jpg',
+    polaroids: ['/ciro2.webp', '/ciro3.webp'],
     bio: 'Natural de Salvador, com formação em teatro na Faculdade Social da Bahia e carreira consolidada no Rio de Janeiro. Conhecido por atuações em novelas como Segundo Sol (TV Globo) e por apresentar o Catfish Brasil (MTV).',
     content: {
       introduction: 'Ciro Sales oferece uma perspectiva rica e multifacetada sobre representação do sotaque e da identidade regional na televisão nacional.',
@@ -144,7 +151,8 @@ export const actors: MediaProfessional[] = [
     name: 'Raissa Xavier',
     role: 'Atriz, Roteirista e Produtora Cultural',
     quote: 'Sotaque não se neutraliza. Ele se afirma',
-    image: ASSETS.JORNAL.JORNAL3,
+    image: '/rai1.webp',
+    polaroids: ['/rai2.webp', '/rai3.jpg'],
     bio: 'Natural de Salvador. Formada em Artes Cênicas pela UFBA. Ganhou destaque nacional ao fazer parte do elenco da novela Segundo Sol. Sua atuação chamou atenção pela naturalidade e pela presença marcante — uma artista que não apenas interpreta, mas representa o lugar de onde veio.',
     content: {
       introduction: 'Foi ao se mudar da Bahia para o Rio de Janeiro que Raissa passou a refletir ainda mais sobre o papel do sotaque na construção da identidade e sobre as barreiras enfrentadas por artistas nordestinos no eixo audiovisual.',
@@ -163,7 +171,8 @@ export const influencers: MediaProfessional[] = [
     name: 'Ivan Mesquita',
     role: 'Humorista, Ator e Criador de Conteúdo Digital',
     quote: 'O nosso sotaque também é Brasil, tá ligado?!',
-    image: ASSETS.JORNAL.JORNAL1,
+    image: '/ivan1.webp',
+    polaroids: ['/ivan2.jpeg', '/ivan3.jpg', '/ivan4.jpg'],
     bio: 'Mais conhecido como "Cêro" — gíria baiana que significa "parceiro". Natural de Itabuna, no sul da Bahia, começou sua trajetória produzindo vídeos sobre culinária e história, sempre com uma boa dose de humor. Durante a pandemia, decidiu investir de vez na criação de conteúdo.',
     content: {
       introduction: 'Ivan Mesquita é humorista, ator e criador de conteúdo digital. Seu trabalho ganhou força nas redes sociais por valorizar o sotaque, as expressões populares e o jeito baiano de se comunicar, elementos que se tornaram marcas registradas de sua identidade artística.',
@@ -178,7 +187,8 @@ export const influencers: MediaProfessional[] = [
     name: 'Lucas Pizane',
     role: 'Cantor, Compositor e Produtor Cultural',
     quote: 'O nosso sotaque também é Brasil, tá ligado?!',
-    image: ASSETS.JORNAL.JORNAL2,
+    image: '/piz1.webp',
+    polaroids: ['/piz2.jpg', '/piz3.webp', '/piz4.avif'],
     bio: 'Natural da Ilha de Itaparica (BA). Integrou bandas locais como Os Ninfetos e cursou Produção Cultural. Em 2024, ganhou projeção nacional ao participar do Big Brother Brasil 24. Após o reality, passou a investir na carreira solo, consolidando-se como uma das novas vozes da música baiana contemporânea.',
     videoUrl: 'nTQ6nNxTs_U',
     content: {

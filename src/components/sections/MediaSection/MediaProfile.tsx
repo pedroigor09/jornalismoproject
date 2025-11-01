@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { MediaProfessional } from '@/types/media';
+import FloatingPolaroidsProfile from '@/components/ui/FloatingPolaroidsProfile';
 
 interface MediaProfileProps {
   professional: MediaProfessional;
@@ -62,7 +63,12 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
           ref={imageRef}
           className={`relative ${!isEven ? 'lg:order-2' : ''}`}
         >
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+          {/* Polaroides flutuantes se existirem */}
+          {professional.polaroids && professional.polaroids.length > 0 && (
+            <FloatingPolaroidsProfile images={professional.polaroids} containerHeight="100%" />
+          )}
+          
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl z-0">
             <Image
               src={professional.image}
               alt={professional.name}
