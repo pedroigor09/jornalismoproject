@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { FashionReference } from '@/types/fashion';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface FashionReferencesCarouselProps {
   references: FashionReference[];
@@ -67,7 +68,7 @@ export const FashionReferencesCarousel = ({ references }: FashionReferencesCarou
           >
             {/* Imagem */}
             <Image
-              src={reference.image}
+              src={getAssetPath(reference.image)}
               alt={reference.name}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"

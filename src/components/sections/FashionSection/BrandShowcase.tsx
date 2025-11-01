@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { Brand } from '@/types/fashion';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface BrandShowcaseProps {
   brand: Brand;
@@ -186,7 +187,7 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
                 }`}
               >
                 <Image
-                  src={image}
+                  src={getAssetPath(image)}
                   alt={`${brand.name} - Peça ${index + 1}`}
                   fill
                   className="object-cover"
@@ -264,7 +265,7 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
                 }`}
               >
                 <Image
-                  src={image}
+                  src={getAssetPath(image)}
                   alt={`Thumbnail ${index + 1}`}
                   fill
                   className="object-cover"
