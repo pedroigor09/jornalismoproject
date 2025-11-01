@@ -4,6 +4,7 @@ import { useScrollReveal } from '@/hooks/useScrollReveal';
 import type { Artist } from '@/types/artist';
 import Image from 'next/image';
 import FloatingPolaroidsProfile from '@/components/ui/FloatingPolaroidsProfile';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface ArtistProfileProps {
   artist: Artist;
@@ -30,7 +31,7 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
           
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl z-0">
             <Image
-              src={artist.image}
+              src={getAssetPath(artist.image)}
               alt={artist.name}
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"

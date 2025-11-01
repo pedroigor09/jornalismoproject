@@ -1,11 +1,12 @@
 import { FashionExpert, Brand, FashionReference } from '@/types/fashion';
 import { ASSETS } from './constants';
+import { getAssetPath } from './getAssetPath';
 
 export const fashionExpert: FashionExpert = {
   name: 'Paula Magalhães',
   role: 'Estilosa, Jornalista, Editora e Colunista de Moda',
   quote: 'Vestir baianidade é ser você. Valorizar o que rola sentimento das suas vivências, da sua terra, da maneira que bem entender.',
-  image: '/paula.jpg',
+  image: '/paula.JPG',
   content: {
     introduction: 'Estilosa, jornalista, editora e colunista de moda, Paula Magalhães, uma das maiores referências fashion da Bahia, atua em Salvador com forte presença nos meios de comunicação e em projetos ligados ao universo fashion. Para ela, a moda é um reflexo do modo de ser do baiano e evidencia, nas tendências atuais, a força e a beleza da baianidade.',
     paragraphs: [
@@ -21,32 +22,32 @@ export const fashionReferences: FashionReference[] = [
   {
     name: 'Moab',
     description: 'Alfaiataria desconstruída e contemporânea',
-    image: '/paula1.jpg',
+    image: '/paula1.JPG',
   },
   {
     name: 'Ateliê Mão de Mãe',
     description: 'Une afeto e técnica, reinventando o crochê',
-    image: '/paula2.jpg',
+    image: '/paula2.JPG',
   },
   {
     name: 'Meninos Rei',
     description: 'Leva a estética afro-baiana para o mundo',
-    image: '/paula3.jpg',
+    image: '/paula3.JPG',
   },
   {
     name: 'Geferson Vila Nova',
     description: 'Traduz elegância com originalidade',
-    image: '/paula4.jpg',
+    image: '/paula4.JPG',
   },
   {
     name: 'Irá Salles',
     description: 'Reforça identidade e expressão',
-    image: '/paula5.jpg',
+    image: '/paula5.JPG',
   },
   {
     name: 'Areia',
     description: 'Transforma o simples em sofisticado com moda agênero',
-    image: '/paula6.jpg',
+    image: '/paula6.JPG',
   },
 ];
 

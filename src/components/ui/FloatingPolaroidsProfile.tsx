@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface Polaroid {
   image: string;
@@ -99,7 +100,7 @@ const FloatingPolaroidsProfile: React.FC<FloatingPolaroidsProfileProps> = ({
             {/* Photo */}
             <div className="relative aspect-square bg-gray-200 mb-2.5 overflow-hidden">
               <Image
-                src={polaroid.image}
+                src={getAssetPath(polaroid.image)}
                 alt={`Polaroid ${index + 1}`}
                 fill
                 className="object-cover"

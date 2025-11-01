@@ -2,14 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 const paulaPhotos = [
-  '/paula8.jpg',
-  '/paula9.jpg',
-  '/paula1.jpg',
-  '/paula2.jpg',
-  '/paula3.jpg',
-  '/paula4.jpg',
+  '/paula8.JPG',
+  '/paula9.JPG',
+  '/paula1.JPG',
+  '/paula2.JPG',
+  '/paula3.JPG',
+  '/paula4.JPG',
 ];
 
 const PaulaCarousel: React.FC = () => {
@@ -62,7 +63,7 @@ const PaulaCarousel: React.FC = () => {
             }`}
           >
             <Image
-              src={photo}
+              src={getAssetPath(photo)}
               alt={`Paula Magalhães ${index + 1}`}
               fill
               className="object-cover"
@@ -152,7 +153,7 @@ const PaulaCarousel: React.FC = () => {
             }`}
           >
             <Image
-              src={photo}
+              src={getAssetPath(photo)}
               alt={`Miniatura ${index + 1}`}
               fill
               className="object-cover"

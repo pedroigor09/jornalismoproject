@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface Polaroid {
   image: string;
@@ -15,7 +16,7 @@ interface Polaroid {
 
 const polaroids: Polaroid[] = [
   {
-    image: '/paula4.jpg',
+    image: '/paula4.JPG',
     rotation: -12,
     left: '5%',
     top: '10%',
@@ -23,7 +24,7 @@ const polaroids: Polaroid[] = [
     scale: 0.9,
   },
   {
-    image: '/paula5.jpg',
+    image: '/paula5.JPG',
     rotation: 8,
     left: '85%',
     top: '15%',
@@ -31,7 +32,7 @@ const polaroids: Polaroid[] = [
     scale: 1,
   },
   {
-    image: '/paula6.jpg',
+    image: '/paula6.JPG',
     rotation: -15,
     left: '10%',
     top: '60%',
@@ -39,7 +40,7 @@ const polaroids: Polaroid[] = [
     scale: 0.95,
   },
   {
-    image: '/paula.jpg',
+    image: '/paula.JPG',
     rotation: 10,
     left: '80%',
     top: '65%',
@@ -47,7 +48,7 @@ const polaroids: Polaroid[] = [
     scale: 0.85,
   },
   {
-    image: '/paula1.jpg',
+    image: '/paula1.JPG',
     rotation: -8,
     left: '15%',
     top: '35%',
@@ -55,7 +56,7 @@ const polaroids: Polaroid[] = [
     scale: 0.8,
   },
   {
-    image: '/paula2.jpg',
+    image: '/paula2.JPG',
     rotation: 12,
     left: '82%',
     top: '40%',
@@ -124,7 +125,7 @@ const FloatingPolaroids: React.FC = () => {
             {/* Photo */}
             <div className="relative aspect-square bg-gray-200 mb-3 overflow-hidden">
               <Image
-                src={polaroid.image}
+                src={getAssetPath(polaroid.image)}
                 alt={`Paula Polaroid ${index + 1}`}
                 fill
                 className="object-cover"

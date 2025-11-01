@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { FashionExpert } from '@/types/fashion';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface FashionExpertProfileProps {
   expert: FashionExpert;
@@ -70,7 +71,7 @@ export const FashionExpertProfile = ({ expert }: FashionExpertProfileProps) => {
         <div ref={imageRef} className="relative">
           <div className="relative aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src={expert.image}
+              src={getAssetPath(expert.image)}
               alt={expert.name}
               fill
               className="object-cover"
