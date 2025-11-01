@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Brand } from '@/types/fashion';
 import { getAssetPath } from '@/lib/getAssetPath';
 
+// Componente de showcase de marca com carrossel
 interface BrandShowcaseProps {
   brand: Brand;
 }
