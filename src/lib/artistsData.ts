@@ -6,7 +6,7 @@ export const artistsData: Artist[] = [
     name: 'James Martins',
     role: 'Poeta, Jornalista e Comunicador',
     quote: 'O Rio é o Brasil, São Paulo é o mundo e a Bahia é a Bahia',
-    image: ASSETS.JORNAL.JORNAL1,
+    image: '/jamesmartins.jpg',
     content: {
       introduction: 'Por entre as ondas de sons, palavras e silêncios, o poeta, jornalista e comunicador James Martins faz da Bahia não apenas um tema, mas um modo de expressão.',
       paragraphs: [
@@ -25,7 +25,7 @@ export const artistsData: Artist[] = [
     name: 'Márcia Short',
     role: 'Cantora',
     quote: 'O sotaque e as expressões são a alma da Bahia',
-    image: ASSETS.JORNAL.JORNAL2,
+    image: '/marciashort.jpg',
     content: {
       introduction: 'Conversar com Márcia Short é mergulhar na essência da cultura baiana. Cantora consagrada e uma das vozes mais marcantes do axé e da música afro-baiana.',
       paragraphs: [
@@ -44,7 +44,7 @@ export const artistsData: Artist[] = [
     name: 'Aldri Anunciação',
     role: 'Comunicador, Dramaturgo e Escritor',
     quote: 'A oralidade vem como verniz, mas o que dá vida à narrativa são as ações culturais',
-    image: ASSETS.JORNAL.JORNAL3,
+    image: '/aldrianunciacao.jpg',
     content: {
       introduction: 'O comunicador, dramaturgo e escritor Aldri Anunciação, autor de obras como Namíbia, Não! e Pretamorfose, explica como o dialeto aparece em sua literatura contemporânea.',
       paragraphs: [
