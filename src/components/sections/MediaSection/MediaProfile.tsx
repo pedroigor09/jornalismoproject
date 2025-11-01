@@ -117,14 +117,25 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
           {/* Vídeo se houver */}
           {professional.videoUrl && (
             <div className="mt-8">
-              <div className="aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
-                <iframe
-                  src={`https://www.youtube.com/embed/${professional.videoUrl}`}
-                  title={professional.name}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+              <div className="relative">
+                {/* Badge de destaque */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-black px-6 py-2 rounded-full shadow-xl z-10 flex items-center gap-2">
+                  <span className="text-xl">🎬</span>
+                  <span>ASSISTA O VÍDEO</span>
+                </div>
+                
+                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black border-2 border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-500 hover:scale-[1.02]">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${professional.videoUrl}`}
+                    title={professional.name}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+
+                {/* Efeito de brilho */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-xl -z-10" />
               </div>
             </div>
           )}

@@ -48,6 +48,7 @@ export const journalists: MediaProfessional[] = [
     quote: 'Deus me livre não ser baiano!',
     image: ASSETS.JORNAL.JORNAL3,
     bio: 'Figura carismática e um dos nomes mais queridos do jornalismo baiano contemporâneo. Nascido e criado em Cajazeiras — ou, como ele mesmo costuma dizer, Cajacity —, conquistou o público com seu jeito espontâneo. Mestre em Comunicação e Jornalismo, acumula mais de 20 anos de experiência na televisão.',
+    videoUrl: 'lgvZ2aNf9zk',
     content: {
       introduction: 'Conhecido por bordões marcantes como "Deus me livre não ser baiano", "11:45" e "12x8", ele se tornou um símbolo da baianidade no telejornalismo, levando para as telas o sotaque, o humor e o calor humano típicos da Bahia.',
       paragraphs: [
@@ -179,6 +180,7 @@ export const influencers: MediaProfessional[] = [
     quote: 'O nosso sotaque também é Brasil, tá ligado?!',
     image: ASSETS.JORNAL.JORNAL2,
     bio: 'Natural da Ilha de Itaparica (BA). Integrou bandas locais como Os Ninfetos e cursou Produção Cultural. Em 2024, ganhou projeção nacional ao participar do Big Brother Brasil 24. Após o reality, passou a investir na carreira solo, consolidando-se como uma das novas vozes da música baiana contemporânea.',
+    videoUrl: 'nTQ6nNxTs_U',
     content: {
       introduction: 'Conversar com Lucas Pizane é mergulhar em uma reflexão sobre linguagem, identidade e pertencimento. Para ele, o sotaque baiano é mais que uma característica vocal — é uma forma de expressar autenticidade.',
       paragraphs: [

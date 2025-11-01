@@ -4,6 +4,7 @@ import { MediaProfessional } from '@/types/media';
 import { MediaSectionHeader } from './SectionHeader';
 import { MediaProfile } from './MediaProfile';
 import { CategoryDivider } from './CategoryDivider';
+import { ViralVideoShowcase } from './ViralVideoShowcase';
 
 interface MediaSectionProps {
   title: string;
@@ -22,6 +23,28 @@ export const MediaSection = ({
   actors,
   influencers,
 }: MediaSectionProps) => {
+  // Vídeos virais especiais
+  const viralVideos = [
+    {
+      title: 'Vinicius e a "Pomba Suja"',
+      videoId: 'Kfi2q3VDfoQ',
+      description: 'O momento viral no BBB quando Vinicius usou a expressão baiana "pomba suja" e deixou o Brasil inteiro curioso!',
+      type: 'short' as const,
+    },
+    {
+      title: 'Vanderson: "Deus me livre não ser baiano!"',
+      videoId: 'lgvZ2aNf9zk',
+      description: 'O bordão mais icônico do jornalismo baiano! Vanderson celebrando a baianidade com orgulho.',
+      type: 'video' as const,
+    },
+    {
+      title: 'Vanderson: "11h45"',
+      videoId: '5JJELhj_niI',
+      description: 'Outro momento clássico de Vanderson que virou marca registrada da TV baiana.',
+      type: 'short' as const,
+    },
+  ];
+
   return (
     <section
       id="naquela-pegada"
@@ -91,6 +114,9 @@ export const MediaSection = ({
             />
           ))}
         </div>
+
+        {/* Vídeos Virais */}
+        <ViralVideoShowcase videos={viralVideos} />
 
         {/* Atores */}
         <CategoryDivider title="Cinema & TV" icon="🎬" />
