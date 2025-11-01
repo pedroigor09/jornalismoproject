@@ -80,9 +80,9 @@ export const Z_INDEX = {
 
 export const SITE_CONTENT = {
   HERO: {
-    TITLE: ['baianidade', 'em cada palavra'],
-    SUBTITLE: 'Uma jornada pela identidade, cultura e sotaque que nos define',
-    DESCRIPTION: 'Explorando as gírias, o sotaque e a essência cultural da Bahia',
+    TITLE: ['Sotaque', 'em Pauta'],
+    SUBTITLE: 'Identidade e resistência no falar baiano',
+    DESCRIPTION: '',
   },
   ABOUT: {
     TITLE: 'Mais do que um sotaque',

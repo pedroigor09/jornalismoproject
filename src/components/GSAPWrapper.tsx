@@ -2,7 +2,6 @@
 
 import { useScrollSmoother } from '@/hooks/useScrollSmoother';
 import { useLenisScroll } from '@/hooks/useLenisScroll';
-import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Footer } from '@/components/ui/Footer';
 import { ReactNode } from 'react';
 
@@ -18,7 +17,6 @@ export const GSAPWrapper = ({ children }: GSAPWrapperProps) => {
   return (
     <>
       {children}
-      <ProgressBar />
       <Footer />
     </>
   );

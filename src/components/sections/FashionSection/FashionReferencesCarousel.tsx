@@ -55,14 +55,7 @@ export const FashionReferencesCarousel = ({ references }: FashionReferencesCarou
   }, []);
 
   return (
-    <div ref={containerRef} className="max-w-7xl mx-auto mb-24 px-6">
-      <h3
-        ref={titleRef}
-        className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-      >
-        Referências da Moda Baiana
-      </h3>
-
+    <div ref={containerRef} className="max-w-7xl mx-auto mb-12 px-6">
       <div
         ref={carouselRef}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

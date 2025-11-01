@@ -68,32 +68,6 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
               </p>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🎤</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Entrevistas</h3>
-              <p className="text-gray-600">
-                Vozes autênticas que contam suas histórias
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Mapeamento</h3>
-              <p className="text-gray-600">
-                Regiões, sotaques e expressões locais
-              </p>
-            </div>
-
-            <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">Multimídia</h3>
-              <p className="text-gray-600">
-                Textos, vídeos, áudios e interatividade
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
