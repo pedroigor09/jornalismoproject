@@ -5,6 +5,8 @@ import { FashionSectionHeader } from './SectionHeader';
 import { FashionExpertProfile } from './FashionExpertProfile';
 import { FashionReferencesCarousel } from './FashionReferencesCarousel';
 import { BrandShowcase } from './BrandShowcase';
+import PaulaCarousel from './PaulaCarousel';
+import FloatingPolaroids from './FloatingPolaroids';
 
 interface FashionSectionProps {
   title: string;
@@ -82,6 +84,21 @@ export const FashionSection = ({
         />
 
         <FashionExpertProfile expert={expert} />
+
+        {/* Carrossel de fotos de Paula com polaroides flutuantes */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32">
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent">
+            Referências da Moda Baiana
+          </h3>
+          <p className="text-xl text-center text-pink-100/80 mb-16 max-w-3xl mx-auto">
+            Conheça os criadores que estão moldando a identidade fashion da Bahia
+          </p>
+
+          <div className="relative mb-24">
+            <FloatingPolaroids />
+            <PaulaCarousel />
+          </div>
+        </div>
 
         <FashionReferencesCarousel references={references} />
 
