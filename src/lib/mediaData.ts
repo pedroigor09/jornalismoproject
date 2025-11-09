@@ -51,6 +51,20 @@ export const journalists: MediaProfessional[] = [
     polaroids: ['/van3.jpg', '/van4.jpg', '/van5.jpeg'],
     bio: 'Figura carismática e um dos nomes mais queridos do jornalismo baiano contemporâneo. Nascido e criado em Cajazeiras — ou, como ele mesmo costuma dizer, Cajacity —, conquistou o público com seu jeito espontâneo. Mestre em Comunicação e Jornalismo, acumula mais de 20 anos de experiência na televisão.',
     videoUrl: 'lgvZ2aNf9zk',
+    audioClips: [
+      JSON.stringify({
+        src: '/vandersson1.m4a',
+        transcript: 'O sotaque é uma forma de identidade cultural que traz raízes, memórias e referências. Ele carrega em si a história de um povo, o jeito de ver e sentir o mundo.',
+        speaker: 'Vanderson Nascimento',
+        afterParagraph: 0
+      }),
+      JSON.stringify({
+        src: '/vandersson2.m4a',
+        transcript: 'É sobre valorizar a linguagem, a identidade baiana, o povo baiano, o jeito baiano de falar e comunicar como o povo quer ver — não só na frente da câmera, mas em todo lugar.',
+        speaker: 'Vanderson Nascimento',
+        afterParagraph: 1
+      })
+    ],
     content: {
       introduction: 'Conhecido por bordões marcantes como "Deus me livre não ser baiano", "11:45" e "12x8", ele se tornou um símbolo da baianidade no telejornalismo, levando para as telas o sotaque, o humor e o calor humano típicos da Bahia.',
       paragraphs: [
@@ -67,6 +81,20 @@ export const journalists: MediaProfessional[] = [
     image: '/luana1.jpg',
     polaroids: ['/luana2.png', '/luana3.webp', '/luana4.jpg', '/luana5.jpeg'],
     bio: 'Natural de Cachoeira, no Recôncavo Baiano. Formada em Jornalismo pela UFRB, mestre em Cultura e Sociedade pela UFBA. Atua na Rede Bahia, onde já apresentou programas como Mosaico Baiano e Conversa Preta. Defensora da valorização das vozes negras e da linguagem regional.',
+    audioClips: [
+      JSON.stringify({
+        src: '/luana1.m4a',
+        transcript: 'O nosso sotaque tem uma musicalidade que transmite acolhimento e proximidade. Ele carrega um jeito afetuoso de se comunicar, sem deixar de ser firme quando é necessário. Há um senso de verdade e de identidade muito forte. É como se dissesse: "Eu sou daqui, eu falo assim, e isso também é Brasil".',
+        speaker: 'Luana Souza',
+        afterParagraph: 0
+      }),
+      JSON.stringify({
+        src: '/luana2.m4a',
+        transcript: 'Na minha primeira entrada ao vivo, a apresentadora disse: "Ai, que sotaque lindo, tinha que ser da Bahia!". Não vi maldade, mas percebo situações sutis, como quando dizem: "Seu jeito de falar é bonitinho, mas será que não te atrapalha?". Às vezes questionam se consigo transmitir uma notícia séria com esse sotaque, como se ele não combinasse com autoridade. Já vi também pessoas imitando meu modo de falar de forma caricatural. Isso mostra o quanto o sotaque ainda é visto como estereótipo.',
+        speaker: 'Luana Souza',
+        afterParagraph: 2
+      })
+    ],
     content: {
       introduction: 'Com um timbre doce e firme, Luana Souza tem se destacado no cenário baiano por unir credibilidade e identidade em sua forma de comunicar. Para ela, o sotaque baiano é mais do que uma característica vocal — é uma expressão de pertencimento e afeto.',
       paragraphs: [

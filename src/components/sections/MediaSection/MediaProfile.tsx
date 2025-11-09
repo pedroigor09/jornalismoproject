@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { MediaProfessional } from '@/types/media';
 import { getAssetPath } from '@/lib/getAssetPath';
+import { AudioPlayer } from '@/components/ui/AudioPlayer';
 
 interface MediaProfileProps {
   professional: MediaProfessional;
@@ -106,13 +107,39 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
             {professional.content.introduction}
           </p>
 
-          {/* Parágrafos */}
+          {/* Parágrafos com áudios intercalados */}
           <div className="space-y-5">
-            {professional.content.paragraphs.map((paragraph, idx) => (
-              <p key={idx} className="text-gray-400 text-sm md:text-base leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+            {professional.content.paragraphs.map((paragraph, idx) => {
+              // Parse dos áudios para encontrar qual deve aparecer após este parágrafo
+              const audioClips = professional.audioClips || [];
+              const audioAfterThis = audioClips
+                .map(clip => {
+                  try {
+                    return JSON.parse(clip);
+                  } catch {
+                    return null;
+                  }
+                })
+                .filter(clip => clip && clip.afterParagraph === idx);
+
+              return (
+                <div key={idx}>
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                    {paragraph}
+                  </p>
+                  
+                  {/* Renderiza áudio se houver um após este parágrafo */}
+                  {audioAfterThis.map((audio, audioIdx) => (
+                    <AudioPlayer
+                      key={audioIdx}
+                      src={audio.src}
+                      transcript={audio.transcript}
+                      speaker={audio.speaker}
+                    />
+                  ))}
+                </div>
+              );
+            })}
           </div>
 
           {/* Vídeo se houver */}
