@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { MediaProfessional } from '@/types/media';
 import { getAssetPath } from '@/lib/getAssetPath';
 import { AudioPlayer } from '@/components/ui/AudioPlayer';
+import { FloatingPolaroids } from './FloatingPolaroids';
 
 interface MediaProfileProps {
   professional: MediaProfessional;
@@ -59,12 +60,13 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
       className={`max-w-7xl mx-auto mb-32 px-6 ${!isEven ? 'lg:flex-row-reverse' : ''}`}
     >
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
-        {/* Imagem */}
+        {/* Imagem com Polaroids */}
         <div
           ref={imageRef}
           className={`relative ${!isEven ? 'lg:order-2' : ''}`}
         >
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl z-0">
+          {/* Foto principal */}
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
             <Image
               src={getAssetPath(professional.image)}
               alt={professional.name}
@@ -86,6 +88,16 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
               )}
             </div>
           </div>
+
+          {/* Polaroids Flutuantes - FORA da foto principal */}
+          {professional.polaroids && professional.polaroids.length > 0 && (
+            <div className="absolute inset-0 pointer-events-none hidden lg:block">
+              <FloatingPolaroids 
+                images={professional.polaroids} 
+                alignRight={isEven}
+              />
+            </div>
+          )}
         </div>
 
         {/* Conteúdo */}

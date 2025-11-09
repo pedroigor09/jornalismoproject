@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { getAssetPath } from '@/lib/getAssetPath';
 
 interface AudioPlayerProps {
@@ -14,6 +14,17 @@ export const AudioPlayer = ({ src, transcript, speaker }: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  // Gera valores aleatórios apenas uma vez para evitar erro de hidratação
+  const waveHeights = useMemo(() => 
+    Array.from({ length: 40 }, () => Math.random() * 100),
+    []
+  );
+
+  const waveDurations = useMemo(() => 
+    Array.from({ length: 40 }, () => 0.5 + Math.random() * 0.5),
+    []
+  );
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -160,8 +171,12 @@ export const AudioPlayer = ({ src, transcript, speaker }: AudioPlayerProps) => {
               key={i}
               className="w-1 bg-gradient-to-t from-orange-500 to-red-500 rounded-full transition-all duration-300"
               style={{
-                height: `${isPlaying ? Math.random() * 100 : 20}%`,
-                animation: isPlaying ? `wave ${0.5 + Math.random() * 0.5}s ease-in-out infinite alternate` : 'none',
+                height: `${isPlaying ? waveHeights[i] : 20}%`,
+                animationName: isPlaying ? 'wave' : 'none',
+                animationDuration: `${waveDurations[i]}s`,
+                animationTimingFunction: 'ease-in-out',
+                animationIterationCount: 'infinite',
+                animationDirection: 'alternate',
                 animationDelay: `${i * 0.05}s`,
               }}
             />
