@@ -1,7 +1,7 @@
 'use client';
 
 import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
-import { CoqueiroAnimated, CoqueiroBackground } from '@/components/ui';
+import { CoqueiroAnimated } from '@/components/ui';
 import { useFadeIn } from '@/hooks/useFadeIn';
 
 interface SobreProjetoProps {
@@ -13,9 +13,6 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
   
   return (
     <section id="o-baiano-tem-o-molho" className={`relative py-32 px-6 ${backgroundColor} overflow-hidden`}>
-      {/* Coqueiros de background */}
-      <CoqueiroBackground count={12} />
-      
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">

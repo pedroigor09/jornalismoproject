@@ -170,7 +170,7 @@ export const influencers: MediaProfessional[] = [
   {
     name: 'Ivan Mesquita',
     role: 'Humorista, Ator e Criador de Conteúdo Digital',
-    quote: 'O nosso sotaque também é Brasil, tá ligado?!',
+    quote: '',
     image: '/ivan1.webp',
     polaroids: ['/ivan2.jpeg', '/ivan3.jpg', '/ivan4.jpg'],
     bio: 'Mais conhecido como "Cêro" — gíria baiana que significa "parceiro". Natural de Itabuna, no sul da Bahia, começou sua trajetória produzindo vídeos sobre culinária e história, sempre com uma boa dose de humor. Durante a pandemia, decidiu investir de vez na criação de conteúdo.',

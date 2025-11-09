@@ -15,3 +15,4 @@ export { CoqueiroAnimated } from './CoqueiroAnimated';
 export { CoqueiroBackground } from './CoqueiroBackground';
 export { NavigationButtons } from './NavigationButtons';
 export { Navbar } from './Navbar';
+export { AudioPlayer } from './AudioPlayer';

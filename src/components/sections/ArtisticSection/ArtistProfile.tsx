@@ -3,8 +3,8 @@
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import type { Artist } from '@/types/artist';
 import Image from 'next/image';
-import FloatingPolaroidsProfile from '@/components/ui/FloatingPolaroidsProfile';
 import { getAssetPath } from '@/lib/getAssetPath';
+import { AudioPlayer } from '@/components/ui/AudioPlayer';
 
 interface ArtistProfileProps {
   artist: Artist;
@@ -24,11 +24,6 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
       <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12 ${isEven ? '' : 'lg:grid-flow-dense'}`}>
         {/* Imagem do Artista */}
         <div className={`relative ${isEven ? '' : 'lg:col-start-2'}`}>
-          {/* Polaroides flutuantes se existirem */}
-          {artist.polaroids && artist.polaroids.length > 0 && (
-            <FloatingPolaroidsProfile images={artist.polaroids} containerHeight="100%" />
-          )}
-          
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-2xl z-0">
             <Image
               src={getAssetPath(artist.image)}
@@ -84,19 +79,44 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
           <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
         </div>
 
-        {/* Parágrafos */}
+        {/* Parágrafos com áudios intercalados */}
         <div className="space-y-6">
-          {artist.content.paragraphs.map((paragraph, idx) => (
-            <p
-              key={idx}
-              className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed"
-              style={{
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-              }}
-            >
-              {paragraph}
-            </p>
-          ))}
+          {artist.content.paragraphs.map((paragraph, idx) => {
+            // Parse dos áudios para encontrar qual deve aparecer após este parágrafo
+            const audioClips = artist.content.audioClips || [];
+            const audioAfterThis = audioClips
+              .map(clip => {
+                try {
+                  return JSON.parse(clip);
+                } catch {
+                  return null;
+                }
+              })
+              .filter(clip => clip && clip.afterParagraph === idx);
+
+            return (
+              <div key={idx}>
+                <p
+                  className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed"
+                  style={{
+                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                  }}
+                >
+                  {paragraph}
+                </p>
+                
+                {/* Renderiza áudio se houver um após este parágrafo */}
+                {audioAfterThis.map((audio, audioIdx) => (
+                  <AudioPlayer
+                    key={audioIdx}
+                    src={audio.src}
+                    transcript={audio.transcript}
+                    speaker={audio.speaker}
+                  />
+                ))}
+              </div>
+            );
+          })}
         </div>
 
         {/* Imagens Adicionais */}

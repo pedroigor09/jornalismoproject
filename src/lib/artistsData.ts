@@ -39,6 +39,14 @@ export const artistsData: Artist[] = [
         'No entanto, ela defende que preservar essas formas de expressão é também um ato político.',
         'Entre reflexões e risadas, Márcia Short deixa claro que o que move sua arte é o mesmo que move o povo baiano: a verdade na expressão.',
       ],
+      audioClips: [
+        JSON.stringify({
+          src: '/audiomarcia2.ogg',
+          transcript: 'As pessoas se identificam na hora. É um sentimento de pertencimento. É como se dissesse: "a gente tá falando a mesma língua". Isso cria uma comunicação verdadeira, de igual pra igual.',
+          speaker: 'Márcia Short',
+          afterParagraph: 3
+        })
+      ],
     },
   },
   {
