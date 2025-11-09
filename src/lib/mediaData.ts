@@ -131,13 +131,37 @@ export const actors: MediaProfessional[] = [
     image: '/evaldo1.webp',
     polaroids: ['/evaldo2.avif', '/evaldo3.avif', '/evaldo4.avif', '/evaldo5.avif'],
     bio: 'Natural de Salvador, nasceu no bairro de Cosme de Farias. Formado em Pedagogia pela UCSal, construiu uma carreira marcada pela consciência social e pelo compromisso com a valorização da cultura baiana. Em 2024, ganhou destaque nacional ao interpretar Jupará na novela Renascer.',
+    audioClips: [
+      JSON.stringify({
+        src: '/macarrao1.mp3',
+        transcript: 'A importância é a constatação do que é, né? A gente conta nossa história na Bahia, em Salvador, a partir das revoltas, da independência, mas a gente também conta outras histórias em outros lugares.',
+        speaker: 'Evaldo Macarrão',
+        afterParagraph: 1
+      }),
+      JSON.stringify({
+        src: '/macarrao2.mp3',
+        transcript: 'Eu nunca tive pressão para mudar meu sotaque. Muito pelo contrário, às vezes pedem até que eu faça o sotaque baiano de Salvador, às vezes eu até resisto um pouco, porque quero brincar com outros sotaques da Bahia, que é tão grande e diversa.',
+        speaker: 'Evaldo Macarrão',
+        afterParagraph: 4
+      }),
+      JSON.stringify({
+        src: '/macarrao3.mp3',
+        transcript: 'Eu quero representar, mas também conectar e convocar. Quero me conectar com o público que ainda está à margem. Que essa novela possa entrar na casa dessas pessoas pedindo licença e convocando a sonharem.',
+        speaker: 'Evaldo Macarrão',
+        afterParagraph: 6
+      })
+    ],
     content: {
-      introduction: 'Evaldo Maurício Silva — conhecido como Evaldo Macarrão — encontrou na arte uma forma de expressão e resistência. Foi no Centro de Referência Integral de Adolescentes (CRIA), no Pelourinho, que ele iniciou sua trajetória artística e política.',
+      introduction: 'Natural de Salvador, Evaldo Maurício Silva, conhecido como Evaldo Macarrão, nasceu no bairro de Cosme de Farias. Desde cedo, o ator encontrou na arte uma forma de expressão e resistência. Foi no Centro de Referência Integral de Adolescentes (CRIA), no Pelourinho, que ele iniciou sua trajetória artística e política, entendendo que o teatro podia ser também uma ferramenta de transformação social.',
       paragraphs: [
-        'A importância é a constatação do que é, né? A gente conta nossa história na Bahia, em Salvador, a partir das revoltas, da independência, mas a gente também conta outras histórias em outros lugares. A gente chega em outros estados e vê corpos baianos trabalhando, reconstruindo esse lugar.',
-        'Eu nunca tive pressão para mudar meu sotaque. Muito pelo contrário — às vezes pedem até que eu faça o sotaque baiano de Salvador. Às vezes eu até resisto um pouco, porque quero brincar com outros sotaques da Bahia, que é tão grande e diversa.',
-        'Eu quero representar, mas também conectar e convocar. Quero me conectar com o público que ainda está à margem. Que essa novela possa entrar na casa dessas pessoas pedindo licença e convocando a sonharem.',
-        'Eu tô aqui no Rio, mas tô sempre retornando pra minha casa, porque preciso me fortalecer, olhar pros meus e encontrar base. A Bahia é o mundo, e o mundo precisa ouvir a nossa voz.',
+        'Formado em Pedagogia pela Universidade Católica de Salvador (UCSal), Macarrão construiu uma carreira marcada pela consciência social, pela força de suas raízes e pelo compromisso com a valorização da cultura baiana. No teatro, no cinema e na televisão, seu trabalho ecoa a pluralidade do Nordeste. Em 2024, ganhou destaque nacional ao interpretar Jupará, na novela Renascer, um papel que o ator define como "uma beleza ancestral", por permitir representar sua terra com verdade e orgulho.',
+        'Vivendo atualmente no Rio de Janeiro, Evaldo fala sobre como percebe a presença nordestina em diversos espaços e sobre o impacto dessa migração na construção cultural do país.',
+        'Para ele, o Nordeste sempre teve como propósito somar e não dividir, e essa força se reflete em todas as áreas: do trabalho à cultura. O ator vê na presença baiana uma marca de resistência e contribuição fundamental para o Brasil contemporâneo.',
+        'Evaldo nunca encarou seu sotaque como barreira. Pelo contrário, o considera parte essencial da sua arte e identidade.',
+        'Sua atuação é uma forma de mobilizar, inspirar e representar corpos pretos e nordestinos que ainda vivem em vulnerabilidade.',
+        'Evaldo reconhece que deve muito aos artistas que abriram caminho, nomes como Lázaro Ramos, Érico Brás, Luiz Miranda, Valdinéia Soriano e Edvana Carvalho, e afirma que hoje sente o compromisso de fortalecer esse chão seguro para as próximas gerações. Mesmo longe da Bahia, o ator faz questão de retornar com frequência ao seu lugar de origem.',
+        '"Eu tô aqui no Rio, mas tô sempre retornando pra minha casa, porque preciso me fortalecer, olhar pros meus e encontrar base. Quando a gente tem isso de meta, a gente não se perde."',
+        'Evaldo Macarrão segue como um dos nomes mais potentes da nova geração de artistas baianos. Seu sotaque, sua presença e seu discurso são parte de um movimento maior: de afirmação, ancestralidade e pertencimento. "Eu quero estar num lugar que me dê dignidade na minha fala, no meu jeito, pra que o público se veja e se reconheça. A Bahia é o mundo, e o mundo precisa ouvir a nossa voz."',
       ],
     },
   },
