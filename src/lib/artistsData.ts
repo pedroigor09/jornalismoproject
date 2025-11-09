@@ -28,9 +28,8 @@ export const artistsData: Artist[] = [
     image: '/marciashort.jpg',
     polaroids: ['/marcia1.jpg', '/marcia2.avif', '/marcia3.jpg', '/marcia4.jpeg', '/marcia5.jpg'],
     content: {
-      introduction: 'Conversar com Márcia Short é mergulhar na essência da cultura baiana. Cantora consagrada e uma das vozes mais marcantes do axé e da música afro-baiana.',
+      introduction: 'Conversar com Márcia Short é mergulhar na essência da cultura baiana. Cantora consagrada e uma das vozes mais marcantes do axé e da música afro-baiana, Márcia fala sobre arte, linguagem e identidade com a mesma força e naturalidade com que pisa no palco. Para ela, cada palavra, gíria ou expressão carrega o peso simbólico da história e do afeto do povo da Bahia.',
       paragraphs: [
-        'Para ela, cada palavra, gíria ou expressão carrega o peso simbólico da história e do afeto do povo da Bahia.',
         'Segundo a artista, a linguagem vai muito além de um aspecto comunicativo — é um espelho da identidade e da alegria do povo baiano.',
         'Márcia relembra que essa forma de expressão nasceu da vivência cotidiana, das ruas, dos blocos afros e dos ensaios populares.',
         'A artista destaca ainda que o público se conecta imediatamente quando reconhece uma expressão típica nas canções.',
@@ -41,10 +40,16 @@ export const artistsData: Artist[] = [
       ],
       audioClips: [
         JSON.stringify({
+          src: '/audiomarcia3.ogg',
+          transcript: 'As gírias, as expressões, o sotaque, o jeito de falar e até o jeito de dançar… tudo faz parte da cultura do povo desse lugar.',
+          speaker: 'Márcia Short',
+          afterIntroduction: true
+        }),
+        JSON.stringify({
           src: '/audiomarcia2.ogg',
           transcript: 'As pessoas se identificam na hora. É um sentimento de pertencimento. É como se dissesse: "a gente tá falando a mesma língua". Isso cria uma comunicação verdadeira, de igual pra igual.',
           speaker: 'Márcia Short',
-          afterParagraph: 3
+          afterParagraph: 2
         })
       ],
     },

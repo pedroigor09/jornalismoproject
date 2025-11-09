@@ -72,6 +72,28 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
           </p>
         </div>
 
+        {/* Áudio após introdução */}
+        {artist.content.audioClips && artist.content.audioClips.length > 0 && (() => {
+          const audioAfterIntro = artist.content.audioClips
+            .map(clip => {
+              try {
+                return JSON.parse(clip);
+              } catch {
+                return null;
+              }
+            })
+            .filter(clip => clip && clip.afterIntroduction);
+
+          return audioAfterIntro.map((audio, audioIdx) => (
+            <AudioPlayer
+              key={audioIdx}
+              src={audio.src}
+              transcript={audio.transcript}
+              speaker={audio.speaker}
+            />
+          ));
+        })()}
+
         {/* Barra Decorativa */}
         <div className="flex items-center gap-4 my-10">
           <div className="h-0.5 flex-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
