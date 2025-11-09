@@ -22,7 +22,6 @@ export const FashionReferencesCarousel = ({ references }: FashionReferencesCarou
     if (!containerRef.current || !carouselRef.current) return;
 
     const ctx = gsap.context(() => {
-      // Animação do título
       gsap.from(titleRef.current, {
         scrollTrigger: {
           trigger: containerRef.current,
@@ -34,7 +33,6 @@ export const FashionReferencesCarousel = ({ references }: FashionReferencesCarou
         y: 30,
       });
 
-      // Animação dos cards com stagger
       const cards = carouselRef.current?.querySelectorAll('.fashion-card');
       if (cards) {
         gsap.from(cards, {
