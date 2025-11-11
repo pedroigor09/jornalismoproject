@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import './PageNavigation.css';
 
 interface PageNavigationProps {
@@ -17,13 +18,13 @@ export const PageNavigation = ({
 }: PageNavigationProps) => {
   return (
     <div className="page-navigation-container">
-      <a href={backHref} className="nav-button nav-button-back">
+      <Link href={backHref} className="nav-button nav-button-back">
         {backLabel}
-      </a>
+      </Link>
       
-      <a href={nextHref} className="nav-button nav-button-next">
+      <Link href={nextHref} className="nav-button nav-button-next">
         {nextLabel}
-      </a>
+      </Link>
     </div>
   );
 };
