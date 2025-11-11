@@ -6,12 +6,21 @@ export function BookPreloader() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Remove o preloader após 3 segundos, independente de qualquer coisa
+    // Previne scroll enquanto o preloader está ativo
+    document.body.style.overflow = 'hidden';
+
+    // Remove o preloader após 3 segundos
     const timer = setTimeout(() => {
       setIsVisible(false);
+      // Libera o scroll quando o preloader desaparece
+      document.body.classList.add('preloader-loaded');
+      document.body.style.overflow = '';
     }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = '';
+    };
   }, []);
 
   if (!isVisible) {

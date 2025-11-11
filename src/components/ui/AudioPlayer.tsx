@@ -14,6 +14,7 @@ export const AudioPlayer = ({ src, transcript, speaker }: AudioPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   // Gera valores aleatórios apenas uma vez para evitar erro de hidratação
   const waveHeights = useMemo(() => 
@@ -25,6 +26,11 @@ export const AudioPlayer = ({ src, transcript, speaker }: AudioPlayerProps) => {
     Array.from({ length: 40 }, () => 0.5 + Math.random() * 0.5),
     []
   );
+
+  // Garante que os valores aleatórios só são usados após a hidratação
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -166,7 +172,7 @@ export const AudioPlayer = ({ src, transcript, speaker }: AudioPlayerProps) => {
 
         {/* Visualização de onda (decorativo) */}
         <div className="mt-6 flex items-center justify-center gap-1 h-12 opacity-30">
-          {[...Array(40)].map((_, i) => (
+          {isClient && [...Array(40)].map((_, i) => (
             <div
               key={i}
               className="w-1 bg-gradient-to-t from-orange-500 to-red-500 rounded-full transition-all duration-300"

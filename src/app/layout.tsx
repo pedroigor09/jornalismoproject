@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Open_Sans, Noto_Sans } from "next/font/google";
 import { BookPreloader } from "@/components/BookPreloader";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { NavigationButtons } from "@/components/ui/NavigationButtons";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -28,8 +30,14 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${notoSans.variable} font-[var(--font-open-sans)] antialiased`}
       >
+        {/* Componente que força scroll ao topo em toda navegação */}
+        <ScrollToTop />
+        
         {/* Preloader completamente isolado - não afeta o DOM principal */}
         <BookPreloader />
+        
+        {/* Botões de navegação globais */}
+        <NavigationButtons />
         
         {/* Conteúdo principal sempre renderizado */}
         {children}

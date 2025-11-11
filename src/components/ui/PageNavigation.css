@@ -1,0 +1,157 @@
+.page-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  background: transparent;
+}
+
+.nav-button {
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button-back {
+  background: linear-gradient(
+    135deg,
+    #4a5568 0%,
+    #2d3748 50%,
+    #1a202c 100%
+  );
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button-back:hover {
+  background: linear-gradient(
+    135deg,
+    #5a6778 0%,
+    #3d4758 50%,
+    #2a303c 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.nav-button-next {
+  background: linear-gradient(
+    135deg,
+    #ff6b35 0%,
+    #f7931e 25%,
+    #fdc830 50%,
+    #f37335 75%,
+    #ff6b35 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  box-shadow: 0 4px 20px rgba(243, 115, 53, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.nav-button-next::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.nav-button-next:hover::before {
+  opacity: 1;
+}
+
+.nav-button-next:hover {
+  color: #1a0f0a;
+  animation: spring 300ms ease-out, gradientFlow 15s ease infinite;
+  text-shadow: 0 1px 2px rgba(255, 215, 0, 0.8);
+  font-weight: bold;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(243, 115, 53, 0.6);
+}
+
+.nav-button:active {
+  transform: translateY(2px);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+    transform-origin: center center;
+    transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+    transform-origin: center center;
+    transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+    transform-origin: center center;
+    transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+    transform-origin: center center;
+    transform: scale(1, 1);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .page-navigation-container {
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-navigation-container {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+  
+  .nav-button {
+    width: 100%;
+    text-align: center;
+  }
+}

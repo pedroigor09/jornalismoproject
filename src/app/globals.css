@@ -3,6 +3,27 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Previne flash de conteúdo antes do preloader carregar */
+body {
+  overflow: hidden;
+}
+
+body.preloader-loaded {
+  overflow: auto !important;
+}
+
+/* Esconde todo conteúdo exceto o preloader até carregar */
+body > main,
+body > div:not([class*="preloader"]) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+body.preloader-loaded > main,
+body.preloader-loaded > div:not([class*="preloader"]) {
+  opacity: 1;
+}
+
 :root {
   --font-open-sans: var(--font-open-sans);
   --font-noto-sans: var(--font-noto-sans);
