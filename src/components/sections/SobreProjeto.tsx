@@ -1,7 +1,6 @@
 'use client';
 
 import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
-import { CoqueiroAnimated } from '@/components/ui';
 import { useFadeIn } from '@/hooks/useFadeIn';
 
 interface SobreProjetoProps {
@@ -16,11 +15,9 @@ export const SobreProjeto = ({ backgroundColor = 'bg-beige-50' }: SobreProjetoPr
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <CoqueiroAnimated side="left" size="lg" />
             <LiquifyTitle className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 bg-clip-text text-transparent">
-              O Baiano tem o molho!
+              "O Baiano tem o molho!"
             </LiquifyTitle>
-            <CoqueiroAnimated side="right" size="lg" />
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto mb-8" />
         </div>
