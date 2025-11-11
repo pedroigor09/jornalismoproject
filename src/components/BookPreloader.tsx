@@ -1,13 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export function BookPreloader() {
   const [isVisible, setIsVisible] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
+    // Mostra o preloader ao mudar de página
+    setIsVisible(true);
+    
     // Previne scroll enquanto o preloader está ativo
     document.body.style.overflow = 'hidden';
+    document.body.classList.remove('preloader-loaded');
 
     // Remove o preloader após 3 segundos
     const timer = setTimeout(() => {
@@ -21,7 +27,7 @@ export function BookPreloader() {
       clearTimeout(timer);
       document.body.style.overflow = '';
     };
-  }, []);
+  }, [pathname]); // Re-executa quando a rota muda
 
   if (!isVisible) {
     return null;

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import './Navbar.css';
 
 export const Navbar = () => {
@@ -19,9 +20,9 @@ export const Navbar = () => {
       <ul className="navbar-menu">
         {menuItems.map((item, index) => (
           <li key={index} className="navbar-item">
-            <a href={item.link}>
+            <Link href={item.link} prefetch={false}>
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
