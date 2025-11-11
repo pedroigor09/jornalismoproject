@@ -57,6 +57,14 @@
   font-weight: 500;
 }
 
+.navbar-item a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .navbar-item:hover {
   background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
   background-size: 100% 100%;
