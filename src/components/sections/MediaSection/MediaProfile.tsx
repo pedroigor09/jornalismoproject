@@ -94,7 +94,7 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
             <div className="absolute inset-0 pointer-events-none hidden lg:block">
               <FloatingPolaroids 
                 images={professional.polaroids} 
-                alignRight={isEven}
+                alignRight={!isEven}
               />
             </div>
           )}
