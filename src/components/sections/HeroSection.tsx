@@ -1,44 +1,57 @@
 'use client';
 
-import { useReverseScroll } from '@/hooks/useReverseScroll';
-import { LiquifyTitle } from '@/components/ui/LiquifyTitle';
-import { ASSETS } from '@/lib/constants';
+import { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import gsap from 'gsap';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 interface HeroSectionProps {
   title: string[];
   descriptions: string[];
-  imageUrl: string;
+  imageUrl?: string;
   imageAlt?: string;
 }
-
 
 export const HeroSection = ({
   title,
   descriptions,
-  imageUrl,
-  imageAlt = 'Hero Image'
 }: HeroSectionProps) => {
-  const textRef = useReverseScroll();
-  const imageRef = useReverseScroll();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Animação da imagem
+      gsap.from(imageRef.current, {
+        opacity: 0,
+        scale: 0.95,
+        duration: 1.5,
+        ease: 'power3.out',
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="flex items-start pt-4 md:pt-8 pb-12 md:pb-24 px-4 md:px-12 lg:px-24 min-h-screen">
-      <div className="flex flex-col xl:flex-row justify-between items-start grow gap-8 md:gap-16 lg:gap-24">
-        <div ref={textRef} className="reverse-scroll flex-1">
-          <LiquifyTitle as="h1" className="heading font-semibold leading-[0.8]">
-            {title.map((line, index) => (
-              <span key={index}>
-                {line}
-                {index < title.length - 1 && <br />}
-              </span>
-            ))}
-          </LiquifyTitle>
-          {descriptions.map((desc, index) => (
-            <p key={index} className={`${index === 0 ? 'pt-4 md:pt-8 text-lg md:text-xl lg:text-2xl' : 'pt-2 md:pt-4 text-base md:text-lg lg:text-xl'} px-2 font-semibold`}>
-              {desc}
-            </p>
-          ))}
-        </div>
+    <section 
+      ref={containerRef}
+      className="relative flex items-center justify-center min-h-screen overflow-hidden bg-[#FF5722]"
+    >
+      {/* Imagem principal que cobre toda a tela */}
+      <div ref={imageRef} className="relative w-full h-screen">
+        <Image
+          src={getAssetPath('/sotaquehome.png')}
+          alt="Sotaque em Pauta - A identidade e resistência no falar baiano"
+          fill
+          priority
+          className="object-cover"
+          style={{
+            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))',
+          }}
+        />
       </div>
     </section>
   );

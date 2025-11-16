@@ -136,7 +136,7 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
 
               return (
                 <div key={idx}>
-                  <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                     {paragraph}
                   </p>
                   
