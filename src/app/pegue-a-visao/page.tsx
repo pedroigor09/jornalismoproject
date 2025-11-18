@@ -5,6 +5,7 @@ import { ColorStripe } from '@/components/ui/ColorStripe';
 import { Navbar } from '@/components/ui/Navbar';
 import { PageNavigation } from '@/components/ui/PageNavigation';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
+import { Timeline } from '@/components/ui/Timeline';
 
 export default function PegueAVisaoPage() {
   return (
@@ -23,6 +24,43 @@ export default function PegueAVisaoPage() {
           ]}
           carouselCaption="Fotos do Atlas Linguístico do Brasil (ALiB)"
           carouselPosition={3}
+          customComponent={
+            <Timeline 
+              events={[
+                {
+                  period: '1500–1600',
+                  title: 'Presença Tupinambá no Recôncavo',
+                  description: 'A base da língua geral indígena, com vocabulário, fonética e entonação que marcaram profundamente a fala cotidiana da região.'
+                },
+                {
+                  period: 'Século XVII',
+                  title: 'Expansão do porto de Salvador',
+                  description: 'Salvador se torna ponto estratégico do Atlântico, intensificando a circulação de povos africanos de diferentes etnias e línguas.'
+                },
+                {
+                  period: 'Século XVIII',
+                  title: 'Convívio linguístico intensificado',
+                  description: 'Iorubás, jejes, hauçás, angolas e quicongos entram em contato com colonos portugueses, indígenas e crioulos. Surge uma fala marcada pelo multilinguismo cotidiano.'
+                },
+                {
+                  period: 'Início do século XIX',
+                  title: 'Formação de redes urbanas negras',
+                  description: 'Igrejas, irmandades, mercados e organizações negras urbanas consolidam expressões, ritmos e estruturas de fala.'
+                },
+                {
+                  period: '1823',
+                  title: 'Independência da Bahia',
+                  description: 'Mais que evento político, o período marca a afirmação de uma identidade baiana em que língua, cultura e resistência se entrelaçam.'
+                },
+                {
+                  period: 'Pós-Independência',
+                  title: 'A fala baiana se afirma como identidade',
+                  description: 'Processo lento, mas contínuo: a fala passa a carregar símbolos culturais, musicais e religiosos que permanecem no presente.'
+                }
+              ]}
+            />
+          }
+          customComponentPosition={1}
           introText={`A Bahia é, sem dúvida, um território onde cada palavra carrega história. Um lugar em que a língua não é apenas instrumento de comunicação, mas um documento vivo de quem resistiu, lutou, negociou e reinventou o próprio modo de existir. Basta atravessar a cidade para perceber: no Subúrbio, o "bora" embala o cotidiano; no Pelourinho, o "véi" ecoa entre ladeiras, turistas e tambores; e o clássico "oxente" — esse patrimônio afetivo — denuncia de longe que um baiano chegou. Mas esse modo de falar não nasceu do acaso: é fruto de séculos de encontros, rupturas, diálogos e permanências culturais que compõem o que hoje chamamos de baianidade.
 
 A formação linguística baiana começa muito antes de 1823, ano da Independência da Bahia — episódio que consolidou o estado como símbolo de resistência no Brasil. Desde o período colonial, Salvador já funcionava como um dos maiores portos do Atlântico, recebendo povos africanos de diferentes etnias, como iorubás, jejes, hauçás, quicongos e angolas; além de populações indígenas, principalmente tupinambás, que habitavam o Recôncavo muito antes da chegada dos portugueses. A convivência multidirecional entre esses grupos — forçada, negociada ou espontânea — moldou não só costumes, práticas religiosas e ritmos musicais, mas também a própria estrutura do português que se fala aqui. O idioma ganhou sabores, sons, entonações e ritmos novos, criando uma fala que carrega, ao mesmo tempo, histórias de perda, resistência e criação.

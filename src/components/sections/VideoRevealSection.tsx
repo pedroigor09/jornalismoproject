@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, ReactNode } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ImageCarousel } from '@/components/ui/ImageCarousel';
@@ -14,7 +14,9 @@ interface VideoRevealSectionProps {
   introText?: string;
   carouselImages?: string[];
   carouselCaption?: string;
-  carouselPosition?: number; // Índice do parágrafo após o qual inserir o carrossel
+  carouselPosition?: number;
+  customComponent?: ReactNode;
+  customComponentPosition?: number;
 }
 
 export const VideoRevealSection = ({ 
@@ -24,7 +26,9 @@ export const VideoRevealSection = ({
   introText,
   carouselImages = [],
   carouselCaption,
-  carouselPosition
+  carouselPosition,
+  customComponent,
+  customComponentPosition
 }: VideoRevealSectionProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -216,6 +220,13 @@ export const VideoRevealSection = ({
                     >
                       {processTextWithLinks(paragraph)}
                     </p>
+                    
+                    {/* Insere o componente customizado após o parágrafo especificado */}
+                    {customComponentPosition === index && customComponent && (
+                      <div className="my-8">
+                        {customComponent}
+                      </div>
+                    )}
                     
                     {/* Insere o carrossel após o parágrafo especificado */}
                     {carouselPosition === index && carouselImages.length > 0 && (
