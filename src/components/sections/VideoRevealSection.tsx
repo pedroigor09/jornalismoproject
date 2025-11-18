@@ -15,6 +15,8 @@ interface VideoRevealSectionProps {
   carouselImages?: string[];
   carouselCaption?: string;
   carouselPosition?: number;
+  carouselImageCaptions?: string[];
+  carouselImageCaptionLinks?: string[];
   customComponent?: ReactNode;
   customComponentPosition?: number;
 }
@@ -27,6 +29,8 @@ export const VideoRevealSection = ({
   carouselImages = [],
   carouselCaption,
   carouselPosition,
+  carouselImageCaptions = [],
+  carouselImageCaptionLinks = [],
   customComponent,
   customComponentPosition
 }: VideoRevealSectionProps) => {
@@ -155,26 +159,51 @@ export const VideoRevealSection = ({
 
   // Função para processar links no texto
   const processTextWithLinks = (text: string) => {
-    // Procura por padrões como "ALiB" ou "Atlas Linguístico do Brasil" e adiciona link
+    // Procura por padrões como "ALiB", "Atlas Linguístico do Brasil" e "Jacyra" (com ou sem "Mota")
     const alibPattern = /(Atlas Linguístico do Brasil|ALiB)/gi;
-    const parts = text.split(alibPattern);
+    const jacyraPattern = /(Jacyra(?:\s+Mota)?)/gi;
     
-    return parts.map((part, index) => {
+    // Primeiro processa ALiB
+    let parts = text.split(alibPattern);
+    let result: React.ReactNode[] = [];
+    
+    parts.forEach((part, index) => {
       if (part.match(alibPattern)) {
-        return (
+        result.push(
           <a
-            key={index}
+            key={`alib-${index}`}
             href="https://alib.ufba.br/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-orange-400 hover:text-orange-300 underline decoration-orange-400/50 hover:decoration-orange-300 transition-colors"
+            className="text-orange-600 hover:text-orange-500 underline decoration-orange-600/50 hover:decoration-orange-500 transition-colors"
           >
             {part}
           </a>
         );
+      } else {
+        // Depois processa Jacyra (com ou sem Mota) dentro de cada parte
+        const jacyraParts = part.split(jacyraPattern);
+        jacyraParts.forEach((subPart, subIndex) => {
+          if (subPart.match(jacyraPattern)) {
+            result.push(
+              <a
+                key={`jacyra-${index}-${subIndex}`}
+                href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do;jsessionid=934630E3234099B9605967CB9057BC59.buscatextual_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-600 hover:text-orange-500 underline decoration-orange-600/50 hover:decoration-orange-500 transition-colors"
+              >
+                {subPart}
+              </a>
+            );
+          } else if (subPart) {
+            result.push(<span key={`text-${index}-${subIndex}`}>{subPart}</span>);
+          }
+        });
       }
-      return <span key={index}>{part}</span>;
     });
+    
+    return result;
   };
 
   return (
@@ -233,6 +262,8 @@ export const VideoRevealSection = ({
                       <ImageCarousel 
                         images={carouselImages}
                         caption={carouselCaption}
+                        imageCaptions={carouselImageCaptions}
+                        imageCaptionLinks={carouselImageCaptionLinks}
                       />
                     )}
                   </div>

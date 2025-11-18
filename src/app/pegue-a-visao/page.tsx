@@ -17,12 +17,18 @@ export default function PegueAVisaoPage() {
           videoUrl="https://youtu.be/9WhiZSi5XB0"
           title="Pegue a Visão: Heranças Linguísticas dos falares brasileiros"
           carouselImages={[
-            '/atlas1.jpg',
-            '/atlas2.png',
-            '/atlas3.jpg',
-            '/atlas4.jpg',
+            '/alib1.jpeg',
+            '/alib2.jpeg',
           ]}
           carouselCaption="Fotos do Atlas Linguístico do Brasil (ALiB)"
+          carouselImageCaptions={[
+            '',
+            'Professora Jacyra Mota'
+          ]}
+          carouselImageCaptionLinks={[
+            '',
+            ''
+          ]}
           carouselPosition={3}
           customComponent={
             <Timeline 

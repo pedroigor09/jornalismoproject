@@ -11,9 +11,11 @@ gsap.registerPlugin(ScrollTrigger);
 interface ImageCarouselProps {
   images: string[];
   caption?: string;
+  imageCaptions?: string[];
+  imageCaptionLinks?: string[];
 }
 
-export const ImageCarousel = ({ images, caption }: ImageCarouselProps) => {
+export const ImageCarousel = ({ images, caption, imageCaptions = [], imageCaptionLinks = [] }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -62,6 +64,28 @@ export const ImageCarousel = ({ images, caption }: ImageCarouselProps) => {
             fill
             className="object-cover transition-opacity duration-500"
           />
+          
+          {/* Legenda da imagem individual */}
+          {imageCaptions[currentIndex] && (
+            <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20">
+              <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-lg shadow-xl">
+                {imageCaptionLinks[currentIndex] ? (
+                  <a
+                    href={imageCaptionLinks[currentIndex]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-900 text-sm md:text-base font-medium text-center whitespace-nowrap hover:text-orange-600 transition-colors underline decoration-gray-900/30 hover:decoration-orange-600"
+                  >
+                    {imageCaptions[currentIndex]}
+                  </a>
+                ) : (
+                  <p className="text-gray-900 text-sm md:text-base font-medium text-center whitespace-nowrap">
+                    {imageCaptions[currentIndex]}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
           
           {/* Overlay de gradiente */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
