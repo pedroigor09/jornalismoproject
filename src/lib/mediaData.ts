@@ -48,7 +48,7 @@ export const journalists: MediaProfessional[] = [
     name: 'Emerson Nunes',
     role: 'Editor-chefe do Jornal da Manhã - TV Bahia',
     quote: 'A linha editorial de um telejornal é muito guiada pelo cuidado com a língua',
-    image: ASSETS.JORNAL.JORNAL1,
+    image: '/emersonunes.jpeg',
     content: {
       introduction: 'A linguagem é o elemento central do jornalismo, e ninguém melhor para refletir sobre isso do que Emerson Nunes, editor-chefe do Jornal da Manhã, da TV Bahia. Com quase duas décadas de experiência na imprensa, Nunes destaca o papel da palavra no telejornalismo e a importância de equilibrar correção gramatical com proximidade junto ao público.',
       paragraphs: [
