@@ -54,7 +54,7 @@ export const fashionReferences: FashionReference[] = [
 export const tamoJuntoParceiro: Brand = {
   name: 'Tamo Junto Parceiro',
   description: 'Fundada em 2016 por dois jovens empreendedores determinados a inovar, a marca surgiu na Feira da Cidade e, desde então, vem conquistando espaço com criatividade, autenticidade e o inconfundível espírito baiano. Com o propósito de espalhar a baianidade pelo mundo, a Tamo Junto Parceiro traduz em suas peças a força e a alegria da cultura local.',
-  videoUrl: 'https://youtu.be/sDhT-3ImNOw',
+  videoUrl: 'https://youtu.be/4Gcfb5iCzAE',
   images: [
     '/baianonaonasce1.jpeg',
     '/baianonaonasce2.jpeg',

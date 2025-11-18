@@ -66,6 +66,7 @@ export const journalists: MediaProfessional[] = [
     image: '/silvana1.webp',
     polaroids: ['/silvana2.jpeg', '/silvana3.jpg', '/silvana4.jpg'],
     bio: 'Jornalista e comunicadora baiana com mais de 20 anos de trajetória na imprensa. Passou por veículos importantes como a TV Bahia, onde apresentou telejornais como o Bahia Meio Dia e o Jornal da Manhã. Atuou como repórter na CNN Brasil, em São Paulo, e retornou à Bahia, onde comanda programas de rádio e projetos próprios de comunicação.',
+    videoUrl: '2ncZQVncMEA',
     content: {
       introduction: 'A conversa com Silvana foi daquelas que fazem a gente sair admirando ainda mais o que é ser baiano. Jornalista com mais de duas décadas de carreira, ela é daquelas mulheres retadas que falam com o coração e deixam claro que o sotaque da Bahia não é detalhe: é identidade.',
       paragraphs: [
@@ -83,10 +84,9 @@ export const journalists: MediaProfessional[] = [
     image: '/van2.jpeg',
     polaroids: ['/van3.jpg', '/van4.jpg', '/van5.jpeg'],
     bio: 'Figura carismática e um dos nomes mais queridos do jornalismo baiano contemporâneo. Nascido e criado em Cajazeiras — ou, como ele mesmo costuma dizer, Cajacity —, conquistou o público com seu jeito espontâneo. Mestre em Comunicação e Jornalismo, acumula mais de 20 anos de experiência na televisão.',
-    videoUrl: 'lgvZ2aNf9zk',
     audioClips: [
       JSON.stringify({
-        src: '/vandersson1.m4a',
+        src: '/Áudio Vanderson Nascimento.mp3',
         transcript: 'O sotaque é uma forma de identidade cultural que traz raízes, memórias e referências. Ele carrega em si a história de um povo, o jeito de ver e sentir o mundo.',
         speaker: 'Vanderson Nascimento',
         afterParagraph: 0
@@ -116,7 +116,7 @@ export const journalists: MediaProfessional[] = [
     bio: 'Natural de Cachoeira, no Recôncavo Baiano. Formada em Jornalismo pela UFRB, mestre em Cultura e Sociedade pela UFBA. Atua na Rede Bahia, onde já apresentou programas como Mosaico Baiano e Conversa Preta. Defensora da valorização das vozes negras e da linguagem regional.',
     audioClips: [
       JSON.stringify({
-        src: '/luana1.m4a',
+        src: '/Áudio Luana Souza.mp3',
         transcript: 'O nosso sotaque tem uma musicalidade que transmite acolhimento e proximidade. Ele carrega um jeito afetuoso de se comunicar, sem deixar de ser firme quando é necessário. Há um senso de verdade e de identidade muito forte. É como se dissesse: "Eu sou daqui, eu falo assim, e isso também é Brasil".',
         speaker: 'Luana Souza',
         afterParagraph: 0
@@ -144,6 +144,7 @@ export const journalists: MediaProfessional[] = [
     quote: 'Quando a gente é verdadeiro, a mensagem chega',
     image: '/mat1.webp',
     polaroids: ['/mat2.webp', '/mat3.jpeg'],
+    videoUrl: 'K7eB3NLY8PU',
     content: {
       introduction: 'Natural da Bahia, construiu sua trajetória com base na autenticidade e no compromisso de representar sua cultura por meio da linguagem. Com passagens marcantes pelo jornalismo popular, Mateus se tornou uma das vozes mais reconhecidas do telejornalismo baiano atual.',
       paragraphs: [
@@ -166,19 +167,19 @@ export const actors: MediaProfessional[] = [
     bio: 'Natural de Salvador, nasceu no bairro de Cosme de Farias. Formado em Pedagogia pela UCSal, construiu uma carreira marcada pela consciência social e pelo compromisso com a valorização da cultura baiana. Em 2024, ganhou destaque nacional ao interpretar Jupará na novela Renascer.',
     audioClips: [
       JSON.stringify({
-        src: '/macarrao1.mp3',
+        src: '/Áudio 1 - Evaldo Macarrão.mp3',
         transcript: 'A importância é a constatação do que é, né? A gente conta nossa história na Bahia, em Salvador, a partir das revoltas, da independência, mas a gente também conta outras histórias em outros lugares.',
         speaker: 'Evaldo Macarrão',
         afterParagraph: 1
       }),
       JSON.stringify({
-        src: '/macarrao2.mp3',
+        src: '/Áudio 2 - Evaldo Macarrão.mp3',
         transcript: 'Eu nunca tive pressão para mudar meu sotaque. Muito pelo contrário, às vezes pedem até que eu faça o sotaque baiano de Salvador, às vezes eu até resisto um pouco, porque quero brincar com outros sotaques da Bahia, que é tão grande e diversa.',
         speaker: 'Evaldo Macarrão',
         afterParagraph: 4
       }),
       JSON.stringify({
-        src: '/macarrao3.mp3',
+        src: '/Áudio 3 - Evaldo Macarrão.mp3',
         transcript: 'Eu quero representar, mas também conectar e convocar. Quero me conectar com o público que ainda está à margem. Que essa novela possa entrar na casa dessas pessoas pedindo licença e convocando a sonharem.',
         speaker: 'Evaldo Macarrão',
         afterParagraph: 6
@@ -222,6 +223,7 @@ export const actors: MediaProfessional[] = [
     image: '/ciro1.jpg',
     polaroids: ['/ciro2.webp', '/ciro3.webp'],
     bio: 'Natural de Salvador, com formação em teatro na Faculdade Social da Bahia e carreira consolidada no Rio de Janeiro. Conhecido por atuações em novelas como Segundo Sol (TV Globo) e por apresentar o Catfish Brasil (MTV).',
+    videoUrl: 'taaVyFEnQuc',
     content: {
       introduction: 'Ciro Sales oferece uma perspectiva rica e multifacetada sobre representação do sotaque e da identidade regional na televisão nacional.',
       paragraphs: [
@@ -239,6 +241,7 @@ export const actors: MediaProfessional[] = [
     image: '/rai1.webp',
     polaroids: ['/rai2.webp', '/rai3.jpg'],
     bio: 'Natural de Salvador. Formada em Artes Cênicas pela UFBA. Ganhou destaque nacional ao fazer parte do elenco da novela Segundo Sol. Sua atuação chamou atenção pela naturalidade e pela presença marcante — uma artista que não apenas interpreta, mas representa o lugar de onde veio.',
+    videoUrl: '0cDpkqK-W3U',
     content: {
       introduction: 'Foi ao se mudar da Bahia para o Rio de Janeiro que Raissa passou a refletir ainda mais sobre o papel do sotaque na construção da identidade e sobre as barreiras enfrentadas por artistas nordestinos no eixo audiovisual.',
       paragraphs: [
@@ -259,6 +262,7 @@ export const influencers: MediaProfessional[] = [
     image: '/ivan1.webp',
     polaroids: ['/ivan2.jpeg', '/ivan3.jpg', '/ivan4.jpg'],
     bio: 'Mais conhecido como "Cêro" — gíria baiana que significa "parceiro". Natural de Itabuna, no sul da Bahia, começou sua trajetória produzindo vídeos sobre culinária e história, sempre com uma boa dose de humor. Durante a pandemia, decidiu investir de vez na criação de conteúdo.',
+    videoUrl: 'Re6yq8qAAWc',
     content: {
       introduction: 'Ivan Mesquita é humorista, ator e criador de conteúdo digital. Seu trabalho ganhou força nas redes sociais por valorizar o sotaque, as expressões populares e o jeito baiano de se comunicar, elementos que se tornaram marcas registradas de sua identidade artística.',
       paragraphs: [
@@ -275,7 +279,7 @@ export const influencers: MediaProfessional[] = [
     image: '/piz1.webp',
     polaroids: ['/piz2.jpg', '/piz3.webp', '/piz4.avif'],
     bio: 'Natural da Ilha de Itaparica (BA). Integrou bandas locais como Os Ninfetos e cursou Produção Cultural. Em 2024, ganhou projeção nacional ao participar do Big Brother Brasil 24. Após o reality, passou a investir na carreira solo, consolidando-se como uma das novas vozes da música baiana contemporânea.',
-    videoUrl: 'nTQ6nNxTs_U',
+    videoUrl: '5Pqhf69mjc8',
     content: {
       introduction: 'Conversar com Lucas Pizane é mergulhar em uma reflexão sobre linguagem, identidade e pertencimento. Para ele, o sotaque baiano é mais que uma característica vocal — é uma forma de expressar autenticidade.',
       paragraphs: [
