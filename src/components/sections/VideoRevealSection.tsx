@@ -271,7 +271,7 @@ export const VideoRevealSection = ({
               </div>
 
               {/* Detalhe decorativo inferior */}
-              <div className="mt-8 flex items-center gap-4 pl-8">
+              <div className="mt-8 flex items-center justify-center gap-4">
                 <div className="w-20 h-0.5 bg-gradient-to-r from-orange-500 to-transparent rounded-full" />
                 <span className="text-orange-600 text-sm font-bold uppercase tracking-wider">
                   Assista ao vídeo
