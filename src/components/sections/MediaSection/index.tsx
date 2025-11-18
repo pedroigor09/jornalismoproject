@@ -33,13 +33,13 @@ export const MediaSection = ({
     },
     {
       title: 'Vanderson: "Deus me livre não ser baiano!"',
-      videoId: 'lgvZ2aNf9zk',
+      videoId: 'LtN_V7Y3JhQ',
       description: 'O bordão mais icônico do jornalismo baiano! Vanderson celebrando a baianidade com orgulho.',
       type: 'video' as const,
     },
     {
       title: 'Vanderson: "11h45"',
-      videoId: '5JJELhj_niI',
+      videoId: 'RbfTs2LbtSc',
       description: 'Outro momento clássico de Vanderson que virou marca registrada da TV baiana.',
       type: 'short' as const,
     },
