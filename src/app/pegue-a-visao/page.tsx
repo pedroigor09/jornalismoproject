@@ -17,12 +17,12 @@ export default function PegueAVisaoPage() {
           title="Heranças Linguísticas dos falares brasileiros"
           subtitle="Conheça o projeto que mapeia a diversidade linguística brasileira"
           carouselImages={[
-            'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&q=80',
-            'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80',
-            'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80',
-            'https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80',
+            '/atlas1.jpg',
+            '/atlas2.png',
+            '/atlas3.jpg',
+            '/atlas4.jpg',
           ]}
-          carouselCaption="Fotos do Atlas Linguístico do Brasil (ALiB) - Imagens temporárias"
+          carouselCaption="Fotos do Atlas Linguístico do Brasil (ALiB)"
           carouselPosition={3}
           introText={`A Bahia é, sem dúvida, um território onde cada palavra carrega história. Um lugar em que a língua não é apenas instrumento de comunicação, mas um documento vivo de quem resistiu, lutou, negociou e reinventou o próprio modo de existir. Basta atravessar a cidade para perceber: no Subúrbio, o "bora" embala o cotidiano; no Pelourinho, o "véi" ecoa entre ladeiras, turistas e tambores; e o clássico "oxente" — esse patrimônio afetivo — denuncia de longe que um baiano chegou. Mas esse modo de falar não nasceu do acaso: é fruto de séculos de encontros, rupturas, diálogos e permanências culturais que compõem o que hoje chamamos de baianidade.
 
