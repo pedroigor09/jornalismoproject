@@ -25,7 +25,7 @@ export const artistsData: Artist[] = [
     name: 'Márcia Short',
     role: 'Cantora',
     quote: 'O sotaque e as expressões são a alma da Bahia',
-    image: '/marciashort.jpg',
+    image: '/marcia3.jpg',
     polaroids: ['/marcia1.jpg', '/marcia2.avif', '/marcia3.jpg', '/marcia4.jpeg', '/marcia5.jpg'],
     content: {
       introduction: 'Conversar com Márcia Short é mergulhar na essência da cultura baiana. Cantora consagrada e uma das vozes mais marcantes do axé e da música afro-baiana, Márcia fala sobre arte, linguagem e identidade com a mesma força e naturalidade com que pisa no palco. Para ela, cada palavra, gíria ou expressão carrega o peso simbólico da história e do afeto do povo da Bahia.',
@@ -40,7 +40,7 @@ export const artistsData: Artist[] = [
       ],
       audioClips: [
         JSON.stringify({
-          src: '/audiomarcia3.ogg',
+          src: '/audiomarciaoriginal.mp3',
           transcript: 'As gírias, as expressões, o sotaque, o jeito de falar e até o jeito de dançar… tudo faz parte da cultura do povo desse lugar.',
           speaker: 'Márcia Short',
           afterIntroduction: true

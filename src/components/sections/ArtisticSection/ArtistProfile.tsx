@@ -30,6 +30,7 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
               alt={artist.name}
               fill
               className="object-cover hover:scale-105 transition-transform duration-700"
+              style={{ objectPosition: '30% center' }}
             />
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
