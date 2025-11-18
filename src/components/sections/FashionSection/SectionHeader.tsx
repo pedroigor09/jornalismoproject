@@ -47,44 +47,74 @@ export const FashionSectionHeader = ({ title, subtitle, introduction }: FashionS
         y: 30,
       });
 
-      // Animação da introdução
-      gsap.from(introRef.current, {
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: 'top 70%',
-          end: 'top 20%',
-          scrub: 1,
-        },
-        opacity: 0,
-        y: 40,
-      });
+      // Animação dos parágrafos
+      const paragraphs = headerRef.current?.querySelectorAll('.intro-paragraph');
+      if (paragraphs) {
+        gsap.from(paragraphs, {
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: 'top 70%',
+            end: 'top 20%',
+            scrub: 1,
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.1,
+        });
+      }
     }, headerRef);
 
     return () => ctx.revert();
   }, []);
 
+  const paragraphs = introduction.split('\n\n');
+
   return (
-    <div ref={headerRef} className="max-w-5xl mx-auto mb-24 px-6 text-center">
-      <h2
-        ref={titleRef}
-        className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent leading-tight"
-      >
-        {title}
-      </h2>
+    <div ref={headerRef} className="max-w-5xl mx-auto mb-24 px-6">
+      <div className="text-center mb-12">
+        <h2
+          ref={titleRef}
+          className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent leading-tight"
+        >
+          {title}
+        </h2>
+        
+        <p
+          ref={subtitleRef}
+          className="text-2xl md:text-3xl font-light text-pink-300 mb-8 italic"
+        >
+          {subtitle}
+        </p>
+
+        {/* Linha Decorativa */}
+        <div className="flex items-center justify-center gap-4 mb-12">
+          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent to-pink-500 rounded-full" />
+          <div className="w-3 h-3 rounded-full bg-pink-500 animate-pulse" />
+          <div className="w-20 h-0.5 bg-gradient-to-l from-transparent to-pink-500 rounded-full" />
+        </div>
+      </div>
       
-      <p
-        ref={subtitleRef}
-        className="text-2xl md:text-3xl font-light text-pink-300 mb-8 italic"
-      >
-        {subtitle}
-      </p>
-      
-      <p
-        ref={introRef}
-        className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto"
-      >
-        {introduction}
-      </p>
+      {/* Texto Introdutório */}
+      <div className="max-w-4xl mx-auto">
+        <div className="relative">
+          {/* Detalhe decorativo */}
+          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500 rounded-full opacity-70" />
+          
+          <div className="space-y-8 pl-8">
+            {paragraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light text-justify"
+                style={{
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                }}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
