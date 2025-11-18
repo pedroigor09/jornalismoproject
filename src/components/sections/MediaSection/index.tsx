@@ -144,8 +144,8 @@ export const MediaSection = ({
 
         {/* Mensagem final */}
         <div className="max-w-4xl mx-auto mt-32 px-6 text-center">
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-400/20 rounded-3xl p-12">
-            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text mb-6">
+          <div className="bg-gradient-to-br from-orange-500/10 to-purple-500/10 backdrop-blur-sm border border-orange-400/20 rounded-3xl p-12">
+            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-r from-orange-300 to-purple-300 bg-clip-text mb-6">
               A Bahia está em todo lugar
             </h3>
             <p className="text-xl text-gray-300 leading-relaxed">

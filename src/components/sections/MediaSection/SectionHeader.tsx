@@ -71,7 +71,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
       <div className="text-center mb-12">
         <h2
           ref={titleRef}
-          className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent leading-tight"
+          className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-orange-400 via-yellow-400 to-blue-400 bg-clip-text text-transparent leading-tight"
         >
           {title}
         </h2>
@@ -84,10 +84,10 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
         </p>
 
         {/* Linha Decorativa */}
-        <div className="flex items-center justify-center gap-4 mb-12">
-          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent to-cyan-500 rounded-full" />
-          <div className="w-3 h-3 rounded-full bg-cyan-500 animate-pulse" />
-          <div className="w-20 h-0.5 bg-gradient-to-l from-transparent to-cyan-500 rounded-full" />
+        <div className="flex items-center justify-center gap-3 mb-12">
+          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent to-orange-500 rounded-full" />
+          <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse" />
+          <div className="w-20 h-0.5 bg-gradient-to-l from-transparent to-orange-500 rounded-full" />
         </div>
       </div>
       

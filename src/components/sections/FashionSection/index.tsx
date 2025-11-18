@@ -87,7 +87,7 @@ export const FashionSection = ({
 
         {/* Carrossel de fotos de Paula com polaroides flutuantes */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent">
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-orange-300 via-yellow-300 to-purple-300 bg-clip-text text-transparent">
             Referências da Moda Baiana
           </h3>
           <p className="text-xl text-center text-pink-100/80 mb-16 max-w-3xl mx-auto">

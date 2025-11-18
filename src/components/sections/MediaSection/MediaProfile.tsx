@@ -106,12 +106,12 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
           className={`space-y-6 ${!isEven ? 'lg:order-1' : ''}`}
         >
           {/* Quote destacada */}
-          <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-300/30 rounded-2xl p-6 md:p-8 relative">
-            <span className="text-6xl text-cyan-400/30 absolute -top-2 -left-1 font-serif">"</span>
-            <p className="text-lg md:text-xl text-cyan-100 italic font-light leading-relaxed relative z-10">
+          <div className="bg-gradient-to-br from-orange-500/20 to-purple-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-6 md:p-8 relative">
+            <span className="text-6xl text-orange-400/30 absolute -top-2 -left-1 font-serif">"</span>
+            <p className="text-lg md:text-xl text-orange-100 italic font-light leading-relaxed relative z-10">
               {professional.quote}
             </p>
-            <span className="text-6xl text-cyan-400/30 absolute -bottom-6 -right-1 font-serif">"</span>
+            <span className="text-6xl text-orange-400/30 absolute -bottom-6 -right-1 font-serif">"</span>
           </div>
 
           {/* Introdução */}
@@ -159,12 +159,12 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
             <div className="mt-8">
               <div className="relative">
                 {/* Badge de destaque */}
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-black px-6 py-2 rounded-full shadow-xl z-10 flex items-center gap-2">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-sm font-black px-6 py-2 rounded-full shadow-xl z-10 flex items-center gap-2">
                   <span className="text-xl">🎬</span>
                   <span>ASSISTA O VÍDEO</span>
                 </div>
                 
-                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black border-2 border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-500 hover:scale-[1.02]">
+                <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black border-2 border-orange-400/30 hover:border-yellow-400/60 transition-all duration-500 hover:scale-[1.02]">
                   <iframe
                     src={`https://www.youtube.com/embed/${professional.videoUrl}`}
                     title={professional.name}
@@ -175,7 +175,7 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
                 </div>
 
                 {/* Efeito de brilho */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-xl -z-10" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl opacity-20 blur-xl -z-10" />
               </div>
             </div>
           )}

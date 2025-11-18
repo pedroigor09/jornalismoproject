@@ -48,7 +48,7 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
       >
         <div className="relative">
           {/* Detalhe decorativo */}
-          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-orange-500 via-yellow-500 to-red-500 rounded-full opacity-70" />
+          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-orange-500 via-yellow-500 to-blue-500 rounded-full opacity-70" />
           
           <div className="space-y-8 pl-8">
             {introduction.split('\n\n').map((paragraph, index) => (

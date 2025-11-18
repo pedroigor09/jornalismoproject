@@ -92,7 +92,7 @@ export const FashionExpertProfile = ({ expert }: FashionExpertProfileProps) => {
           {/* Quote destacada */}
           <div
             ref={quoteRef}
-            className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 backdrop-blur-sm border border-pink-300/30 rounded-2xl p-8 relative"
+            className="bg-gradient-to-br from-orange-500/20 to-purple-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-8 relative"
           >
             <span className="text-7xl text-pink-400/30 absolute -top-4 -left-2 font-serif">"</span>
             <p className="text-xl md:text-2xl text-pink-100 italic font-light leading-relaxed relative z-10">

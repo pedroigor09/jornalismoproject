@@ -59,7 +59,7 @@ export const ViralVideoShowcase = ({ videos }: ViralVideoShowcaseProps) => {
     <div ref={containerRef} className="max-w-7xl mx-auto mb-32 px-6">
       <h3
         ref={titleRef}
-        className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"
+        className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-orange-300 via-yellow-300 to-purple-300 bg-clip-text text-transparent"
       >
         🔥 Momentos Virais
       </h3>
@@ -70,9 +70,9 @@ export const ViralVideoShowcase = ({ videos }: ViralVideoShowcaseProps) => {
             key={index}
             className="viral-video-card group"
           >
-            <div className="relative bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 hover:border-cyan-400/60 hover:scale-105 transition-all duration-500">
+            <div className="relative bg-gradient-to-br from-orange-500/10 to-purple-500/10 backdrop-blur-sm border border-orange-400/30 rounded-2xl p-6 hover:border-yellow-400/60 hover:scale-105 transition-all duration-500">
               {/* Badge de tipo */}
-              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-black px-4 py-2 rounded-full shadow-lg">
+              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-xs font-black px-4 py-2 rounded-full shadow-lg">
                 {video.type === 'short' ? '📱 SHORT' : '🎬 VÍDEO'}
               </div>
 
@@ -88,7 +88,7 @@ export const ViralVideoShowcase = ({ videos }: ViralVideoShowcaseProps) => {
               </div>
 
               {/* Título */}
-              <h4 className="text-xl font-black text-cyan-100 mb-2 group-hover:text-cyan-300 transition-colors">
+              <h4 className="text-xl font-black text-orange-100 mb-2 group-hover:text-yellow-300 transition-colors">
                 {video.title}
               </h4>
 
@@ -108,17 +108,17 @@ export const ViralVideoShowcase = ({ videos }: ViralVideoShowcaseProps) => {
 
       {/* Linha decorativa */}
       <div className="mt-16 flex items-center justify-center gap-4">
-        <div className="h-px w-32 bg-gradient-to-r from-transparent to-cyan-400/50" />
+        <div className="h-px w-32 bg-gradient-to-r from-transparent to-orange-400/50" />
         <div className="flex gap-2">
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 rounded-full bg-cyan-400/60 animate-pulse"
+              className="w-2 h-2 rounded-full bg-yellow-400/60 animate-pulse"
               style={{ animationDelay: `${i * 0.3}s` }}
             />
           ))}
         </div>
-        <div className="h-px w-32 bg-gradient-to-l from-transparent to-cyan-400/50" />
+        <div className="h-px w-32 bg-gradient-to-l from-transparent to-orange-400/50" />
       </div>
     </div>
   );
