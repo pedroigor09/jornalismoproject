@@ -13,7 +13,7 @@ export default function PegueAVisaoPage() {
       <ColorStripe />
       <main style={{ paddingTop: '70px' }}>
         <VideoRevealSection
-          videoUrl="https://youtu.be/NXFucD6nMn0"
+          videoUrl="https://youtu.be/9WhiZSi5XB0"
           title="Heranças Linguísticas dos falares brasileiros"
           subtitle="Conheça o projeto que mapeia a diversidade linguística brasileira"
           carouselImages={[
