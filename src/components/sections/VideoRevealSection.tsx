@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ImageCarousel } from '@/components/ui/ImageCarousel';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,13 +12,19 @@ interface VideoRevealSectionProps {
   title?: string;
   subtitle?: string;
   introText?: string;
+  carouselImages?: string[];
+  carouselCaption?: string;
+  carouselPosition?: number; // Índice do parágrafo após o qual inserir o carrossel
 }
 
 export const VideoRevealSection = ({ 
   videoUrl, 
   title = "Descubra a Bahia",
   subtitle = "Uma jornada visual pela nossa cultura",
-  introText
+  introText,
+  carouselImages = [],
+  carouselCaption,
+  carouselPosition
 }: VideoRevealSectionProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -142,6 +149,30 @@ export const VideoRevealSection = ({
   // Divide o texto em parágrafos
   const paragraphs = introText ? introText.split('\n').filter(p => p.trim() !== '') : [];
 
+  // Função para processar links no texto
+  const processTextWithLinks = (text: string) => {
+    // Procura por padrões como "ALiB" ou "Atlas Linguístico do Brasil" e adiciona link
+    const alibPattern = /(Atlas Linguístico do Brasil|ALiB)/gi;
+    const parts = text.split(alibPattern);
+    
+    return parts.map((part, index) => {
+      if (part.match(alibPattern)) {
+        return (
+          <a
+            key={index}
+            href="https://alib.ufba.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 hover:text-orange-300 underline decoration-orange-400/50 hover:decoration-orange-300 transition-colors"
+          >
+            {part}
+          </a>
+        );
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
+
   return (
     <section
       id="pegue-a-visao"
@@ -183,15 +214,24 @@ export const VideoRevealSection = ({
               
               <div className="space-y-6 pl-8">
                 {paragraphs.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light"
-                    style={{
-                      textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                    }}
-                  >
-                    {paragraph}
-                  </p>
+                  <div key={index}>
+                    <p
+                      className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light"
+                      style={{
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                      }}
+                    >
+                      {processTextWithLinks(paragraph)}
+                    </p>
+                    
+                    {/* Insere o carrossel após o parágrafo especificado */}
+                    {carouselPosition === index && carouselImages.length > 0 && (
+                      <ImageCarousel 
+                        images={carouselImages}
+                        caption={carouselCaption}
+                      />
+                    )}
+                  </div>
                 ))}
               </div>
 

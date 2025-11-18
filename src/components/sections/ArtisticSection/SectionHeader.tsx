@@ -44,11 +44,26 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
       {/* Texto de Introdução */}
       <div
         ref={introRef as any}
-        className="max-w-5xl mx-auto"
+        className="max-w-4xl mx-auto"
       >
-        <p className="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light">
-          {introduction}
-        </p>
+        <div className="relative">
+          {/* Detalhe decorativo */}
+          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-orange-500 via-yellow-500 to-red-500 rounded-full opacity-70" />
+          
+          <div className="space-y-8 pl-8">
+            {introduction.split('\n\n').map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light text-justify"
+                style={{
+                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                }}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   );
