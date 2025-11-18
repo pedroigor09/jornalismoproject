@@ -20,7 +20,7 @@ interface VideoRevealSectionProps {
 export const VideoRevealSection = ({ 
   videoUrl, 
   title = "Descubra a Bahia",
-  subtitle = "Uma jornada visual pela nossa cultura",
+  subtitle,
   introText,
   carouselImages = [],
   carouselCaption,
@@ -177,29 +177,25 @@ export const VideoRevealSection = ({
     <section
       id="pegue-a-visao"
       ref={sectionRef}
-      className="relative py-20 md:py-32 px-4 md:px-12 lg:px-24 overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(30,31,37,1) 50%, rgba(0,0,0,0.95) 100%)',
-      }}
+      className="relative py-20 md:py-32 px-4 md:px-12 lg:px-24 overflow-hidden bg-white"
     >
       <div className="max-w-7xl mx-auto">
         {/* Título e Subtítulo */}
         <div className="text-center mb-12 md:mb-16">
           <h2
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
-            style={{
-              textShadow: '0 4px 20px rgba(255, 107, 53, 0.5)',
-            }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4"
           >
             {title}
           </h2>
-          <p
-            ref={subtitleRef}
-            className="text-lg md:text-xl lg:text-2xl text-gray-300 font-light"
-          >
-            {subtitle}
-          </p>
+          {subtitle && (
+            <p
+              ref={subtitleRef}
+              className="text-lg md:text-xl lg:text-2xl text-gray-700 font-light"
+            >
+              {subtitle}
+            </p>
+          )}
         </div>
 
         {/* Texto Introdutório Cinematográfico */}
@@ -216,10 +212,7 @@ export const VideoRevealSection = ({
                 {paragraphs.map((paragraph, index) => (
                   <div key={index}>
                     <p
-                      className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light"
-                      style={{
-                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                      }}
+                      className="text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light"
                     >
                       {processTextWithLinks(paragraph)}
                     </p>
@@ -238,7 +231,7 @@ export const VideoRevealSection = ({
               {/* Detalhe decorativo inferior */}
               <div className="mt-8 flex items-center gap-4 pl-8">
                 <div className="w-20 h-0.5 bg-gradient-to-r from-orange-500 to-transparent rounded-full" />
-                <span className="text-orange-400 text-sm font-bold uppercase tracking-wider">
+                <span className="text-orange-600 text-sm font-bold uppercase tracking-wider">
                   Assista ao vídeo
                 </span>
                 <div className="w-20 h-0.5 bg-gradient-to-l from-orange-500 to-transparent rounded-full" />

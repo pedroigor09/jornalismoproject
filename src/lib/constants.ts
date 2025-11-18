@@ -1,14 +1,11 @@
-// Helper para adicionar basePath às imagens
-// Detecta se estamos em build/export ou se já estamos em produção
+
 const isDevelopment = process.env.NODE_ENV === 'development';
 const basePath = isDevelopment ? '' : '/jornalismoproject';
 
 const getAssetPath = (path: string) => {
-  // Se for URL externa, retorna como está
   if (path.startsWith('http://') || path.startsWith('https://')) {
     return path;
   }
-  // Adiciona basePath para imagens locais
   return `${basePath}${path}`;
 };
 
@@ -28,7 +25,7 @@ export const ASSETS = {
   },
 } as const;
 
-export const GOOGLE_MAPS_API_KEY = 'AIzaSyCXlnYAEgr2kdEgSfE3nf2TpOUK90Aa4Xk';
+export const GOOGLE_MAPS_API_KEY = 'AIzaSyB4VaxAMb_aCXrVt9wz2xfQe-UnnDGmQtc';
 
 export const COLORS = {
   PRIMARY: {
