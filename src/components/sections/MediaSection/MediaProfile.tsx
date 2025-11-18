@@ -72,6 +72,9 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
               alt={professional.name}
               fill
               className="object-cover"
+              quality={100}
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             

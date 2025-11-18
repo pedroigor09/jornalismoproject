@@ -115,6 +115,8 @@ export const FloatingPolaroids = ({ images, alignRight = true }: FloatingPolaroi
                 alt={`Polaroid ${index + 1}`}
                 fill
                 className="object-cover"
+                quality={100}
+                sizes="150px"
               />
             </div>
             {/* Espaço inferior da polaroid */}
