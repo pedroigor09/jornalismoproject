@@ -7,7 +7,11 @@ export const mediaIntroduction: MediaIntroduction[] = [
 
 Se antes o sotaque precisava ser aparado, hoje ele se torna ponte. A diversidade linguística, que já era amplamente mapeada por pesquisas como o Atlas Linguístico do Brasil — citado pela professora Jacyra Mota ao explicar como termos como "neblina" e "orvalho" mudam de sentido conforme a região — migra das páginas de estudo para as telas de TV. Cada expressão, cada entonação, cada gíria revela identidade, pertencimento e história. Em Salvador, por exemplo, "neblina" significa nevoeiro — e não orvalho, como em outras áreas. É essa pluralidade que ajuda a compor um Brasil diverso, e é essa mesma pluralidade que agora começa a ocupar o espaço que antes era dominado pela suposta "norma neutra".
 
+[VIDEO:v2z6TXybHvA]
+
 Enquanto o país aprende a valorizar seus modos de falar, o telejornalismo baiano se consolida como referência de comunicação que equilibra técnica e afeto. Emerson Nunes, editor-chefe do Jornal da Manhã, resume esse desafio cotidiano: o telejornal precisa respeitar a norma culta, mas sem perder a clareza e a proximidade. "O português deve estar correto, mas, ao mesmo tempo, ser claro e acessível", afirma. Para ele, o uso moderado de expressões regionais não apenas humaniza, como fortalece o vínculo entre repórter e audiência. Quando disse ao vivo a expressão "o cacau caiu", um baianismo típico para indicar chuva forte, parte do público estranhou — e o telejornal respondeu com conteúdo educativo, mostrando que o jornalismo pode ser, ao mesmo tempo, informativo e pedagógico sobre cultura local.
+
+[VIDEO:FICbgn5gUkI]
 
 Essa curvatura da linguagem — entre norma padrão e oralidade baiana — ganha força nas grandes datas culturais. Em períodos como o Carnaval e o São João, o telejornal incorpora ritmos, gírias e referências que fazem parte da vida cotidiana. "O uso de expressões populares, quando feito com cuidado, humaniza e cria vínculo", aponta Nunes. Assim, o telejornal deixa de ser apenas emissor de notícias e passa a ser também um espelho cultural.
 

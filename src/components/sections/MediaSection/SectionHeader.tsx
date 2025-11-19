@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -63,7 +64,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
     return () => ctx.revert();
   }, []);
 
-  // Processa o texto para separar parágrafos
+  // Processa o texto para separar parágrafos e identificar vídeos
   const allParagraphs = introductions[0]?.split('\n\n') || [];
 
   return (
@@ -98,14 +99,30 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
           <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 rounded-full opacity-70" />
           
           <div className="space-y-8 pl-8">
-            {allParagraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
-              >
-                {paragraph}
-              </p>
-            ))}
+            {allParagraphs.map((paragraph, index) => {
+              // Verifica se é um marcador de vídeo
+              const videoMatch = paragraph.match(/^\[VIDEO:([^\]]+)\]$/);
+              
+              if (videoMatch) {
+                return (
+                  <div key={index} className="my-12">
+                    <YouTubeEmbed 
+                      videoId={videoMatch[1]} 
+                      credit="Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida"
+                    />
+                  </div>
+                );
+              }
+              
+              return (
+                <p
+                  key={index}
+                  className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
+                >
+                  {paragraph}
+                </p>
+              );
+            })}
           </div>
         </div>
       </div>
