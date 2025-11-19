@@ -132,7 +132,7 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
         </h3>
         <p
           ref={descriptionRef}
-          className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto"
+          className="text-xl text-black leading-relaxed max-w-4xl mx-auto font-light"
         >
           {brand.description}
         </p>

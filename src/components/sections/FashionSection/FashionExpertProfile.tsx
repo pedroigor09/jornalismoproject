@@ -102,14 +102,14 @@ export const FashionExpertProfile = ({ expert }: FashionExpertProfileProps) => {
           </div>
 
           {/* Introdução */}
-          <p className="text-gray-300 text-lg leading-relaxed">
+          <p className="text-black text-lg leading-relaxed font-light">
             {expert.content.introduction}
           </p>
 
           {/* Parágrafos */}
           <div className="space-y-6">
             {expert.content.paragraphs.map((paragraph, index) => (
-              <p key={index} className="text-gray-400 text-base leading-relaxed">
+              <p key={index} className="text-black text-base leading-relaxed font-light">
                 {paragraph}
               </p>
             ))}

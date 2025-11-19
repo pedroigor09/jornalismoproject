@@ -4,15 +4,23 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-interface FashionSectionHeaderProps {
+interface SectionHeaderProps {
   title: string;
   subtitle: string;
   introduction: string;
+  customComponent?: React.ReactNode;
+  customComponentPosition?: number;
 }
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const FashionSectionHeader = ({ title, subtitle, introduction }: FashionSectionHeaderProps) => {
+export const FashionSectionHeader = ({ 
+  title, 
+  subtitle, 
+  introduction,
+  customComponent,
+  customComponentPosition 
+}: SectionHeaderProps) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -67,7 +75,73 @@ export const FashionSectionHeader = ({ title, subtitle, introduction }: FashionS
     return () => ctx.revert();
   }, []);
 
-  const paragraphs = introduction.split('\n\n');
+  const processContent = (text: string) => {
+    const paragraphs = text.split('\n\n');
+    const result: React.ReactNode[] = [];
+
+    paragraphs.forEach((paragraph, index) => {
+      const trimmed = paragraph.trim();
+      
+      // Detecta citações que começam com aspas e contêm " - "
+      const startsWithQuote = trimmed.startsWith('"') || trimmed.startsWith('"') || trimmed.startsWith('"');
+      const hasDashSeparator = trimmed.includes(' - ');
+      
+      if (startsWithQuote && hasDashSeparator) {
+        const dashIndex = trimmed.lastIndexOf(' - ');
+        if (dashIndex > 0) {
+          const quotePart = trimmed.substring(0, dashIndex);
+          const authorPart = trimmed.substring(dashIndex + 3);
+          
+          const quote = quotePart.replace(/^[""]/, '').replace(/[""]\.*$/, '').trim();
+          const author = authorPart.replace(/\.$/, '').trim();
+          
+          result.push(
+            <div key={index} className="my-10 max-w-4xl mx-auto">
+              <div className="relative bg-gradient-to-br from-pink-50 to-orange-50 backdrop-blur-lg rounded-2xl p-8 border border-pink-300/30 shadow-2xl">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-400 to-orange-400 rounded-2xl opacity-20 blur-lg -z-10" />
+                
+                <div className="mb-6">
+                  <blockquote className="relative">
+                    <div className="absolute -left-2 top-0 text-5xl text-pink-400/40 font-serif leading-none">"</div>
+                    <p className="text-lg md:text-xl text-gray-900 italic leading-relaxed pl-6 pr-4">
+                      {quote}
+                    </p>
+                    <div className="absolute -right-2 bottom-0 text-5xl text-pink-400/40 font-serif leading-none">"</div>
+                  </blockquote>
+                </div>
+                
+                <div className="flex justify-end">
+                  <span className="text-orange-600 font-semibold text-sm">— {author}</span>
+                </div>
+              </div>
+            </div>
+          );
+          return;
+        }
+      }
+      
+      // Parágrafo normal
+      result.push(
+        <p
+          key={index}
+          className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
+        >
+          {paragraph}
+        </p>
+      );
+      
+      // Insere o componente customizado após o parágrafo especificado
+      if (customComponent && customComponentPosition === index + 1) {
+        result.push(
+          <div key={`custom-${index}`} className="my-16">
+            {customComponent}
+          </div>
+        );
+      }
+    });
+
+    return result;
+  };
 
   return (
     <div ref={headerRef} className="max-w-5xl mx-auto mb-24 px-6">
@@ -101,17 +175,7 @@ export const FashionSectionHeader = ({ title, subtitle, introduction }: FashionS
           <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500 rounded-full opacity-70" />
           
           <div className="space-y-8 pl-8">
-            {paragraphs.map((paragraph, index) => (
-              <p
-                key={index}
-                className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
-                style={{
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                }}
-              >
-                {paragraph}
-              </p>
-            ))}
+            {processContent(introduction)}
           </div>
         </div>
       </div>
