@@ -10,6 +10,10 @@ interface SectionHeaderProps {
   introduction: string;
   customComponent?: React.ReactNode;
   customComponentPosition?: number;
+  customComponents?: Array<{
+    component: React.ReactNode;
+    position: number;
+  }>;
 }
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,7 +23,8 @@ export const FashionSectionHeader = ({
   subtitle, 
   introduction,
   customComponent,
-  customComponentPosition 
+  customComponentPosition,
+  customComponents
 }: SectionHeaderProps) => {
   const headerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -130,13 +135,26 @@ export const FashionSectionHeader = ({
         </p>
       );
       
-      // Insere o componente customizado após o parágrafo especificado
+      // Insere o componente customizado após o parágrafo especificado (modo antigo)
       if (customComponent && customComponentPosition === index + 1) {
         result.push(
           <div key={`custom-${index}`} className="my-16">
             {customComponent}
           </div>
         );
+      }
+      
+      // Insere múltiplos componentes customizados (modo novo)
+      if (customComponents) {
+        customComponents.forEach((item, itemIndex) => {
+          if (item.position === index + 1) {
+            result.push(
+              <div key={`custom-multi-${index}-${itemIndex}`} className="my-16">
+                {item.component}
+              </div>
+            );
+          }
+        });
       }
     });
 

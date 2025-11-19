@@ -15,6 +15,10 @@ interface FashionSectionProps {
   expert: FashionExpert;
   references: FashionReference[];
   brand: Brand;
+  customComponents?: Array<{
+    component: React.ReactNode;
+    position: number;
+  }>;
 }
 
 export const FashionSection = ({
@@ -24,7 +28,22 @@ export const FashionSection = ({
   expert,
   references,
   brand,
+  customComponents,
 }: FashionSectionProps) => {
+  // Combina componentes antigos e novos
+  const allCustomComponents = [
+    ...(customComponents || []),
+    {
+      component: (
+        <div className="relative mb-12">
+          <FloatingPolaroids />
+          <PaulaCarousel />
+        </div>
+      ),
+      position: 3,
+    },
+  ];
+
   return (
     <section
       id="baiano-nao-nasce-estreia"
@@ -36,16 +55,8 @@ export const FashionSection = ({
           title={title}
           subtitle={subtitle}
           introduction={introduction}
-          customComponent={
-            <div className="relative mb-12">
-              <FloatingPolaroids />
-              <PaulaCarousel />
-            </div>
-          }
-          customComponentPosition={3}
+          customComponents={allCustomComponents}
         />
-
-        <FashionExpertProfile expert={expert} />
 
         <BrandShowcase brand={brand} />
       </div>

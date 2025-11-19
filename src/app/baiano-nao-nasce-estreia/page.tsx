@@ -5,6 +5,7 @@ import { ColorStripe } from '@/components/ui/ColorStripe';
 import { Navbar } from '@/components/ui/Navbar';
 import { PageNavigation } from '@/components/ui/PageNavigation';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
+import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
 import { fashionExpert, fashionReferences, tamoJuntoParceiro } from '@/lib/fashionData';
 
 export default function BaianoNaoNasceEstreiaPage() {
@@ -26,7 +27,9 @@ Paula reforça que as referências afro estão presentes em diversos detalhes: d
 
 A valorização dessa identidade aparece também nos criadores que hoje representam a moda baiana para o Brasil e para o mundo. Moab, com sua alfaiataria desconstruída; o Ateliê Mão de Mãe, reinventando o crochê com afeto e técnica; Meninos Rei, que exalta a estética afro-baiana em cada peça; Geferson Vila Nova, com elegância original; Irá Salles, reforçando expressão e pertencimento; e marcas como Areia, que apostam em propostas agênero e sofisticadas. Essas produções mostram que a moda baiana não é apenas regional: ela é contemporânea, cosmopolita e, ao mesmo tempo, firme em suas referências culturais. É nessa mistura que surgem roupas que comunicam sem precisar de palavras — e, ainda assim, carregam o sotaque da Bahia.
 
-Esse diálogo entre moda e linguagem ganha materialidade em espaços como a loja Tamo Junto Parceiro, no Rio Vermelho. Criada por jovens empreendedores baianos, a marca nasceu com o objetivo de espalhar a baianidade pelo mundo, mas encontrou no próprio público local sua maior força. As peças, sempre coloridas, cheias de personalidade e repletas de gírias, despertam nos baianos um sentimento de reconhecimento imediato. Segundo Tatiane, uma das criadoras, as estampas funcionam como espelhos culturais: quando alguém lê "oxe", "se plante" ou "não aperte minha mente", vê ali não apenas uma frase, mas um pedaço de sua vivência, de sua família, de seus amigos. E ela reforça esse propósito ao afirmar: "Esse é o nosso maior sonho: espalhar a nossa baianidade para todo canto, mostrar um pouquinho do que é realmente ser baiano. Temos um lema: de Salvador para o mundo, vestindo baianidade. O que acontece na Bahia, queremos que se espalhe pelo mundo." A loja se torna, então, um espaço de pertencimento, onde cada expressão grafada nas paredes e cada camiseta vendida reafirma que a linguagem baiana — tão marcante, musical e afetiva — também é arte e também é moda.
+Esse diálogo entre moda e linguagem ganha materialidade em espaços como a loja Tamo Junto Parceiro, no Rio Vermelho. Criada por jovens empreendedores baianos, a marca nasceu com o objetivo de espalhar a baianidade pelo mundo, mas encontrou no próprio público local sua maior força. As peças, sempre coloridas, cheias de personalidade e repletas de gírias, despertam nos baianos um sentimento de reconhecimento imediato. Segundo Tatiane, uma das criadoras, as estampas funcionam como espelhos culturais: quando alguém lê "oxe", "se plante" ou "não aperte minha mente", vê ali não apenas uma frase, mas um pedaço de sua vivência, de sua família, de seus amigos.
+
+E ela reforça esse propósito ao afirmar: "Esse é o nosso maior sonho: espalhar a nossa baianidade para todo canto, mostrar um pouquinho do que é realmente ser baiano. Temos um lema: de Salvador para o mundo, vestindo baianidade. O que acontece na Bahia, queremos que se espalhe pelo mundo." A loja se torna, então, um espaço de pertencimento, onde cada expressão grafada nas paredes e cada camiseta vendida reafirma que a linguagem baiana — tão marcante, musical e afetiva — também é arte e também é moda.
 
 Curiosamente, turistas e estrangeiros também se encantam com essas expressões, ainda que muitas vezes as consumam como curiosidade cultural. Perguntam significados, riem, se surpreendem. Mas é o baiano quem veste com orgulho, não como souvenir, e sim como afirmação de quem é. Isso demonstra a potência da moda como ferramenta de voz regional: ela transforma o que antes poderia ser alvo de estranhamento ou preconceito linguístico em símbolo de força, humor e autoestima.
 
@@ -36,6 +39,12 @@ Quando Tatiane reafirma que o sonho da marca é "vestir baianidade de Salvador p
           expert={fashionExpert}
           references={fashionReferences}
           brand={tamoJuntoParceiro}
+          customComponents={[
+            {
+              component: <YouTubeEmbed videoId="j1kqpwgq1xw" title="Tamo Junto Parceiro - Vestindo Baianidade" />,
+              position: 6,
+            },
+          ]}
         />
 
         <PageNavigation
