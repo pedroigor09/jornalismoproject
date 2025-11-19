@@ -44,18 +44,6 @@ export const artistsData: Artist[] = [
           transcript: 'As gírias, as expressões, o sotaque, o jeito de falar e até o jeito de dançar… tudo faz parte da cultura do povo desse lugar.',
           speaker: 'Márcia Short',
           afterIntroduction: true
-        }),
-        JSON.stringify({
-          src: '/audiomarcia2.ogg',
-          transcript: 'As pessoas se identificam na hora. É um sentimento de pertencimento. É como se dissesse: "a gente tá falando a mesma língua". Isso cria uma comunicação verdadeira, de igual pra igual.',
-          speaker: 'Márcia Short',
-          afterParagraph: 2
-        }),
-        JSON.stringify({
-          src: '/audiomarcia1.ogg',
-          transcript: 'Enquanto nordestina, percebo que o nosso jeito de falar já imprime uma personalidade. Cada época tem seu marco, mas o baiano tem um molho próprio. Como diz o poeta contemporâneo Kannalha, o baiano já nasce com pimenta na cabeça da chibata. Isso é muito nosso, é o nosso tempero.',
-          speaker: 'Márcia Short',
-          afterParagraph: 4
         })
       ],
     },
