@@ -113,7 +113,7 @@ export const SectionHeader = ({ title, subtitle, introduction, customComponent, 
               return (
                 <span
                   key={`${i}-${j}`}
-                  className="block mt-6 text-2xl md:text-3xl lg:text-4xl text-orange-600 font-black italic leading-tight text-center"
+                  className="block mt-6 text-xl md:text-2xl lg:text-3xl text-orange-600 font-black italic leading-tight text-justify"
                 >
                   {text}
                 </span>

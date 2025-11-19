@@ -160,7 +160,7 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
             key={index}
             className="bg-gradient-to-br from-orange-500/10 to-pink-500/10 backdrop-blur-sm border border-orange-300/20 rounded-2xl p-8 hover:border-orange-300/40 transition-all duration-500"
           >
-            <p className="text-lg md:text-xl text-gray-200 italic leading-relaxed mb-4">
+            <p className="text-lg md:text-xl text-gray-900 italic leading-relaxed mb-4">
               "{quote.text}"
             </p>
             <p className="text-orange-400 font-semibold text-right">— {quote.author}</p>

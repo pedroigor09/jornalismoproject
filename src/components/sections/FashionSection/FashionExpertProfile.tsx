@@ -81,8 +81,8 @@ export const FashionExpertProfile = ({ expert }: FashionExpertProfileProps) => {
             
             {/* Nome e cargo sobre a imagem */}
             <div className="absolute bottom-0 left-0 right-0 p-8">
-              <h3 className="text-3xl font-black text-white mb-2">{expert.name}</h3>
-              <p className="text-pink-300 text-lg font-light">{expert.role}</p>
+              <h3 className="text-3xl font-black text-black mb-2">{expert.name}</h3>
+              <p className="text-orange-600 text-lg font-light">{expert.role}</p>
             </div>
           </div>
         </div>
@@ -94,11 +94,11 @@ export const FashionExpertProfile = ({ expert }: FashionExpertProfileProps) => {
             ref={quoteRef}
             className="bg-gradient-to-br from-orange-500/20 to-purple-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-8 relative"
           >
-            <span className="text-7xl text-pink-400/30 absolute -top-4 -left-2 font-serif">"</span>
-            <p className="text-xl md:text-2xl text-pink-100 italic font-light leading-relaxed relative z-10">
+            <span className="text-7xl text-orange-500/30 absolute -top-4 -left-2 font-serif">"</span>
+            <p className="text-xl md:text-2xl text-gray-900 italic font-light leading-relaxed relative z-10">
               {expert.quote}
             </p>
-            <span className="text-7xl text-pink-400/30 absolute -bottom-8 -right-2 font-serif">"</span>
+            <span className="text-7xl text-orange-500/30 absolute -bottom-8 -right-2 font-serif">"</span>
           </div>
 
           {/* Introdução */}
