@@ -3,13 +3,21 @@
 import type { ArtisticSectionProps } from '@/types/artist';
 import { SectionHeader } from './SectionHeader';
 import { ArtistProfile } from './ArtistProfile';
+import { ReactNode } from 'react';
+
+interface ExtendedArtisticSectionProps extends ArtisticSectionProps {
+  customComponent?: ReactNode;
+  customComponentPosition?: number;
+}
 
 export const ArtisticSection = ({
   title,
   subtitle,
   introduction,
   artists,
-}: ArtisticSectionProps) => {
+  customComponent,
+  customComponentPosition,
+}: ExtendedArtisticSectionProps) => {
   return (
     <section
       id="oxe-que-arte-e-essa"
@@ -22,6 +30,8 @@ export const ArtisticSection = ({
           title={title}
           subtitle={subtitle}
           introduction={introduction}
+          customComponent={customComponent}
+          customComponentPosition={customComponentPosition}
         />
 
         {/* Lista de Artistas */}

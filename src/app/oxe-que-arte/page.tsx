@@ -6,6 +6,7 @@ import { Navbar } from '@/components/ui/Navbar';
 import { PageNavigation } from '@/components/ui/PageNavigation';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
 import { artistsData } from '@/lib/artistsData';
+import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
 
 export default function OxeQueArtePage() {
   return (
@@ -28,7 +29,7 @@ Essa amplificação contemporânea dialoga, por exemplo, com o trabalho de James
 
 Tanto James quanto esses influenciadores acionam a língua como território de disputa: lutar contra a folclorização é lutar contra a narrativa que reduz o baiano ao exótico, ao engraçado, ao preguiçoso, ao 'diferente'. Na contramão dessa visão, eles afirmam uma baianidade complexa, urbana, múltipla, politizada e capaz de produzir pensamento crítico. Assim, aquilo que surge como riso em um vídeo ou como vibração em um poema tem raízes profundas: é a recusa em permitir que outros definam o que o baiano é ou deve ser.
 
-Na música, esse processo é ainda mais evidente — e mais antigo. Quando Márcia Short afirma que 'a Bahia fala cantando', ela traduz um entendimento profundo de que o falar baiano já nasce ritmado, já nasce música — um modo de vocalizar o mundo que carrega afetos, memórias e pertencimentos. Essa percepção dialoga com vivências pessoais que reforçam a dimensão identitária do sotaque. 'Enquanto nordestina, percebo que o nosso jeito de falar já imprime uma personalidade. Cada época tem seu marco, mas o baiano tem um molho próprio. Como diz o poeta contemporâneo Kannalha, o baiano já nasce com pimenta na cabeça da chibata. Isso é muito nosso, é o nosso tempero.' Essa imagem — de uma voz que nasce temperada, ardida, viva — explicita uma ancestralidade sonora que atravessa gerações. O público que reconhece uma expressão típica em uma canção sente essa conexão de imediato — uma experiência que hoje se repete nas redes quando expressões como 'oxe', 'barril' ou 'pomba suja' viralizam, despertando tanto identificação quanto estranhamento.
+Na música, esse processo é ainda mais evidente — e mais antigo. Quando Márcia Short afirma que 'a Bahia fala cantando', ela traduz um entendimento profundo de que o falar baiano já nasce ritmado, já nasce música — um modo de vocalizar o mundo que carrega afetos, memórias e pertencimentos. Essa percepção dialoga com vivências pessoais que reforçam a dimensão identitária do sotaque.
 
 A reação nacional às gírias baianas confirma o que Márcia e Jacyra Mota apontam há anos: o país admira a musicalidade da Bahia, mas ainda tropeça em seus preconceitos linguísticos. O que muda na era digital é o alcance da resposta. A cada viralização, a baianidade se reafirma como linguagem legítima, desafiando hierarquias históricas que, durante décadas, marginalizaram sotaques regionais em nome de uma suposta neutralidade que, no fundo, sempre foi sudestina. Agora, quem dita o ritmo é o usuário comum, o criador independente, o jovem que grava stories no bairro, a menina que viraliza uma gíria no ônibus, o artista que mistura fala cotidiana com refrões irresistíveis. O digital democratiza vozes e, com isso, revela a potência de falas antes subestimadas.
 
@@ -42,6 +43,16 @@ A força dessa intersecção entre redes sociais, poesia e música está justame
 
 Assim, quando artistas, poetas, cantores, pesquisadores e criadores de conteúdo analisam, cantam, interpretam, escrevem ou simplesmente falam do jeito que sempre falaram, eles se encontram na mesma defesa: a de que o sotaque baiano é arte, é política, é memória e é futuro. Cada vogal alongada, cada gíria reinventada, cada verso que lembra as ladeiras de Salvador, cada vídeo que viraliza com um 'oxe' dito no tempo certo, tudo isso forma uma constelação cultural que desafia silenciamentos e reescreve narrativas. No cruzamento entre poesia, redes sociais e música, o sotaque baiano segue não apenas vivo, mas cada vez mais luminoso — firme na certeza de que, como diz Pizane, 'o nosso jeito de falar também é Brasil, tá ligado?'.`}
           artists={artistsData}
+          customComponent={
+            <ClickableAudioImage
+              imageSrc="/marcia2.avif"
+              audioSrc="/audiomarciaoriginal.mp3"
+              transcript="Enquanto nordestina, percebo que o nosso jeito de falar já imprime uma personalidade. Cada época tem seu marco, mas o baiano tem um molho próprio. Como diz o poeta contemporâneo Kannalha, o baiano já nasce com pimenta na cabeça da chibata. Isso é muito nosso, é o nosso tempero."
+              speaker="Márcia Short"
+              alt="Márcia Short"
+            />
+          }
+          customComponentPosition={4}
         />
 
         <PageNavigation

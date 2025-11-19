@@ -7,9 +7,11 @@ interface SectionHeaderProps {
   title: string;
   subtitle: string;
   introduction: string;
+  customComponent?: React.ReactNode;
+  customComponentPosition?: number;
 }
 
-export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderProps) => {
+export const SectionHeader = ({ title, subtitle, introduction, customComponent, customComponentPosition }: SectionHeaderProps) => {
   const titleRef = useScrollReveal(0.8);
   const subtitleRef = useScrollReveal(0.75);
   const introRef = useScrollReveal(0.7);
@@ -62,6 +64,15 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
           {paragraph}
         </p>
       );
+      
+      // Insere componente customizado DEPOIS do parágrafo especificado
+      if (customComponentPosition === index && customComponent) {
+        result.push(
+          <div key={`custom-${index}`}>
+            {customComponent}
+          </div>
+        );
+      }
     });
 
     return result;
