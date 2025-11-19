@@ -122,25 +122,18 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
 
   return (
     <div ref={containerRef} className="max-w-7xl mx-auto mb-32 px-6">
-      {/* Header */}
-      <div className="text-center mb-16">
-        <h3
-          ref={titleRef}
-          className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-yellow-300 via-orange-400 to-pink-400 bg-clip-text text-transparent"
-        >
-          {brand.name}
-        </h3>
-        <p
-          ref={descriptionRef}
-          className="text-xl text-black leading-relaxed max-w-4xl mx-auto font-light"
-        >
-          {brand.description}
-        </p>
-      </div>
-
       {/* Vídeo */}
       {videoId && (
         <div ref={videoRef} className="mb-20">
+          {/* Detalhe decorativo antes do vídeo */}
+          <div className="mb-8 flex items-center justify-center gap-4">
+            <div className="w-20 h-0.5 bg-gradient-to-r from-orange-500 to-transparent rounded-full" />
+            <span className="text-orange-600 text-sm font-bold uppercase tracking-wider">
+              Assista ao vídeo
+            </span>
+            <div className="w-20 h-0.5 bg-gradient-to-l from-orange-500 to-transparent rounded-full" />
+          </div>
+          
           <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black">
             <iframe
               src={`https://www.youtube.com/embed/${videoId}`}
