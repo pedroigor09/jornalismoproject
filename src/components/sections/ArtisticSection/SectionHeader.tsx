@@ -2,6 +2,7 @@
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { HighlightQuote } from '@/components/ui/HighlightQuote';
+import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
 
 interface SectionHeaderProps {
   title: string;
@@ -23,7 +24,28 @@ export const SectionHeader = ({ title, subtitle, introduction, customComponent, 
     paragraphs.forEach((paragraph, index) => {
       const trimmed = paragraph.trim();
       
-      // Detecta placeholder de vídeo
+      // Detecta marcador de vídeo no formato [VIDEO:id]
+      const videoMatch = trimmed.match(/^\[VIDEO:([^\]]+)\]$/);
+      if (videoMatch) {
+        const videoId = videoMatch[1];
+        // Define crédito baseado no ID do vídeo
+        let credit = "Reprodução/Redes Sociais";
+        if (videoId === "5Pqhf69mjc8" || videoId === "Re6yq8qAAWc") {
+          credit = "Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida";
+        }
+        
+        result.push(
+          <div key={index} className="my-12">
+            <YouTubeEmbed 
+              videoId={videoId} 
+              credit={credit}
+            />
+          </div>
+        );
+        return;
+      }
+      
+      // Detecta placeholder de vídeo antigo [VÍDEO:...]
       if (trimmed.startsWith('[VÍDEO:')) {
         const videoText = trimmed.replace(/^\[VÍDEO:\s*/, '').replace(/\]$/, '');
         result.push(
