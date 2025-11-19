@@ -102,6 +102,28 @@ export const SectionHeader = ({ title, subtitle, introduction, customComponent, 
         }
         return part;
       });
+
+      // Processa texto entre ** para destaque especial (frase de Pizane)
+      const finalProcessed = processedParagraph.flatMap((part, i) => {
+        if (typeof part === 'string') {
+          const parts = part.split(/(\*\*[^*]+\*\*)/g);
+          return parts.map((subPart, j) => {
+            if (subPart.startsWith('**') && subPart.endsWith('**')) {
+              const text = subPart.slice(2, -2);
+              return (
+                <span
+                  key={`${i}-${j}`}
+                  className="block mt-6 text-2xl md:text-3xl lg:text-4xl text-orange-600 font-black italic leading-tight text-center"
+                >
+                  {text}
+                </span>
+              );
+            }
+            return subPart;
+          });
+        }
+        return part;
+      });
       
       // Parágrafo normal
       result.push(
@@ -109,7 +131,7 @@ export const SectionHeader = ({ title, subtitle, introduction, customComponent, 
           key={index}
           className="text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
         >
-          {processedParagraph}
+          {finalProcessed}
         </p>
       );
       
