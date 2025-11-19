@@ -54,7 +54,7 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
             <div className="absolute -top-6 -left-4 text-8xl text-orange-500/20 font-serif leading-none">
               "
             </div>
-            <blockquote className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight italic pl-8">
+            <blockquote className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight italic pl-8">
               {artist.quote}
             </blockquote>
             <div className="absolute -bottom-6 -right-4 text-8xl text-orange-500/20 font-serif leading-none">
@@ -68,7 +68,7 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
       <div className="max-w-4xl mx-auto">
         {/* Introdução */}
         <div className="mb-8">
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light italic">
+          <p className="text-xl md:text-2xl text-gray-800 leading-relaxed font-light italic">
             {artist.content.introduction}
           </p>
         </div>
@@ -120,10 +120,7 @@ export const ArtistProfile = ({ artist, index }: ArtistProfileProps) => {
             return (
               <div key={idx}>
                 <p
-                  className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed"
-                  style={{
-                    textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                  }}
+                  className="text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed"
                 >
                   {paragraph}
                 </p>

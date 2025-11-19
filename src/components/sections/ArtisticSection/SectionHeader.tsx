@@ -1,6 +1,7 @@
 'use client';
 
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import { HighlightQuote } from '@/components/ui/HighlightQuote';
 
 interface SectionHeaderProps {
   title: string;
@@ -13,15 +14,65 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
   const subtitleRef = useScrollReveal(0.75);
   const introRef = useScrollReveal(0.7);
 
+  const processContent = (text: string) => {
+    const paragraphs = text.split('\n\n');
+    const result: React.ReactNode[] = [];
+
+    paragraphs.forEach((paragraph, index) => {
+      const trimmed = paragraph.trim();
+      
+      // Detecta especificamente a citação de James Martins
+      if (trimmed.includes('Eu me esforço muito para que essa baianidade') && trimmed.includes('James Martins')) {
+        result.push(
+          <HighlightQuote 
+            key={index} 
+            quote="Eu me esforço muito para que essa baianidade não apareça de maneira folclórica ou estereotipada" 
+            author="James Martins" 
+          />
+        );
+        return;
+      }
+      
+      // Detecta citações genéricas que começam com aspas e contêm " - "
+      const startsWithQuote = trimmed.startsWith('"') || trimmed.startsWith('"') || trimmed.startsWith('"');
+      const hasDashSeparator = trimmed.includes(' - ');
+      
+      if (startsWithQuote && hasDashSeparator) {
+        const dashIndex = trimmed.lastIndexOf(' - ');
+        if (dashIndex > 0) {
+          const quotePart = trimmed.substring(0, dashIndex);
+          const authorPart = trimmed.substring(dashIndex + 3);
+          
+          const quote = quotePart.replace(/^[""]/, '').replace(/[""]\.*$/, '').trim();
+          const author = authorPart.replace(/\.$/, '').trim();
+          
+          result.push(
+            <HighlightQuote key={index} quote={quote} author={author} />
+          );
+          return;
+        }
+      }
+      
+      // Parágrafo normal
+      result.push(
+        <p
+          key={index}
+          className="text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
+        >
+          {paragraph}
+        </p>
+      );
+    });
+
+    return result;
+  };
+
   return (
     <header className="text-center mb-20 md:mb-32">
       {/* Título Principal */}
       <h2
         ref={titleRef as any}
-        className="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-6"
-        style={{
-          textShadow: '0 4px 30px rgba(255, 107, 53, 0.6)',
-        }}
+        className="text-4xl md:text-5xl lg:text-7xl font-black text-black mb-6"
       >
         {title}
       </h2>
@@ -29,7 +80,7 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
       {/* Subtítulo */}
       <p
         ref={subtitleRef as any}
-        className="text-xl md:text-2xl lg:text-3xl text-orange-400 font-light mb-8 italic"
+        className="text-xl md:text-2xl lg:text-3xl text-orange-600 font-light mb-8 italic"
       >
         {subtitle}
       </p>
@@ -51,17 +102,7 @@ export const SectionHeader = ({ title, subtitle, introduction }: SectionHeaderPr
           <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-orange-500 via-yellow-500 to-blue-500 rounded-full opacity-70" />
           
           <div className="space-y-8 pl-8">
-            {introduction.split('\n\n').map((paragraph, index) => (
-              <p
-                key={index}
-                className="text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light text-justify"
-                style={{
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                }}
-              >
-                {paragraph}
-              </p>
-            ))}
+            {processContent(introduction)}
           </div>
         </div>
       </div>
