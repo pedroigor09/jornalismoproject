@@ -52,7 +52,7 @@ Assim, quando artistas, poetas, cantores, pesquisadores e criadores de conteúdo
               alt="Márcia Short"
             />
           }
-          customComponentPosition={4}
+          customComponentPosition={5}
         />
 
         <PageNavigation
