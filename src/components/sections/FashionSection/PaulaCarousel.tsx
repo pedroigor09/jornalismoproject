@@ -66,7 +66,7 @@ const PaulaCarousel: React.FC = () => {
               src={getAssetPath(photo)}
               alt={`Paula Magalhães ${index + 1}`}
               fill
-              className="object-cover"
+              className="object-contain"
               priority={index === 0}
             />
           </div>
@@ -138,6 +138,13 @@ const PaulaCarousel: React.FC = () => {
             aria-label={`Ir para slide ${index + 1}`}
           />
         ))}
+      </div>
+
+      {/* Crédito */}
+      <div className="text-center mt-4">
+        <p className="text-sm text-gray-600 italic">
+          Reprodução/Redes Sociais
+        </p>
       </div>
 
       {/* Miniaturas */}
