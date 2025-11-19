@@ -78,7 +78,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
         
         <p
           ref={subtitleRef}
-          className="text-2xl md:text-3xl font-light text-cyan-300 mb-8 italic"
+          className="text-2xl md:text-3xl font-light text-orange-600 mb-8 italic"
         >
           {subtitle}
         </p>
@@ -101,10 +101,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
             {allParagraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed font-light text-justify"
-                style={{
-                  textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-                }}
+                className="intro-paragraph text-base md:text-lg lg:text-xl text-gray-900 leading-relaxed font-light text-justify"
               >
                 {paragraph}
               </p>

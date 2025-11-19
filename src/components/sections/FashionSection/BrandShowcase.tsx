@@ -124,7 +124,7 @@ export const BrandShowcase = ({ brand }: BrandShowcaseProps) => {
     <div ref={containerRef} className="max-w-7xl mx-auto mb-32 px-6">
       {/* Vídeo */}
       {videoId && (
-        <div ref={videoRef} className="mb-20">
+        <div ref={videoRef} className="mb-8">
           {/* Detalhe decorativo antes do vídeo */}
           <div className="mb-8 flex items-center justify-center gap-4">
             <div className="w-20 h-0.5 bg-gradient-to-r from-orange-500 to-transparent rounded-full" />

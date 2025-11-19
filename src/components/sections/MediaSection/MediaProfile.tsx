@@ -79,13 +79,13 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
-              <h3 className="text-3xl md:text-4xl font-black text-white mb-2">
+              <h3 className="text-3xl md:text-4xl font-black text-black mb-2">
                 {professional.name}
               </h3>
-              <p className="text-cyan-300 text-lg font-light mb-4">{professional.role}</p>
+              <p className="text-orange-600 text-lg font-light mb-4">{professional.role}</p>
               
               {professional.bio && (
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-900 text-sm leading-relaxed">
                   {professional.bio}
                 </p>
               )}
@@ -111,14 +111,14 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
           {/* Quote destacada */}
           <div className="bg-gradient-to-br from-orange-500/20 to-purple-500/20 backdrop-blur-sm border border-orange-300/30 rounded-2xl p-6 md:p-8 relative">
             <span className="text-6xl text-orange-400/30 absolute -top-2 -left-1 font-serif">"</span>
-            <p className="text-lg md:text-xl text-orange-100 italic font-light leading-relaxed relative z-10">
+            <p className="text-lg md:text-xl text-gray-900 italic font-light leading-relaxed relative z-10">
               {professional.quote}
             </p>
             <span className="text-6xl text-orange-400/30 absolute -bottom-6 -right-1 font-serif">"</span>
           </div>
 
           {/* Introdução */}
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+          <p className="text-gray-900 text-base md:text-lg leading-relaxed">
             {professional.content.introduction}
           </p>
 
@@ -139,7 +139,7 @@ export const MediaProfile = ({ professional, index }: MediaProfileProps) => {
 
               return (
                 <div key={idx}>
-                  <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                  <p className="text-gray-900 text-base md:text-lg leading-relaxed">
                     {paragraph}
                   </p>
                   
