@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
+import { QuoteWithImage } from '@/components/ui/QuoteWithImage';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -109,6 +110,21 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                     <YouTubeEmbed 
                       videoId={videoMatch[1]} 
                       credit="Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida"
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é um marcador de citação com imagem
+              const quoteImageMatch = paragraph.match(/^\[QUOTE_IMAGE:([^:]+):(.+)\]$/);
+              
+              if (quoteImageMatch) {
+                return (
+                  <div key={index} className="my-12">
+                    <QuoteWithImage 
+                      imagePath={quoteImageMatch[1]}
+                      imageAlt="Silvana Freire"
+                      quote={quoteImageMatch[2]}
                     />
                   </div>
                 );
