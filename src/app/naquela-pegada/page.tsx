@@ -5,7 +5,7 @@ import { ColorStripe } from '@/components/ui/ColorStripe';
 import { Navbar } from '@/components/ui/Navbar';
 import { PageNavigation } from '@/components/ui/PageNavigation';
 import { GSAPWrapper } from '@/components/GSAPWrapper';
-import { mediaIntroduction, journalists, actors, influencers } from '@/lib/mediaData';
+import { mediaIntroduction } from '@/lib/mediaData';
 
 export default function NaquelaPegadaPage() {
   return (
@@ -17,9 +17,6 @@ export default function NaquelaPegadaPage() {
           title="Naquela pegada!"
           subtitle="A identidade e a fala baiana do telejornal ao streaming"
           introductions={mediaIntroduction.map(intro => intro.text)}
-          journalists={journalists}
-          actors={actors}
-          influencers={influencers}
         />
 
         <PageNavigation
