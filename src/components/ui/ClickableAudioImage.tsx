@@ -188,6 +188,9 @@ export const ClickableAudioImage = ({
         <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl opacity-20 blur-lg -z-10" />
       </div>
 
+      {/* Legenda */}
+      <p className="text-sm text-gray-400 mt-2 text-center">Reprodução/Redes Sociais</p>
+
       {/* Transcrição abaixo da imagem */}
       {showTranscript && (
         <div className="mt-6 bg-gradient-to-br from-gray-900/95 to-black/95 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/20 shadow-xl">
