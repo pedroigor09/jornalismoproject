@@ -5,6 +5,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
 import { QuoteWithImage } from '@/components/ui/QuoteWithImage';
+import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
+import { HighlightQuote } from '@/components/ui/HighlightQuote';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -125,6 +127,40 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                       imagePath={quoteImageMatch[1]}
                       imageAlt="Silvana Freire"
                       quote={quoteImageMatch[2]}
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é um marcador de áudio com imagem
+              // Formato: [AUDIO_IMAGE:imagePath:audioPath:transcript:speaker]
+              const audioImageMatch = paragraph.match(/^\[AUDIO_IMAGE:([^:]+):([^:]+):([^:]+):([^\]]+)\]$/);
+              
+              if (audioImageMatch) {
+                return (
+                  <div key={index} className="my-12">
+                    <ClickableAudioImage
+                      imageSrc={audioImageMatch[1]}
+                      audioSrc={audioImageMatch[2]}
+                      transcript={audioImageMatch[3]}
+                      speaker={audioImageMatch[4]}
+                      alt={audioImageMatch[4]}
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é uma citação formatada com aspas e " - Autor"
+              const trimmed = paragraph.trim();
+              const quotePattern = /^[""](.+?)[""]\.?\s*-\s*(.+?)\.?$/;
+              const quoteMatch = trimmed.match(quotePattern);
+              
+              if (quoteMatch) {
+                return (
+                  <div key={index} className="my-12">
+                    <HighlightQuote 
+                      quote={quoteMatch[1].trim()}
+                      author={quoteMatch[2].trim()}
                     />
                   </div>
                 );
