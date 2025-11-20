@@ -13,5 +13,10 @@ export function getAssetPath(path: string): string {
   // Garante que o path começa com /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   
-  return `${basePath}${normalizedPath}`;
+  // Codifica caracteres especiais (espaços, acentos) para URLs
+  const encodedPath = normalizedPath.split('/').map(segment => 
+    segment ? encodeURIComponent(segment) : ''
+  ).join('/');
+  
+  return `${basePath}${encodedPath}`;
 }
