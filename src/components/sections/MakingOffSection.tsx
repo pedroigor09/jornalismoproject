@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,27 +16,27 @@ interface MakingOffImage {
 
 const makingOffData: MakingOffImage[] = [
   {
-    src: '/bastidor1.jpg',
+    src: getAssetPath('/bastidor1.jpg'),
     caption: 'Preparação das entrevistas',
     category: 'bastidores'
   },
   {
-    src: '/bastidor2.jpg',
+    src: getAssetPath('/bastidor2.jpg'),
     caption: 'Momentos de gravação',
     category: 'bastidores'
   },
 ];
 
 const cinematicImages = [
-  { src: '/Emerson Nunes.jpg', caption: 'Emerson Nunes' },
-  { src: '/Entrevista com Ciro Sales.jpg', caption: 'Entrevista com Ciro Sales' },
-  { src: '/Entrevista com Ivan Mesquista.jpg', caption: 'Entrevista com Ivan Mesquista' },
-  { src: '/Equipe em reunião.jpg', caption: 'Equipe em reunião' },
-  { src: '/James Martins.jpg', caption: 'James Martins' },
-  { src: '/Porfª Jacyra Mota.jpg', caption: 'Profª Jacyra Mota' },
-  { src: '/Primeira pré-banca.jpg', caption: 'Primeira pré-banca' },
-  { src: '/Profª Jacyra Mota.jpg', caption: 'Profª Jacyra Mota' },
-  { src: '/Silvana Freire.jpg', caption: 'Silvana Freire' },
+  { src: getAssetPath('/Emerson Nunes.jpg'), caption: 'Emerson Nunes' },
+  { src: getAssetPath('/Entrevista com Ciro Sales.jpg'), caption: 'Entrevista com Ciro Sales' },
+  { src: getAssetPath('/Entrevista com Ivan Mesquista.jpg'), caption: 'Entrevista com Ivan Mesquista' },
+  { src: getAssetPath('/Equipe em reunião.jpg'), caption: 'Equipe em reunião' },
+  { src: getAssetPath('/James Martins.jpg'), caption: 'James Martins' },
+  { src: getAssetPath('/Porfª Jacyra Mota.jpg'), caption: 'Profª Jacyra Mota' },
+  { src: getAssetPath('/Primeira pré-banca.jpg'), caption: 'Primeira pré-banca' },
+  { src: getAssetPath('/Profª Jacyra Mota.jpg'), caption: 'Profª Jacyra Mota' },
+  { src: getAssetPath('/Silvana Freire.jpg'), caption: 'Silvana Freire' },
 ];
 
 export function MakingOffSection() {
@@ -139,7 +140,7 @@ export function MakingOffSection() {
         {/* Background com parallax */}
         <div className="absolute inset-0">
           <Image
-            src="/making-off/hero-bg.jpg"
+            src={getAssetPath('/making-off/hero-bg.jpg')}
             alt="Making Off Background"
             fill
             className="object-cover opacity-20"
@@ -175,7 +176,7 @@ export function MakingOffSection() {
               controls
               preload="metadata"
             >
-              <source src="/Makingoff.mp4" type="video/mp4" />
+              <source src={getAssetPath('/Makingoff.mp4')} type="video/mp4" />
               Seu navegador não suporta o elemento de vídeo.
             </video>
           </div>
