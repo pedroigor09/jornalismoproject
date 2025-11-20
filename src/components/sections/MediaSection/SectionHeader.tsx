@@ -9,6 +9,7 @@ import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
 import { HighlightQuote } from '@/components/ui/HighlightQuote';
 import { SectionTitleWithBackground } from '@/components/ui/SectionTitleWithBackground';
 import { TimelineWithPolaroids } from '@/components/ui/TimelineWithPolaroids';
+import { getAssetPath } from '@/lib/getAssetPath';
 import { AudioPlayer } from '@/components/ui/AudioPlayer';
 
 interface MediaSectionHeaderProps {
@@ -222,7 +223,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                   <div key={index} className="my-12 flex justify-center">
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400 max-w-2xl w-full">
                       <img
-                        src={gifMatch[1]}
+                        src={getAssetPath(gifMatch[1])}
                         alt="GIF animado"
                         className="w-full h-auto"
                       />

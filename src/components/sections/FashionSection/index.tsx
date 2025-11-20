@@ -6,7 +6,6 @@ import { FashionExpertProfile } from './FashionExpertProfile';
 import { FashionReferencesCarousel } from './FashionReferencesCarousel';
 import { BrandShowcase } from './BrandShowcase';
 import PaulaCarousel from './PaulaCarousel';
-import FloatingPolaroids from './FloatingPolaroids';
 
 interface FashionSectionProps {
   title: string;
@@ -36,7 +35,6 @@ export const FashionSection = ({
     {
       component: (
         <div className="relative mb-12">
-          <FloatingPolaroids />
           <PaulaCarousel />
         </div>
       ),
