@@ -65,7 +65,11 @@ A fala baiana, com sua cadência própria, vogais abertas, ritmo marcado e music
 
 Já Jéssica Marques vive o impacto direto da herança desse preconceito. Ela relata que neutralizar a fala para atender às demandas das produções não é um ato de submissão, mas uma técnica — ainda que forjada num ambiente que, por décadas, associou o sotaque nordestino à falta de preparo. Ao lembrar que palavras como "presente", pronunciada com o "É" baiano, precisavam ser ajustadas para a forma neutra "Ê", Jéssica expõe a pressão histórica que moldou o audiovisual brasileiro. A neutralização, no caso dela, é estratégica, mas revela uma estrutura que ainda hierarquiza sotaques.
 
+[QUOTE_IMAGE:/jes1.jpg:Quando falamos na nossa língua materna, as intenções ganham mais vida]
+
 Ciro Sales, por sua vez, traz uma nuance diferente: mesmo não tendo um sotaque baiano muito marcado, descobriu que isso gerava outro tipo de preconceito, o "preconceito reverso". "Às vezes as pessoas falam: 'Você nem parece baiano'. Isso é muito irritante porque eu sou muito baiano", diz. Essa observação expõe um retrato ainda presente no imaginário nacional: o de que existir baianamente significa corresponder a uma única forma de falar — uma visão redutora que ignora a pluralidade linguística do estado e reforça estigmas criados pela mídia ao longo de décadas.
+
+[VIDEO:taaVyFEnQuc]
 
 Mas talvez ninguém tenha vivido com tanta intensidade o peso do preconceito linguístico quanto Raissa Xavier. Ao chegar ao Rio de Janeiro, enfrentou xenofobia explícita e se viu "neutralizando" o sotaque para não denunciar sua origem. "Eu neutralizava meu sotaque para que não soubessem de onde eu era", lembra. O que para muitos é apenas uma característica fonética, para ela se tornou questão de sobrevivência num mercado que ainda carrega resquícios do apagamento histórico das vozes nordestinas. Foi somente ao encontrar apoio no grupo de artistas baianos chamado "Máfia do Dendê" que ela conseguiu reconstruir sua relação com a própria fala e afirmar: "Eu não tô aqui pra neutralizar nada. Essa é a minha verdade."
 

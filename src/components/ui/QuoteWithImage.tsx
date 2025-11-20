@@ -15,13 +15,16 @@ export const QuoteWithImage = ({ quote, author, imagePath, imageAlt }: QuoteWith
     <div className="max-w-6xl mx-auto my-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Imagem */}
-        <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-          <Image
-            src={getAssetPath(imagePath)}
-            alt={imageAlt}
-            fill
-            className="object-cover"
-          />
+        <div>
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src={getAssetPath(imagePath)}
+              alt={imageAlt}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-sm text-gray-400 mt-2 text-center">Reprodução/Redes Sociais</p>
         </div>
 
         {/* Citação */}
