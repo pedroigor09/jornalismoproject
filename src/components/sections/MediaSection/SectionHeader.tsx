@@ -8,6 +8,7 @@ import { QuoteWithImage } from '@/components/ui/QuoteWithImage';
 import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
 import { HighlightQuote } from '@/components/ui/HighlightQuote';
 import { SectionTitleWithBackground } from '@/components/ui/SectionTitleWithBackground';
+import { TimelineWithPolaroids } from '@/components/ui/TimelineWithPolaroids';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -159,6 +160,37 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                       imageSrc={titleBgMatch[1]}
                       title={titleBgMatch[2]}
                       imageAlt="Pelourinho - Salvador, Bahia"
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é um marcador de timeline com polaroids
+              // Formato: [TIMELINE_POLAROIDS]
+              if (paragraph.trim() === '[TIMELINE_POLAROIDS]') {
+                return (
+                  <div key={index} className="my-16">
+                    <TimelineWithPolaroids
+                      events={[
+                        {
+                          period: '',
+                          imageSrc: '/man1.jpg',
+                          imageAlt: 'Manchete sobre sotaque baiano',
+                          link: 'https://caras.com.br/tv/isadora-cruz-fala-sobre-preconceito-com-o-sotaque-nordestino-falaram-que-tinha-que-mudar.phtml'
+                        },
+                        {
+                          period: '',
+                          imageSrc: '/man2.jpg',
+                          imageAlt: 'Manchete sobre preconceito linguístico',
+                          link: 'https://g1.globo.com/ba/bahia/noticia/2025/07/21/preta-gil-quase-repetiu-de-ano-por-causa-de-preconceito-linguistico.ghtml'
+                        },
+                        {
+                          period: '',
+                          imageSrc: '/man3.jpg',
+                          imageAlt: 'Manchete sobre sotaque nordestino',
+                          link: 'https://g1.globo.com/pop-arte/noticia/2022/06/11/juliette-neutralizar-o-sotaque.ghtml'
+                        }
+                      ]}
                     />
                   </div>
                 );
