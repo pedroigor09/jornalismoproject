@@ -9,6 +9,8 @@ Se antes o sotaque precisava ser aparado, hoje ele se torna ponte. A diversidade
 
 [VIDEO:v2z6TXybHvA]
 
+[SECTION_TITLE:Quando a notícia carrega identidade: a transformação das redações brasileiras]
+
 Enquanto o país aprende a valorizar seus modos de falar, o telejornalismo baiano se consolida como referência de comunicação que equilibra técnica e afeto. Emerson Nunes, editor-chefe do Jornal da Manhã, resume esse desafio cotidiano: o telejornal precisa respeitar a norma culta, mas sem perder a clareza e a proximidade. "O português deve estar correto, mas, ao mesmo tempo, ser claro e acessível", afirma. Para ele, o uso moderado de expressões regionais não apenas humaniza, como fortalece o vínculo entre repórter e audiência. Quando disse ao vivo a expressão "o cacau caiu", um baianismo típico para indicar chuva forte, parte do público estranhou — e o telejornal respondeu com conteúdo educativo, mostrando que o jornalismo pode ser, ao mesmo tempo, informativo e pedagógico sobre cultura local.
 
 [VIDEO:FICbgn5gUkI]

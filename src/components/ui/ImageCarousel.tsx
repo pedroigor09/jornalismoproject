@@ -49,12 +49,6 @@ export const ImageCarousel = ({ images, caption, imageCaptions = [], imageCaptio
 
   return (
     <div ref={carouselRef} className="my-12 md:my-16">
-      {caption && (
-        <p className="text-center text-gray-400 text-sm md:text-base mb-4 font-light">
-          {caption}
-        </p>
-      )}
-      
       <div className="relative w-full max-w-4xl mx-auto">
         {/* Imagem principal */}
         <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900 shadow-2xl">
@@ -64,28 +58,6 @@ export const ImageCarousel = ({ images, caption, imageCaptions = [], imageCaptio
             fill
             className="object-cover transition-opacity duration-500"
           />
-          
-          {/* Legenda da imagem individual */}
-          {imageCaptions[currentIndex] && (
-            <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20">
-              <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-lg shadow-xl">
-                {imageCaptionLinks[currentIndex] ? (
-                  <a
-                    href={imageCaptionLinks[currentIndex]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-900 text-sm md:text-base font-medium text-center whitespace-nowrap hover:text-orange-600 transition-colors underline decoration-gray-900/30 hover:decoration-orange-600"
-                  >
-                    {imageCaptions[currentIndex]}
-                  </a>
-                ) : (
-                  <p className="text-gray-900 text-sm md:text-base font-medium text-center whitespace-nowrap">
-                    {imageCaptions[currentIndex]}
-                  </p>
-                )}
-              </div>
-            </div>
-          )}
           
           {/* Overlay de gradiente */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
@@ -133,6 +105,13 @@ export const ImageCarousel = ({ images, caption, imageCaptions = [], imageCaptio
           {currentIndex + 1} / {images.length}
         </div>
       </div>
+
+      {/* Legenda fixa abaixo do carrossel */}
+      {caption && (
+        <p className="text-center text-gray-600 text-sm md:text-base mt-4 font-light">
+          {caption}
+        </p>
+      )}
     </div>
   );
 };

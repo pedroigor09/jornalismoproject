@@ -25,7 +25,13 @@ const regioesBahia: Regiao[] = [
     id: 'salvador',
     nome: 'Salvador',
     position: { lat: -12.9714, lng: -38.5014 },
-    girias: ['Oxente', 'Sô', 'Vixe', 'Arretado'],
+    girias: [
+      'Barril - situação difícil ou tensa',
+      'Pivete - criança/jovem',
+      'Colé - forma curta de "qual é?"',
+      'Massa - legal, bom',
+      'Se amostrando - querendo aparecer'
+    ],
     sotaque: 'Sotaque soteropolitano - alongado e musical',
     cor: '#FFD700',
   },
@@ -33,31 +39,51 @@ const regioesBahia: Regiao[] = [
     id: 'reconcavo',
     nome: 'Recôncavo',
     position: { lat: -12.6667, lng: -38.9667 },
-    girias: ['Uai', 'Trem', 'Cabra', 'Massa'],
+    girias: [
+      'Xibiotagem - quando alguém está exagerando ou fazendo drama',
+      'Meeiro - algo não muito empolgante',
+      'Lorota - mentira',
+      'Beiço de jegue não é arroz doce - algo que parece fácil mas é difícil'
+    ],
     sotaque: 'Sotaque do Recôncavo - forte influência africana',
     cor: '#E63946',
   },
   {
-    id: 'feira',
-    nome: 'Feira de Santana',
-    position: { lat: -12.2664, lng: -38.9663 },
-    girias: ['Êita', 'Rapaz', 'Véi', 'Bichão'],
-    sotaque: 'Sotaque feirense - rápido e expressivo',
+    id: 'norte',
+    nome: 'Norte da Bahia',
+    position: { lat: -8.5333, lng: -39.3803 },
+    girias: [
+      'Arretado - excelente/muito bom',
+      'Se avexe não - não se apresse/não se desespere',
+      'Oxente - surpresa',
+      'Aperreado - preocupado/agoniado'
+    ],
+    sotaque: 'Sotaque do norte - expressivo e forte',
     cor: '#FF6B35',
   },
   {
     id: 'sul',
     nome: 'Sul da Bahia',
-    position: { lat: -14.7870, lng: -39.0361 },
-    girias: ['Ô meu rei', 'Cacete', 'Peste', 'Mermão'],
+    position: { lat: -18.3353, lng: -39.6633 },
+    girias: [
+      'Massa véi - muito bom',
+      'Atentar - provocar/perturbar',
+      'Cabuloso - impressionante/forte',
+      'Na moralzinha - de boa/tranquilo'
+    ],
     sotaque: 'Sotaque do sul - mais suave e cantado',
     cor: '#00BFA5',
   },
   {
     id: 'oeste',
     nome: 'Oeste da Bahia',
-    position: { lat: -12.1486, lng: -44.9961 },
-    girias: ['Trem bão', 'Uai sô', 'Que di', 'Pôxe'],
+    position: { lat: -11.2892, lng: -46.6164 },
+    girias: [
+      'Baixar a poeira - acalmar',
+      'Invocado - bravo ou determinado',
+      'Trupicar - tropeçar',
+      'Cuida! - anda logo!'
+    ],
     sotaque: 'Sotaque do oeste - influência mineira',
     cor: '#9C27B0',
   },
@@ -155,15 +181,18 @@ export const MapaInterativo = () => {
 
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-500 mb-3 uppercase">Gírias Típicas</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="space-y-2">
                     {selectedRegiao.girias.map((giria, idx) => (
-                      <span
+                      <div
                         key={idx}
-                        className="px-4 py-2 rounded-full text-sm font-semibold text-white"
-                        style={{ backgroundColor: selectedRegiao.cor }}
+                        className="text-sm text-gray-700 leading-relaxed"
                       >
-                        {giria}
-                      </span>
+                        <span className="font-semibold" style={{ color: selectedRegiao.cor }}>
+                          {giria.split(' - ')[0]}
+                        </span>
+                        {' - '}
+                        {giria.split(' - ')[1]}
+                      </div>
                     ))}
                   </div>
                 </div>

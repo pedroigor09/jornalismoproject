@@ -20,10 +20,10 @@ export default function PegueAVisaoPage() {
             '/alib1.jpeg',
             '/alib2.jpeg',
           ]}
-          carouselCaption="Fotos do Atlas Linguístico do Brasil (ALiB)"
+          carouselCaption="Amanda Marinho, Deborah Freitas e Ilary Almeida"
           carouselImageCaptions={[
-            '',
-            'Professora Jacyra Mota'
+            'Amanda Marinho, Deborah Freitas, Ilary Almeida e Profª Jacyra Mota',
+            'Fotos do Atlas Linguístico do Brasil (ALiB)'
           ]}
           carouselImageCaptionLinks={[
             '',

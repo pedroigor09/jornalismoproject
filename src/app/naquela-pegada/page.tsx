@@ -15,7 +15,7 @@ export default function NaquelaPegadaPage() {
       <main style={{ paddingTop: '70px' }}>
         <MediaSection
           title="Naquela pegada!"
-          subtitle="A identidade e a fala baiana do telejornal ao streaming"
+          subtitle="A construção da identidade baiana entre jornalistas e atores"
           introductions={mediaIntroduction.map(intro => intro.text)}
         />
 

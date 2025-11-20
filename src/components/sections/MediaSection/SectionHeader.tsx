@@ -231,6 +231,25 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                 );
               }
               
+              // Verifica se é um marcador de título de seção
+              // Formato: [SECTION_TITLE:titleText]
+              const sectionTitleMatch = paragraph.match(/^\[SECTION_TITLE:(.+)\]$/);
+              
+              if (sectionTitleMatch) {
+                return (
+                  <div key={index} className="my-16">
+                    <h3 className="text-4xl md:text-5xl font-black text-center bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent leading-tight px-6">
+                      {sectionTitleMatch[1]}
+                    </h3>
+                    <div className="flex items-center justify-center gap-3 mt-6">
+                      <div className="w-20 h-0.5 bg-gradient-to-r from-transparent to-orange-500 rounded-full" />
+                      <div className="w-3 h-3 rounded-full bg-yellow-400 animate-pulse" />
+                      <div className="w-20 h-0.5 bg-gradient-to-l from-transparent to-orange-500 rounded-full" />
+                    </div>
+                  </div>
+                );
+              }
+              
               // Verifica se é uma citação formatada com aspas e " - Autor"
               const trimmed = paragraph.trim();
               const quotePattern = /^[""](.+?)[""]\.?\s*-\s*(.+?)\.?$/;
