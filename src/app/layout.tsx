@@ -3,6 +3,7 @@ import { Open_Sans, Noto_Sans } from "next/font/google";
 import { BookPreloader } from "@/components/BookPreloader";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { NavigationButtons } from "@/components/ui/NavigationButtons";
+import { VLibras } from "@/components/VLibras";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -41,6 +42,9 @@ export default function RootLayout({
         
         {/* Conteúdo principal sempre renderizado */}
         {children}
+
+        {/* VLibras - Widget de acessibilidade em Libras */}
+        <VLibras />
       </body>
     </html>
   );
