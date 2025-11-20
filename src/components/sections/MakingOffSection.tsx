@@ -316,6 +316,24 @@ export function MakingOffSection() {
         </div>
       </section>
 
+      {/* Vídeo Fala Povo */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <video
+              className="w-full h-full object-contain"
+              controls
+              preload="metadata"
+            >
+              <source src={getAssetPath('/Fala povo.mp4')} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+          <p className="text-sm text-gray-500 text-center italic mt-4">
+            Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida
+          </p>
+        </div>
+      </section>
 
     </div>
   );
