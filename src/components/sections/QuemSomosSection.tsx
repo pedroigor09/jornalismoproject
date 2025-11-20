@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/getAssetPath';
 
 export function QuemSomosSection() {
   return (
@@ -22,19 +23,19 @@ export function QuemSomosSection() {
           {[
             { 
               name: 'Amanda Marinho', 
-              image: '/amanda.jpg', 
+              image: getAssetPath('/amanda.jpg'), 
               role: 'Ligada ao audiovisual, analisa como expressões regionais aparecem ou são apagadas em produtos midiáticos, especialmente nas redes sociais e na TV.',
               linkedin: 'https://www.linkedin.com/in/amanda-marinho-4182111b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
             },
             { 
               name: 'Deborah Freitas', 
-              image: '/deborah.jpg', 
+              image: getAssetPath('/deborah.jpg'), 
               role: 'A partir de viagens ao interior da Bahia, como cada comunidade possui jeitos próprios de falar, revelando identidade e pertencimento.',
               linkedin: 'https://www.linkedin.com/in/deborah-freitas-59575b240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
             },
             { 
               name: 'Ilary Almeida', 
-              image: '/ilary.jpg', 
+              image: getAssetPath('/ilary.jpg'), 
               role: 'Traz sua vivência com expressões baianas do dia a dia, observando como gírias locais despertam curiosidade ou estranhamento em pessoas de outras regiões.',
               linkedin: 'https://www.linkedin.com/in/ilary-almeida-44054217a?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
             },
@@ -43,9 +44,8 @@ export function QuemSomosSection() {
               href={person.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="block cursor-pointer"
               key={index}
-              className="group relative"
+              className="group relative block cursor-pointer"
               style={{
                 perspective: '1000px',
                 animation: `floatIn 1s ease-out ${index * 0.2}s both`
