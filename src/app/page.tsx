@@ -2,6 +2,7 @@
 
 import { HeroSection } from '@/components/sections/HeroSection';
 import { SobreProjeto } from '@/components/sections/SobreProjeto';
+import { QuemSomosSection } from '@/components/sections/QuemSomosSection';
 import { ColorStripe } from '@/components/ui/ColorStripe';
 import { Navbar } from '@/components/ui/Navbar';
 import { PageNavigation } from '@/components/ui/PageNavigation';
@@ -21,6 +22,8 @@ export default function Home() {
         />
 
         <SobreProjeto />
+
+        <QuemSomosSection />
 
         <PageNavigation
           backHref="/"

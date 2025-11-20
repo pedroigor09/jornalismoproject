@@ -21,7 +21,7 @@ export default function NaquelaPegadaPage() {
 
         <PageNavigation
           backHref="/baiano-nao-nasce-estreia"
-          nextLabel="NA COCO"
+          nextLabel="NA COCÓ"
           nextHref="/na-coco"
         />
       </main>

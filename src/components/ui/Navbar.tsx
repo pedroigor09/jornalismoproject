@@ -7,7 +7,6 @@ import './Navbar.css';
 export const Navbar = () => {
   const menuItems = [
     { label: 'Home', link: '/' },
-    { label: 'O baiano tem o molho!', link: '/' },
     { label: 'Pegue a visão', link: '/pegue-a-visao' },
     { label: 'Oxe, Que arte é essa?', link: '/oxe-que-arte' },
     { label: 'Baiano não nasce, estreia!', link: '/baiano-nao-nasce-estreia' },
