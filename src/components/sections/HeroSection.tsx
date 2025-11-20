@@ -47,7 +47,7 @@ export const HeroSection = ({
           alt="Sotaque em Pauta - A identidade e resistência no falar baiano"
           fill
           priority
-          className="object-cover"
+          className="object-contain md:object-cover"
           style={{
             filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))',
           }}
