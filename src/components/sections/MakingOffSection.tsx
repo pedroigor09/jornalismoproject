@@ -140,7 +140,7 @@ export function MakingOffSection() {
         {/* Background com parallax */}
         <div className="absolute inset-0">
           <Image
-            src={getAssetPath('/making-off/hero-bg.jpg')}
+            src={getAssetPath('/pelourinho2.jpg')}
             alt="Making Off Background"
             fill
             className="object-cover opacity-20"
