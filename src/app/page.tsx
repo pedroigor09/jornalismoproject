@@ -27,6 +27,9 @@ export default function Home() {
         {/* Vídeo Mosaico */}
         <section className="py-16 px-6 bg-beige-50">
           <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 text-center">
+              Mosaico Baianês
+            </h2>
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
               <video
                 className="w-full h-full object-cover"

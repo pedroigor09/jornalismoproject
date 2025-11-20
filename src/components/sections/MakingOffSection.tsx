@@ -319,6 +319,9 @@ export function MakingOffSection() {
       {/* Vídeo Fala Povo */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-black text-black mb-8 text-center">
+            Fala Povo!!
+          </h2>
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
             <video
               className="w-full h-full object-contain"
