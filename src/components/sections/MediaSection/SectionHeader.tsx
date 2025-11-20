@@ -7,6 +7,7 @@ import { YouTubeEmbed } from '@/components/ui/YouTubeEmbed';
 import { QuoteWithImage } from '@/components/ui/QuoteWithImage';
 import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
 import { HighlightQuote } from '@/components/ui/HighlightQuote';
+import { SectionTitleWithBackground } from '@/components/ui/SectionTitleWithBackground';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -98,10 +99,7 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
       {/* Texto Introdutório */}
       <div className="max-w-4xl mx-auto">
         <div className="relative">
-          {/* Detalhe decorativo */}
-          <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-indigo-500 rounded-full opacity-70" />
-          
-          <div className="space-y-8 pl-8">
+          <div className="space-y-8">
             {allParagraphs.map((paragraph, index) => {
               // Verifica se é um marcador de vídeo
               const videoMatch = paragraph.match(/^\[VIDEO:([^\]]+)\]$/);
@@ -145,6 +143,22 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                       transcript={audioImageMatch[3]}
                       speaker={audioImageMatch[4]}
                       alt={audioImageMatch[4]}
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é um marcador de título com imagem de fundo
+              // Formato: [TITLE_BG:imagePath:titleText]
+              const titleBgMatch = paragraph.match(/^\[TITLE_BG:([^:]+):(.+)\]$/);
+              
+              if (titleBgMatch) {
+                return (
+                  <div key={index} className="my-16 -mx-6 md:-mx-12 lg:-mx-24">
+                    <SectionTitleWithBackground
+                      imageSrc={titleBgMatch[1]}
+                      title={titleBgMatch[2]}
+                      imageAlt="Pelourinho - Salvador, Bahia"
                     />
                   </div>
                 );
