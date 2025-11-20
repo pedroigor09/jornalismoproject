@@ -309,6 +309,11 @@ export const VideoRevealSection = ({
           )}
         </div>
 
+        {/* Créditos do vídeo */}
+        <p className="text-sm text-gray-500 text-center italic mt-4">
+          Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida
+        </p>
+
         {/* Efeito de luz ambiente */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none"
