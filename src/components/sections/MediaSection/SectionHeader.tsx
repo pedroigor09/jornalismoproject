@@ -9,6 +9,7 @@ import { ClickableAudioImage } from '@/components/ui/ClickableAudioImage';
 import { HighlightQuote } from '@/components/ui/HighlightQuote';
 import { SectionTitleWithBackground } from '@/components/ui/SectionTitleWithBackground';
 import { TimelineWithPolaroids } from '@/components/ui/TimelineWithPolaroids';
+import { AudioPlayer } from '@/components/ui/AudioPlayer';
 
 interface MediaSectionHeaderProps {
   title: string;
@@ -191,6 +192,22 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                           link: 'https://g1.globo.com/pop-arte/noticia/2022/06/11/juliette-neutralizar-o-sotaque.ghtml'
                         }
                       ]}
+                    />
+                  </div>
+                );
+              }
+              
+              // Verifica se é um marcador de áudio simples
+              // Formato: [AUDIO:audioPath:transcript:speaker]
+              const audioMatch = paragraph.match(/^\[AUDIO:([^:]+):([^:]+):([^\]]+)\]$/);
+              
+              if (audioMatch) {
+                return (
+                  <div key={index} className="my-12">
+                    <AudioPlayer
+                      src={audioMatch[1]}
+                      transcript={audioMatch[2]}
+                      speaker={audioMatch[3]}
                     />
                   </div>
                 );
