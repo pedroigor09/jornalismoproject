@@ -25,7 +25,7 @@ Ainda assim, Silvana reconhece que esse caminho não foi simples. Palavras como 
 
 A autenticidade é também marca registrada de Vanderson Nascimento, um dos nomes mais queridos da TV baiana e figura central na renovação do telejornalismo local. Dono de bordões como "Deus me livre não ser baiano", Vanderson sintetiza a emergência de uma geração de comunicadores que já não teme o julgamento histórico associado ao sotaque, mas o reivindica como território simbólico. Seu modo de falar não é adotado como recurso estilístico, mas como verdade pessoal e profissional — um gesto político que afirma a legitimidade do baianês como língua de autoridade, de afeto e de credibilidade.
 
-[GIF_PLACEHOLDER]
+[GIF:/gifvanderson.gif]
 
 Ao afirmar que "o baiano não fala, o baiano se expressa", ele evidencia que o falar da Bahia tem uma corporeidade que ultrapassa a palavra: é gesto, é cadência, é memória. Cada entonação carrega não apenas informação, mas história, pertencimento, humor e ancestralidade.
 

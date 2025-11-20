@@ -213,6 +213,24 @@ export const MediaSectionHeader = ({ title, subtitle, introductions }: MediaSect
                 );
               }
               
+              // Verifica se é um marcador de GIF
+              // Formato: [GIF:path]
+              const gifMatch = paragraph.match(/^\[GIF:([^\]]+)\]$/);
+              
+              if (gifMatch) {
+                return (
+                  <div key={index} className="my-12 flex justify-center">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-orange-400 max-w-2xl w-full">
+                      <img
+                        src={gifMatch[1]}
+                        alt="GIF animado"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                );
+              }
+              
               // Verifica se é uma citação formatada com aspas e " - Autor"
               const trimmed = paragraph.trim();
               const quotePattern = /^[""](.+?)[""]\.?\s*-\s*(.+?)\.?$/;

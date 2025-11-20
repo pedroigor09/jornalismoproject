@@ -27,15 +27,15 @@ const makingOffData: MakingOffImage[] = [
 ];
 
 const cinematicImages = [
-  '/Emerson Nunes.jpg',
-  '/Entrevista com Ciro Sales.jpg',
-  '/Entrevista com Ivan Mesquista.jpg',
-  '/Equipe em reunião.jpg',
-  '/James Martins.jpg',
-  '/Porfª Jacyra Mota.jpg',
-  '/Primeira pré-banca.jpg',
-  '/Profª Jacyra Mota.jpg',
-  '/Silvana Freire.jpg',
+  { src: '/Emerson Nunes.jpg', caption: 'Emerson Nunes' },
+  { src: '/Entrevista com Ciro Sales.jpg', caption: 'Entrevista com Ciro Sales' },
+  { src: '/Entrevista com Ivan Mesquista.jpg', caption: 'Entrevista com Ivan Mesquista' },
+  { src: '/Equipe em reunião.jpg', caption: 'Equipe em reunião' },
+  { src: '/James Martins.jpg', caption: 'James Martins' },
+  { src: '/Porfª Jacyra Mota.jpg', caption: 'Profª Jacyra Mota' },
+  { src: '/Primeira pré-banca.jpg', caption: 'Primeira pré-banca' },
+  { src: '/Profª Jacyra Mota.jpg', caption: 'Profª Jacyra Mota' },
+  { src: '/Silvana Freire.jpg', caption: 'Silvana Freire' },
 ];
 
 export function MakingOffSection() {
@@ -166,6 +166,22 @@ export function MakingOffSection() {
         </div>
       </section>
 
+      {/* Making Off Video */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black">
+            <video
+              className="w-full h-full object-contain"
+              controls
+              preload="metadata"
+            >
+              <source src="/Makingoff.mp4" type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* Cinematic Carousel */}
       <section ref={carouselRef} className="py-16 px-6 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto">
@@ -183,12 +199,18 @@ export function MakingOffSection() {
                   }`}
                 >
                   <Image
-                    src={img}
-                    alt={`Making off ${index + 1}`}
+                    src={img.src}
+                    alt={img.caption}
                     fill
                     className="object-contain"
                     priority={index === 0}
                   />
+                  {/* Caption overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm px-6 py-4">
+                    <p className="text-black text-lg font-semibold text-center">
+                      {img.caption}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -214,21 +236,6 @@ export function MakingOffSection() {
               </svg>
             </button>
 
-            {/* Indicators */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-              {cinematicImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`transition-all duration-300 rounded-full ${
-                    index === currentSlide
-                      ? 'w-12 h-2 bg-white'
-                      : 'w-2 h-2 bg-white/50 hover:bg-white/75'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
 
           {/* Film strip decoration */}
