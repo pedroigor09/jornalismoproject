@@ -29,10 +29,7 @@ export const SectionHeader = ({ title, subtitle, introduction, customComponent, 
       if (videoMatch) {
         const videoId = videoMatch[1];
         // Define crédito baseado no ID do vídeo
-        let credit = "Reprodução/Redes Sociais";
-        if (videoId === "5Pqhf69mjc8" || videoId === "Re6yq8qAAWc") {
-          credit = "Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida";
-        }
+        let credit = "Vídeo: Amanda Marinho, Deborah Freitas e Ilary Almeida";
         
         result.push(
           <div key={index} className="my-12">

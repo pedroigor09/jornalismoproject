@@ -15,7 +15,7 @@ export default function PegueAVisaoPage() {
       <main style={{ paddingTop: '70px' }}>
         <VideoRevealSection
           videoUrl="https://youtu.be/9WhiZSi5XB0"
-          title="Pegue a Visão: Heranças Linguísticas dos falares brasileiros"
+          title="Pegue a visão: Heranças Linguísticas dos falares brasileiros"
           carouselImages={[
             '/alib1.jpeg',
             '/alib2.jpeg',

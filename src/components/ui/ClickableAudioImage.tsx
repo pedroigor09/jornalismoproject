@@ -189,7 +189,7 @@ export const ClickableAudioImage = ({
       </div>
 
       {/* Legenda */}
-      <p className="text-sm text-gray-400 mt-2 text-center">Reprodução/Redes Sociais</p>
+      <p className="text-sm text-gray-400 mt-2 text-center">Áudio: Amanda Marinho, Deborah Freitas e Ilary Almeida</p>
 
       {/* Transcrição abaixo da imagem */}
       {showTranscript && (

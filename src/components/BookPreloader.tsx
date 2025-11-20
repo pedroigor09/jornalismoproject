@@ -59,8 +59,8 @@ export function BookPreloader() {
           </div>
           <div className="loading-text">
             <h2>
-              <span className="desktop-text">Carregando Plataforma de Noticiário da Unijorge...</span>
-              <span className="mobile-text">Carregando Baianidade...</span>
+              <span className="desktop-text">carregando baianidade</span>
+              <span className="mobile-text">carregando baianidade</span>
             </h2>
             <div className="loading-dots">
               <span></span>
